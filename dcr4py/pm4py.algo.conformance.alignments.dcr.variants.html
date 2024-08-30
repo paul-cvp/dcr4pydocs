@@ -1,0 +1,1901 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pm4py.algo.conformance.alignments.dcr.variants package &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=319a7919"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pm4py.algo.conformance.alignments.dcr.variants';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="pm4py.algo.html">pm4py.algo package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pm4py.algo.conformance.html">pm4py.algo.conformance package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="pm4py.algo.conformance.alignments.html">pm4py.algo.conformance.alignments package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="reference internal" href="pm4py.algo.conformance.alignments.dcr.html">pm4py.algo.conformance.alignments.dcr package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.dcr.html">pm4py.algo.conformance.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.decorators.html">pm4py.algo.conformance.dcr.decorators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.rules.html">pm4py.algo.conformance.dcr.rules package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.variants.html">pm4py.algo.conformance.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.algo.discovery.html">pm4py.algo.discovery package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.html">pm4py.algo.discovery.dcr_discover package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.extenstions.html">pm4py.algo.discovery.dcr_discover.extenstions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.variants.html">pm4py.algo.discovery.dcr_discover.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.objects.html">pm4py.objects package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.objects.conversion.html">pm4py.objects.conversion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.conversion.dcr.html">pm4py.objects.conversion.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.conversion.dcr.variants.html">pm4py.objects.conversion.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.objects.dcr.html">pm4py.objects.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.distributed.html">pm4py.objects.dcr.distributed package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.exporter.html">pm4py.objects.dcr.exporter package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html">pm4py.objects.dcr.exporter.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html">pm4py.objects.dcr.extended package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html">pm4py.objects.dcr.hierarchical package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.importer.html">pm4py.objects.dcr.importer package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html">pm4py.objects.dcr.importer.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html">pm4py.objects.dcr.timed package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html">pm4py.objects.dcr.utils package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.visualization.html">pm4py.visualization package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.visualization.dcr.html">pm4py.visualization.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.visualization.dcr.variants.html">pm4py.visualization.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">pm4py.algo.c...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pm4py-algo-conformance-alignments-dcr-variants-package">
+<h1>pm4py.algo.conformance.alignments.dcr.variants package<a class="headerlink" href="#pm4py-algo-conformance-alignments-dcr-variants-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pm4py.algo.conformance.alignments.dcr.variants.optimal">
+<span id="pm4py-algo-conformance-alignments-dcr-variants-optimal-module"></span><h2>pm4py.algo.conformance.alignments.dcr.variants.optimal module<a class="headerlink" href="#module-pm4py.algo.conformance.alignments.dcr.variants.optimal" title="Link to this heading">#</a></h2>
+<p>This module contains the object-oriented implementation of the Optimal Alignments algorithm,
+based on the paper by Axel Kjeld Fjelrad Christfort and Tijs Slaats [1].</p>
+<p>Overview:
+The implementation encapsulates the core components of the algorithm and provides.</p>
+<p>The calculation of the alignments and graph-trace handling are encapsulated in separate,
+dedicated classes, thereby facilitating modularity and reuse.
+Central to the module are the following classes:</p>
+<ul class="simple">
+<li><p><cite>LogAlignment</cite>: A simplified interface to perform optimal alignment through the other classes.</p></li>
+<li><p><cite>TraceAlignment</cite>: Serves as the primary interface for interacting with the algorithm.
+orchestrating the alignment process and providing access to performance metrics.</p></li>
+<li><p><cite>TraceHandler</cite>: Manages the conversion and handling of event traces, preparing them for alignment.</p></li>
+<li><p><cite>DCRGraphHandler</cite>: Encapsulates operations and checks on DCR graphs relevant for the alignment.</p></li>
+<li><p><cite>Alignment</cite>: Implements the actual algorithm, managing the search space, and constructing optimal alignments.</p></li>
+</ul>
+<p>The module’s classes interact to process an input DCR graph and a trace abd execute the alignment algorithm. This process helps in understanding how closely the behavior described by
+the trace matches the behavior allowed by the DCR graph, which is essential in the analysis and optimization of business processes.</p>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p>A. K. F. Christfort, T. Slaats, “Efficient Optimal Alignment Between Dynamic Condition Response Graphs and Traces”,
+in Business Process Management, Springer International Publishing, 2023, pp. 3-19.
+DOI &lt;<a class="reference external" href="https://doi.org/10.1007/978-3-031-41620-0_1">https://doi.org/10.1007/978-3-031-41620-0_1</a>&gt;_.</p>
+</aside>
+</aside>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">LogAlignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EventLog</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#LogAlignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<blockquote>
+<div><p>The LogAlignment provides the simplified interface to perform optimal alignment for DCR graphs, with a provided event log.
+Calls TraceAlignment for each trace to compute optimal alignment for each trace.</p>
+<p>After intilializing Log alignment, can call perform_log_alignment() to execute the alignment process for all traces in log
+which returns a list of result for each alignment procedure</p>
+<p>Example usage:</p>
+</div></blockquote>
+<p>Define your instances of DCR graph and trace representation as ‘graph’ and ‘trace’</p>
+<blockquote>
+<div><blockquote>
+<div><p>align_log = LogAlignment(log, parameters)</p>
+<p>alignment_result = align_log.perform_log_alignment(graph, parameters)</p>
+</div></blockquote>
+<p>Note:
+- The user is expected to have a basic understanding of DCR graphs and trace alignment in the context of process mining.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>traces (list[Tuple]): the list of traces as tuples.
+Trace_alignments (list[Alignments]): Instance that holds the result of the alignment processes, initialized as an empty list [].</p>
+</dd>
+<dt>Methods:</dt><dd><p>perform_log_alignment(graph, parameters): Performs trace alignment for a log against the DCR graph and returns the list of alignment results.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment.perform_log_alignment">
+<span class="sig-name descname"><span class="pre">perform_log_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#LogAlignment.perform_log_alignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment.perform_log_alignment" title="Link to this definition">#</a></dt>
+<dd><p>Processes an event log and applies a specific operation to each trace.</p>
+<p>This method iterates through all traces in the log, and performs alignment operations,
+and store it in a list</p>
+<dl>
+<dt>Parameters:</dt><dd><p>graph (DcrGraph): the event log used for aligning the traces
+parameters (Optional[Dict]): A dictionary of parameters that control the behavior of the trace processing.</p>
+<blockquote>
+<div><p>This can include custom activity and case ID keys, among others.</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>List[Dict]: a list of dictionaries containing info on alignment and move fitness</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">TraceAlignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#TraceAlignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The TraceAlignment class provides a simplified interface to perform optimal alignment for DCR graphs,
+abstracting the complexity of direct interactions with the DCRGraphHandler, TraceHandler, and Alignment classes.</p>
+<p>Users should initialize TraceAlignment with a DCR_Graph object and a trace object, which can be a list of events, a Pandas DataFrame,
+an EventLog, or a Trace. Optional parameters can also be passed to customize the processing, such as specifying custom activity
+and case ID keys.</p>
+<p>After initializing TraceAlignment, users can call perform_alignment() to execute the alignment process, which returns the result of
+the alignment procedure.</p>
+<dl class="simple">
+<dt>Example usage:</dt><dd><p>Define your instances of DCR graph and trace representation as ‘graph’ and ‘trace’
+facade = Facade(graph, trace)
+alignment_result = facade.perform_alignment()</p>
+</dd>
+</dl>
+<p>Note:
+- The user is expected to have a basic understanding of DCR graphs and trace alignment in the context of process mining.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>graph_handler (DCRGraphHandler): Handler for DCR graph operations.
+trace_handler (TraceHandler): Handler for trace operations.
+alignment (Alignment): Instance that holds the result of the alignment process, initialized to None.</p>
+</dd>
+<dt>Methods:</dt><dd><p>perform_alignment(): Performs trace alignment against the DCR graph and returns the alignment result.
+get_performance_metrics(): Calculates and returns the alignment fitness.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.perform_alignment">
+<span class="sig-name descname"><span class="pre">perform_alignment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#TraceAlignment.perform_alignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.perform_alignment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.get_performance_metrics">
+<span class="sig-name descname"><span class="pre">get_performance_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#TraceAlignment.get_performance_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.get_performance_metrics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">Parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration that defines keys and constants for various parameters used in the alignment process.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>CASE_ID_KEY: The key used to identify the case ID in the event log.
+ACTIVITY_KEY: The key used to identify the activity in the event log.
+SYNC_COST: The cost of a synchronous move during the alignment.
+MODEL_COST: The cost of a model move during the alignment.
+LOG_COST: The cost of a log move during the alignment.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.CASE_ID_KEY">
+<span class="sig-name descname"><span class="pre">CASE_ID_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pm4py:param:case_id_key'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.CASE_ID_KEY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.ACTIVITY_KEY">
+<span class="sig-name descname"><span class="pre">ACTIVITY_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pm4py:param:activity_key'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.ACTIVITY_KEY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.SYNC_COST">
+<span class="sig-name descname"><span class="pre">SYNC_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.SYNC_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.MODEL_COST">
+<span class="sig-name descname"><span class="pre">MODEL_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.MODEL_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.LOG_COST">
+<span class="sig-name descname"><span class="pre">LOG_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.LOG_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">Outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Outputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration that defines constants for various outputs of the alignment process.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>ALIGNMENT: The key for accessing the final alignment from the result.
+COST: The key for accessing the total cost of the alignment.
+VISITED: The key for accessing the number of visited states during the alignment process.
+CLOSED: The key for accessing the number of closed states during the alignment process.
+GLOBAL_MIN: The key for accessing the global minimum cost encountered during the alignment.
+MODEL_MOVE_FITNESS = the key for accessing the model move fitness
+LOG_MOVE_FITNESS = the key for accessing the log move fitness
+ALIGN_FITNESS = the key for accessing the alignment fitness</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.ALIGNMENT">
+<span class="sig-name descname"><span class="pre">ALIGNMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'alignment'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.ALIGNMENT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.COST">
+<span class="sig-name descname"><span class="pre">COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cost'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.VISITED">
+<span class="sig-name descname"><span class="pre">VISITED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'visited_states'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.VISITED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.CLOSED">
+<span class="sig-name descname"><span class="pre">CLOSED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'closed'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.CLOSED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.GLOBAL_MIN">
+<span class="sig-name descname"><span class="pre">GLOBAL_MIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'global_min'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.GLOBAL_MIN" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.ALIGN_FITNESS">
+<span class="sig-name descname"><span class="pre">ALIGN_FITNESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fitness'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.ALIGN_FITNESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.BEST_WORST_COST">
+<span class="sig-name descname"><span class="pre">BEST_WORST_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bwc'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.BEST_WORST_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">Performance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_handler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_handler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Performance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance.calculate_fitness">
+<span class="sig-name descname"><span class="pre">calculate_fitness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Performance.calculate_fitness"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance.calculate_fitness" title="Link to this definition">#</a></dt>
+<dd><p>From the Conformance Checking book [1].
+Calculate the fitness of the alignment based on the optimal and worst-case costs.</p>
+<p>The fitness is calculated as one minus the ratio of the optimal alignment cost to
+the worst-case alignment cost. If the worst-case alignment cost is zero,
+fitness is set to zero to avoid division by zero.</p>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>The calculated fitness value, where higher values indicate a better fit.</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h3>References<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[1] C. Josep et al., “Conformance Checking Software”,  Springer International Publishing, 82-91, 2018. <a class="reference external" href="https://doi.org/10.1007/978-3-319-99414-7">DOI</a>.</p></li>
+</ul>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">TraceHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#TraceHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>TraceHandler is responsible for managing and converting traces into a format suitable
+for the alignment algorithm. This class provides functionalities to check if the trace is
+empty, retrieve the first activity from the trace, and convert the trace format as needed.</p>
+<p>A trace can be provided as a list of dictionaries, a pandas DataFrame, an EventLog, or a Trace object.
+The TraceHandler takes care of converting these into a uniform internal representation.</p>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>trace<span class="classifier">Tuple[Any] | Trace</span></dt><dd><p>The trace to be managed and converted. It’s stored internally in a list of dictionaries
+regardless of the input format.</p>
+</dd>
+<dt>activity_key<span class="classifier">str</span></dt><dd><p>The key to identify activities within the trace data.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>is_empty() -&gt; bool:</dt><dd><p>Checks if the trace is empty (contains no events).</p>
+</dd>
+<dt>get_first_activity() -&gt; Any:</dt><dd><p>Retrieves the first activity from the trace, if available.</p>
+</dd>
+<dt>convert_trace(activity_key, case_id_key, parameters):</dt><dd><p>Converts the trace into a tuple-based format required for processing by the alignment algorithm.
+This conversion handles both DataFrame and Event Log traces and can be configured via parameters.</p>
+</dd>
+</dl>
+</section>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>trace<span class="classifier">Tuple[str] | Trace</span></dt><dd><p>The initial trace data provided in one of the acceptable formats.</p>
+</dd>
+<dt>parameters<span class="classifier">Optional[Dict]</span></dt><dd><p>Optional parameters for trace conversion. These can define the keys for activity and case ID within
+the trace data and can include other conversion-related parameters.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#TraceHandler.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.is_empty" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.get_first_activity">
+<span class="sig-name descname"><span class="pre">get_first_activity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#TraceHandler.get_first_activity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.get_first_activity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">DCRGraphHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#DCRGraphHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>DCRGraphHandler manages operations on a DCR graph within the context of an alignment algorithm.
+It provides methods to check if an event is enabled, if the graph is in an accepting state,
+and to execute an event on the graph.</p>
+<p>The DCR graph follows the semantics defined in the DCR semantics module, and this class
+acts as an interface to apply these semantics for the purpose of alignment computation.</p>
+<section id="id3">
+<h3>Attributes<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>graph<span class="classifier">DcrGraph</span></dt><dd><p>The DCR graph on which the operations are to be performed.</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Methods<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>is_enabled(event: Any) -&gt; bool:</dt><dd><p>Determines if an event is enabled in the current state of the DCR graph.</p>
+</dd>
+<dt>is_accepting() -&gt; bool:</dt><dd><p>Checks if the current state of the DCR graph is an accepting state.</p>
+</dd>
+<dt>execute(event: Any, curr_graph) -&gt; Any:</dt><dd><p>Executes an event on the DCR graph, which may result in a transition to a new state.
+If the execution is not possible, it returns the current graph state.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>graph<span class="classifier">DcrGraph</span></dt><dd><p>An instance of a DCR_Graph object which the handler will manage and manipulate.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h3>Raises<a class="headerlink" href="#raises" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>TypeError</dt><dd><p>If the provided graph is not an instance of DCR_Graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_enabled">
+<span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#DCRGraphHandler.is_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_enabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.enabled">
+<span class="sig-name descname"><span class="pre">enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#DCRGraphHandler.enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.enabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_accepting">
+<span class="sig-name descname"><span class="pre">is_accepting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#DCRGraphHandler.is_accepting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_accepting" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_graph</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#DCRGraphHandler.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.execute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">Alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler" title="pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler"><span class="pre">DCRGraphHandler</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler" title="pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler"><span class="pre">TraceHandler</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.handle_state">
+<span class="sig-name descname"><span class="pre">handle_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.handle_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.handle_state" title="Link to this definition">#</a></dt>
+<dd><p>Manages the transition to a new state in the alignment algorithm based on the specified move type.
+It computes the new state, checks for execution equivalency to avoid re-processing, and if unique,
+updates the visited states and the priority queue for further processing.</p>
+<section id="id6">
+<h3>Parameters<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">int</span></dt><dd><p>The current cost of the alignment.</p>
+</dd>
+<dt>curr_graph<span class="classifier">DcrGraph</span></dt><dd><p>The current state of the DCR graph.</p>
+</dd>
+<dt>curr_trace<span class="classifier">list</span></dt><dd><p>The current state of the trace.</p>
+</dd>
+<dt>event<span class="classifier">Any</span></dt><dd><p>The event from the trace that is being considered in the current alignment step.</p>
+</dd>
+<dt>moves<span class="classifier">list</span></dt><dd><p>The list of moves made so far.</p>
+</dd>
+<dt>move_type<span class="classifier">str, optional</span></dt><dd><p>The type of move to make. This should be one of “sync”, “model”, or “log”. Default is None.</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h3>Returns<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>None</p>
+</section>
+<section id="id8">
+<h3>Raises<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>None</p>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This method interfaces with the <cite>get_new_state</cite> method to compute the new state.</p></li>
+<li><p>It employs a heap-based priority queue to manage the processing order of states based on their costs.</p></li>
+<li><p>Execution equivalency check is performed to reduce redundant processing of similar states.</p></li>
+</ul>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.get_new_state">
+<span class="sig-name descname"><span class="pre">get_new_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_marking</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.get_new_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.get_new_state" title="Link to this definition">#</a></dt>
+<dd><p>Computes the new state of the alignment algorithm based on the current state and
+the specified move type. The new state includes the updated cost, graph, trace,
+and move. This method handles three types of moves: synchronous, model, and log.</p>
+<section id="id9">
+<h3>Parameters<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">int</span></dt><dd><p>The current cost of the alignment.</p>
+</dd>
+<dt>curr_graph<span class="classifier">DcrGraph</span></dt><dd><p>The current state of the DCR graph.</p>
+</dd>
+<dt>curr_trace<span class="classifier">list</span></dt><dd><p>The current state of the trace.</p>
+</dd>
+<dt>moves<span class="classifier">list</span></dt><dd><p>The list of moves made so far.</p>
+</dd>
+<dt>move_type<span class="classifier">str</span></dt><dd><p>The type of move to make. This should be one of “sync”, “model”, or “log”.</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h3>Returns<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing four elements:
+- new_cost : int, the updated cost of the alignment.
+- new_graph : DCR_Graph, the updated state of the DCR graph.
+- new_trace : list, the updated state of the trace.
+- new_move : tuple, a tuple representing the move made, formatted as (move_type, first_activity).</p>
+</dd>
+</dl>
+</section>
+<section id="example">
+<h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
+<p>new_cost, new_graph, new_trace, new_move = get_new_state(curr_cost, curr_graph, curr_trace, moves, “sync”)</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.update_closed_and_visited_sets">
+<span class="sig-name descname"><span class="pre">update_closed_and_visited_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_repr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.update_closed_and_visited_sets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.update_closed_and_visited_sets" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.process_current_state">
+<span class="sig-name descname"><span class="pre">process_current_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.process_current_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.process_current_state" title="Link to this definition">#</a></dt>
+<dd><p>Process the current state in the alignment process.
+This method processes the current state of the alignment, updates the graph handler
+with the current graph, and prepares the state representation for further processing.</p>
+<section id="id11">
+<h3>Parameters<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>current<span class="classifier">Tuple</span></dt><dd><p>The current state, which is a tuple containing the current cost, current graph,
+current trace, and the moves made up to this point.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.check_accepting_conditions">
+<span class="sig-name descname"><span class="pre">check_accepting_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_accepting</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.check_accepting_conditions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.check_accepting_conditions" title="Link to this definition">#</a></dt>
+<dd><p>Check if the current state meets the accepting conditions and update the global minimum cost and final alignment.</p>
+<section id="id12">
+<h3>Parameters<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">float</span></dt><dd><p>The cost associated with the current state.</p>
+</dd>
+<dt>is_accepting<span class="classifier">bool</span></dt><dd><p>Flag indicating whether the current state is an accepting state.</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h3>Returns<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>The final cost if the accepting conditions are met; <cite>float(‘inf’)</cite> otherwise.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.apply_trace">
+<span class="sig-name descname"><span class="pre">apply_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.apply_trace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.apply_trace" title="Link to this definition">#</a></dt>
+<dd><p>Applies the alignment algorithm to a trace in order to find an optimal alignment
+between the DCR graph and the trace based on the algorithm outlined in the paper
+by Axel Kjeld Fjelrad Christfort and Tijs Slaats.</p>
+<section id="id14">
+<h3>Parameters<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>parameters<span class="classifier">dict, optional</span></dt><dd><p>A dictionary of parameters to configure the alignment algorithm.
+Possible keys include:
+- Parameters.ACTIVITY_KEY: Specifies the key to use for activity names in the trace data.
+- Parameters.CASE_ID_KEY: Specifies the key to use for case IDs in the trace data.
+If not provided or None, default values are used.</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h3>Returns<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary containing the results of the alignment algorithm, with the following keys:
+- ‘alignment’: List of tuples representing the optimal alignment found.
+- ‘cost’: The cost of the optimal alignment.
+- ‘visited’: The number of states visited during the alignment algorithm.
+- ‘closed’: The number of closed states during the alignment algorithm.
+- ‘global_min’: The global minimum cost found during the alignment algorithm.</p>
+</dd>
+</dl>
+</section>
+<section id="id16">
+<h3>Example<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>result = alignment_obj.apply_trace()
+optimal_alignment = result[‘alignment’]
+alignment_cost = result[‘cost’]</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.skip_current">
+<span class="sig-name descname"><span class="pre">skip_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.skip_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.skip_current" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.perform_moves">
+<span class="sig-name descname"><span class="pre">perform_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.perform_moves"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.perform_moves" title="Link to this definition">#</a></dt>
+<dd><p>Defines available moves based on the trace and model state.</p>
+<p>This method determines which moves are possible (synchronous, model, or log moves)
+so that they can be processed accordingly. Each move type is defined as:
+- Synchronous (sync): The activity is both in the trace and the model, and is currently enabled.
+- Model move: The activity is enabled in the model but not in the trace.
+- Log move: The activity is in the trace but not enabled in the model.</p>
+<section id="id17">
+<h3>Parameters<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">float</span></dt><dd><p>The cost associated with the current state before performing any moves.</p>
+</dd>
+<dt>current<span class="classifier">tuple</span></dt><dd><p>The current state represented as a tuple containing the following:
+- current[0]: The current cumulative cost associated with the trace.
+- current[1]: The current state of the graph representing the model.
+- current[2]: The current position in the trace.
+- current[3]: A placeholder for additional information (if any).
+- current[4]: The list of moves performed to reach this state.</p>
+</dd>
+<dt>moves<span class="classifier">list</span></dt><dd><p>The list of moves performed so far to reach the current state. This will be updated with new moves
+as they are performed.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.construct_results">
+<span class="sig-name descname"><span class="pre">construct_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_cost</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#Alignment.construct_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.construct_results" title="Link to this definition">#</a></dt>
+<dd><p>Constructs a dictionary of results from the alignment process containing various metrics
+and outcomes, such as the final alignment, its cost, and statistics about the search process.</p>
+<section id="id18">
+<h3>Parameters<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>visited<span class="classifier">int</span></dt><dd><p>The number of states visited during the alignment process.</p>
+</dd>
+<dt>closed<span class="classifier">int</span></dt><dd><p>The number of states that were closed (i.e., fully processed and will not be revisited).</p>
+</dd>
+<dt>final_cost<span class="classifier">float</span></dt><dd><p>The cost associated with the final alignment obtained.</p>
+</dd>
+</dl>
+</section>
+<section id="id19">
+<h3>Returns<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary with keys corresponding to various outputs of the alignment process:
+- ‘alignment’: The final alignment between the process model and the trace.
+- ‘cost’: The cost of the final alignment   .
+- ‘visited’: The total number of visited states.
+- ‘closed’: The total number of closed states.
+- ‘model move fitness’: the fitness provided that model moves are used
+- ‘log move fitness’: the fitness provided by the log moves</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.apply">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trace_or_log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.apply" title="Link to this definition">#</a></dt>
+<dd><p>Applies an alignment operation on a given trace or log against a specified DCR graph.</p>
+<p>Depending on the type of input, this function handles the alignment of a single trace or multiple traces contained
+in an event log. For a single trace, it creates an instance of TraceAlignment and performs the alignment.
+For an event log, it initializes a LogAlignment object and aligns each trace contained within.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>trace_or_log (Union[pd.DataFrame, EventLog, Trace]): The event log or single trace to align.
+graph (DcrGraph): The DCR graph against which the alignment is to be performed.
+parameters (Optional[Dict]): A dictionary of parameters for the alignment (default is None).</p>
+</dd>
+<dt>Returns:</dt><dd><ul class="simple">
+<li><p>If a single trace is provided, returns the result of the TraceAlignment.</p></li>
+<li><p>If an event log is provided, returns a list of results from LogAlignment for each trace.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal.get_diagnostics_dataframe">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal.</span></span><span class="sig-name descname"><span class="pre">get_diagnostics_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal.html#get_diagnostics_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.get_diagnostics_dataframe" title="Link to this definition">#</a></dt>
+<dd><p>Gets the diagnostics dataframe from a log and the conformance results</p>
+<section id="id20">
+<h3>Parameters<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>log</dt><dd><p>Event log</p>
+</dd>
+<dt>conf_result</dt><dd><p>Results of conformance checking</p>
+</dd>
+<dt>variant</dt><dd><p>Variant to be used:
+- Variants.CLASSIC</p>
+</dd>
+<dt>parameters</dt><dd><p>Variant-specific parameters</p>
+</dd>
+</dl>
+</section>
+<section id="id21">
+<h3>Returns<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>diagn_dataframe</dt><dd><p>Diagnostics dataframe</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded">
+<span id="pm4py-algo-conformance-alignments-dcr-variants-optimal-multithreaded-module"></span><h2>pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded module<a class="headerlink" href="#module-pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded" title="Link to this heading">#</a></h2>
+<p>This module contains the object-oriented implementation of the Optimal Alignments algorithm,
+based on the paper by Axel Kjeld Fjelrad Christfort and Tijs Slaats [1].</p>
+<p>Overview:
+The implementation encapsulates the core components of the algorithm and provides.</p>
+<p>The calculation of the alignments and graph-trace handling are encapsulated in separate,
+dedicated classes, thereby facilitating modularity and reuse.
+Central to the module are the following classes:</p>
+<ul class="simple">
+<li><p><cite>LogAlignment</cite>: A simplified interface to perform optimal alignment through the other classes.</p></li>
+<li><p><cite>TraceAlignment</cite>: Serves as the primary interface for interacting with the algorithm.
+orchestrating the alignment process and providing access to performance metrics.</p></li>
+<li><p><cite>TraceHandler</cite>: Manages the conversion and handling of event traces, preparing them for alignment.</p></li>
+<li><p><cite>DCRGraphHandler</cite>: Encapsulates operations and checks on DCR graphs relevant for the alignment.</p></li>
+<li><p><cite>Alignment</cite>: Implements the actual algorithm, managing the search space, and constructing optimal alignments.</p></li>
+</ul>
+<p>The module’s classes interact to process an input DCR graph and a trace abd execute the alignment algorithm. This process helps in understanding how closely the behavior described by
+the trace matches the behavior allowed by the DCR graph, which is essential in the analysis and optimization of business processes.</p>
+<p>This version of the module includes multithreading capabilities to improve performance when processing large logs.</p>
+<section id="id22">
+<h3>References<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id23" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p>A. K. F. Christfort, T. Slaats, “Efficient Optimal Alignment Between Dynamic Condition Response Graphs and Traces”,
+in Business Process Management, Springer International Publishing, 2023, pp. 3-19.
+DOI &lt;<a class="reference external" href="https://doi.org/10.1007/978-3-031-41620-0_1">https://doi.org/10.1007/978-3-031-41620-0_1</a>&gt;_.</p>
+</aside>
+</aside>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">LogAlignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#LogAlignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>LogAlignment class provides a multithreaded interface to perform optimal alignment for multiple traces in an event log.</p>
+<p>This class manages the parallel processing of traces, distributing the workload across multiple CPU cores
+to improve performance when dealing with large event logs.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>parameters (Dict[str, Any]): Configuration parameters for the alignment process.
+cpu_count (int): The number of CPU cores available on the system.
+max_workers (int): The maximum number of worker processes to use for parallel processing.
+chunk_size (int): The number of traces to process in each chunk.
+traces (EventLog): The event log containing the traces to be aligned.</p>
+</dd>
+<dt>Methods:</dt><dd><dl class="simple">
+<dt>perform_log_alignment(graph: DcrGraph, parameters: Dict[str, Any] = None) -&gt; List[Dict[str, Any]]:</dt><dd><p>Performs the alignment process for all traces in the log using multiple worker processes.</p>
+</dd>
+<dt>process_chunk(graph: DcrGraph, traces: List[Trace], parameters: Dict[str, Any]) -&gt; List[Dict[str, Any]]:</dt><dd><p>Static method to process a chunk of traces, used by worker processes.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment.perform_log_alignment">
+<span class="sig-name descname"><span class="pre">perform_log_alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#LogAlignment.perform_log_alignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment.perform_log_alignment" title="Link to this definition">#</a></dt>
+<dd><p>Performs the alignment process for all traces in the log using multiple worker processes.</p>
+<p>This method divides the traces into chunks and distributes them among worker processes
+for parallel processing. It then collects and combines the results from all workers.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>graph (DcrGraph): The DCR graph against which the traces will be aligned.
+parameters (Dict[str, Any], optional): Additional parameters for the alignment process.</p>
+</dd>
+<dt>Returns:</dt><dd><p>List[Dict[str, Any]]: A list of alignment results for all processed traces.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment.process_chunk">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">process_chunk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">traces</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Trace</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#LogAlignment.process_chunk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment.process_chunk" title="Link to this definition">#</a></dt>
+<dd><p>Static method to process a chunk of traces.</p>
+<p>This method is designed to be run in a separate process, aligning each trace in the given chunk
+against the provided DCR graph.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>graph (DcrGraph): The DCR graph against which the traces will be aligned.
+traces (List[Trace]): A list of traces to be processed.
+parameters (Dict[str, Any]): Parameters for the alignment process.</p>
+</dd>
+<dt>Returns:</dt><dd><p>List[Dict[str, Any]]: A list of alignment results for the processed traces.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">TraceAlignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#TraceAlignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The TraceAlignment class provides a simplified interface to perform optimal alignment for DCR graphs,
+abstracting the complexity of direct interactions with the DCRGraphHandler, TraceHandler, and Alignment classes.</p>
+<p>Users should initialize TraceAlignment with a DCR_Graph object and a trace object, which can be a list of events, a Pandas DataFrame,
+an EventLog, or a Trace. Optional parameters can also be passed to customize the processing, such as specifying custom activity
+and case ID keys.</p>
+<p>After initializing TraceAlignment, users can call perform_alignment() to execute the alignment process, which returns the result of
+the alignment procedure.</p>
+<dl class="simple">
+<dt>Example usage:</dt><dd><p>Define your instances of DCR graph and trace representation as ‘graph’ and ‘trace’
+facade = Facade(graph, trace)
+alignment_result = facade.perform_alignment()</p>
+</dd>
+</dl>
+<p>Note:
+- The user is expected to have a basic understanding of DCR graphs and trace alignment in the context of process mining.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>graph_handler (DCRGraphHandler): Handler for DCR graph operations.
+trace_handler (TraceHandler): Handler for trace operations.
+alignment (Alignment): Instance that holds the result of the alignment process, initialized to None.</p>
+</dd>
+<dt>Methods:</dt><dd><p>perform_alignment(): Performs trace alignment against the DCR graph and returns the alignment result.
+get_performance_metrics(): Calculates and returns the alignment fitness.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment.perform_alignment">
+<span class="sig-name descname"><span class="pre">perform_alignment</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#TraceAlignment.perform_alignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment.perform_alignment" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment.get_performance_metrics">
+<span class="sig-name descname"><span class="pre">get_performance_metrics</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#TraceAlignment.get_performance_metrics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment.get_performance_metrics" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">Parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration that defines keys and constants for various parameters used in the alignment process.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>CASE_ID_KEY: The key used to identify the case ID in the event log.
+ACTIVITY_KEY: The key used to identify the activity in the event log.
+SYNC_COST: The cost of a synchronous move during the alignment.
+MODEL_COST: The cost of a model move during the alignment.
+LOG_COST: The cost of a log move during the alignment.</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.CASE_ID_KEY">
+<span class="sig-name descname"><span class="pre">CASE_ID_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pm4py:param:case_id_key'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.CASE_ID_KEY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.ACTIVITY_KEY">
+<span class="sig-name descname"><span class="pre">ACTIVITY_KEY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pm4py:param:activity_key'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.ACTIVITY_KEY" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.SYNC_COST">
+<span class="sig-name descname"><span class="pre">SYNC_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.SYNC_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.MODEL_COST">
+<span class="sig-name descname"><span class="pre">MODEL_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.MODEL_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.LOG_COST">
+<span class="sig-name descname"><span class="pre">LOG_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.LOG_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">Outputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Outputs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<p>Enumeration that defines constants for various outputs of the alignment process.</p>
+<dl class="simple">
+<dt>Attributes:</dt><dd><p>ALIGNMENT: The key for accessing the final alignment from the result.
+COST: The key for accessing the total cost of the alignment.
+VISITED: The key for accessing the number of visited states during the alignment process.
+CLOSED: The key for accessing the number of closed states during the alignment process.
+GLOBAL_MIN: The key for accessing the global minimum cost encountered during the alignment.
+MODEL_MOVE_FITNESS = the key for accessing the model move fitness
+LOG_MOVE_FITNESS = the key for accessing the log move fitness
+ALIGN_FITNESS = the key for accessing the alignment fitness</p>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.ALIGNMENT">
+<span class="sig-name descname"><span class="pre">ALIGNMENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'alignment'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.ALIGNMENT" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.COST">
+<span class="sig-name descname"><span class="pre">COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'cost'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.VISITED">
+<span class="sig-name descname"><span class="pre">VISITED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'visited_states'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.VISITED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.CLOSED">
+<span class="sig-name descname"><span class="pre">CLOSED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'closed'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.CLOSED" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.GLOBAL_MIN">
+<span class="sig-name descname"><span class="pre">GLOBAL_MIN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'global_min'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.GLOBAL_MIN" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.ALIGN_FITNESS">
+<span class="sig-name descname"><span class="pre">ALIGN_FITNESS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'fitness'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.ALIGN_FITNESS" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.BEST_WORST_COST">
+<span class="sig-name descname"><span class="pre">BEST_WORST_COST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'bwc'</span></em><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.BEST_WORST_COST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Performance">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">Performance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">alignment</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_handler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_handler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Performance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Performance" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Performance.calculate_fitness">
+<span class="sig-name descname"><span class="pre">calculate_fitness</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Performance.calculate_fitness"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Performance.calculate_fitness" title="Link to this definition">#</a></dt>
+<dd><p>From the Conformance Checking book [1].
+Calculate the fitness of the alignment based on the optimal and worst-case costs.</p>
+<p>The fitness is calculated as one minus the ratio of the optimal alignment cost to
+the worst-case alignment cost. If the worst-case alignment cost is zero,
+fitness is set to zero to avoid division by zero.</p>
+<section id="id24">
+<h3>Returns<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>The calculated fitness value, where higher values indicate a better fit.</p>
+</dd>
+</dl>
+</section>
+<section id="id25">
+<h3>References<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>[1] C. Josep et al., “Conformance Checking Software”,  Springer International Publishing, 82-91, 2018. <a class="reference external" href="https://doi.org/10.1007/978-3-319-99414-7">DOI</a>.</p></li>
+</ul>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">TraceHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#TraceHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>TraceHandler is responsible for managing and converting traces into a format suitable
+for the alignment algorithm. This class provides functionalities to check if the trace is
+empty, retrieve the first activity from the trace, and convert the trace format as needed.</p>
+<p>A trace can be provided as a list of dictionaries, a pandas DataFrame, an EventLog, or a Trace object.
+The TraceHandler takes care of converting these into a uniform internal representation.</p>
+<section id="id27">
+<h3>Attributes<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>trace<span class="classifier">Tuple[Any] | Trace</span></dt><dd><p>The trace to be managed and converted. It’s stored internally in a list of dictionaries
+regardless of the input format.</p>
+</dd>
+<dt>activity_key<span class="classifier">str</span></dt><dd><p>The key to identify activities within the trace data.</p>
+</dd>
+</dl>
+</section>
+<section id="id28">
+<h3>Methods<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>is_empty() -&gt; bool:</dt><dd><p>Checks if the trace is empty (contains no events).</p>
+</dd>
+<dt>get_first_activity() -&gt; Any:</dt><dd><p>Retrieves the first activity from the trace, if available.</p>
+</dd>
+<dt>convert_trace(activity_key, case_id_key, parameters):</dt><dd><p>Converts the trace into a tuple-based format required for processing by the alignment algorithm.
+This conversion handles both DataFrame and Event Log traces and can be configured via parameters.</p>
+</dd>
+</dl>
+</section>
+<section id="id29">
+<h3>Parameters<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>trace<span class="classifier">Tuple[str] | Trace</span></dt><dd><p>The initial trace data provided in one of the acceptable formats.</p>
+</dd>
+<dt>parameters<span class="classifier">Optional[Dict]</span></dt><dd><p>Optional parameters for trace conversion. These can define the keys for activity and case ID within
+the trace data and can include other conversion-related parameters.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler.is_empty">
+<span class="sig-name descname"><span class="pre">is_empty</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#TraceHandler.is_empty"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler.is_empty" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler.get_first_activity">
+<span class="sig-name descname"><span class="pre">get_first_activity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#TraceHandler.get_first_activity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler.get_first_activity" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">DCRGraphHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#DCRGraphHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>DCRGraphHandler manages operations on a DCR graph within the context of an alignment algorithm.
+It provides methods to check if an event is enabled, if the graph is in an accepting state,
+and to execute an event on the graph.</p>
+<p>The DCR graph follows the semantics defined in the DCR semantics module, and this class
+acts as an interface to apply these semantics for the purpose of alignment computation.</p>
+<section id="id30">
+<h3>Attributes<a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>graph<span class="classifier">DcrGraph</span></dt><dd><p>The DCR graph on which the operations are to be performed.</p>
+</dd>
+</dl>
+</section>
+<section id="id31">
+<h3>Methods<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>is_enabled(event: Any) -&gt; bool:</dt><dd><p>Determines if an event is enabled in the current state of the DCR graph.</p>
+</dd>
+<dt>is_accepting() -&gt; bool:</dt><dd><p>Checks if the current state of the DCR graph is an accepting state.</p>
+</dd>
+<dt>execute(event: Any, curr_graph) -&gt; Any:</dt><dd><p>Executes an event on the DCR graph, which may result in a transition to a new state.
+If the execution is not possible, it returns the current graph state.</p>
+</dd>
+</dl>
+</section>
+<section id="id32">
+<h3>Parameters<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>graph<span class="classifier">DcrGraph</span></dt><dd><p>An instance of a DCR_Graph object which the handler will manage and manipulate.</p>
+</dd>
+</dl>
+</section>
+<section id="id33">
+<h3>Raises<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>TypeError</dt><dd><p>If the provided graph is not an instance of DCR_Graph.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.is_enabled">
+<span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#DCRGraphHandler.is_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.is_enabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.enabled">
+<span class="sig-name descname"><span class="pre">enabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#DCRGraphHandler.enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.enabled" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.is_accepting">
+<span class="sig-name descname"><span class="pre">is_accepting</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#DCRGraphHandler.is_accepting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.is_accepting" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_graph</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Any</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#DCRGraphHandler.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.execute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">Alignment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler" title="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler"><span class="pre">DCRGraphHandler</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">trace_handler</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler" title="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler"><span class="pre">TraceHandler</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.handle_state">
+<span class="sig-name descname"><span class="pre">handle_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.handle_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.handle_state" title="Link to this definition">#</a></dt>
+<dd><p>Manages the transition to a new state in the alignment algorithm based on the specified move type.
+It computes the new state, checks for execution equivalency to avoid re-processing, and if unique,
+updates the visited states and the priority queue for further processing.</p>
+<section id="id34">
+<h3>Parameters<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">int</span></dt><dd><p>The current cost of the alignment.</p>
+</dd>
+<dt>curr_graph<span class="classifier">DcrGraph</span></dt><dd><p>The current state of the DCR graph.</p>
+</dd>
+<dt>curr_trace<span class="classifier">list</span></dt><dd><p>The current state of the trace.</p>
+</dd>
+<dt>event<span class="classifier">Any</span></dt><dd><p>The event from the trace that is being considered in the current alignment step.</p>
+</dd>
+<dt>moves<span class="classifier">list</span></dt><dd><p>The list of moves made so far.</p>
+</dd>
+<dt>move_type<span class="classifier">str, optional</span></dt><dd><p>The type of move to make. This should be one of “sync”, “model”, or “log”. Default is None.</p>
+</dd>
+</dl>
+</section>
+<section id="id35">
+<h3>Returns<a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
+<p>None</p>
+</section>
+<section id="id36">
+<h3>Raises<a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
+<p>None</p>
+</section>
+<section id="id37">
+<h3>Notes<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>This method interfaces with the <cite>get_new_state</cite> method to compute the new state.</p></li>
+<li><p>It employs a heap-based priority queue to manage the processing order of states based on their costs.</p></li>
+<li><p>Execution equivalency check is performed to reduce redundant processing of similar states.</p></li>
+</ul>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.get_new_state">
+<span class="sig-name descname"><span class="pre">get_new_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_marking</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">curr_trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">move_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.get_new_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.get_new_state" title="Link to this definition">#</a></dt>
+<dd><p>Computes the new state of the alignment algorithm based on the current state and
+the specified move type. The new state includes the updated cost, graph, trace,
+and move. This method handles three types of moves: synchronous, model, and log.</p>
+<section id="id38">
+<h3>Parameters<a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">int</span></dt><dd><p>The current cost of the alignment.</p>
+</dd>
+<dt>curr_graph<span class="classifier">DcrGraph</span></dt><dd><p>The current state of the DCR graph.</p>
+</dd>
+<dt>curr_trace<span class="classifier">list</span></dt><dd><p>The current state of the trace.</p>
+</dd>
+<dt>moves<span class="classifier">list</span></dt><dd><p>The list of moves made so far.</p>
+</dd>
+<dt>move_type<span class="classifier">str</span></dt><dd><p>The type of move to make. This should be one of “sync”, “model”, or “log”.</p>
+</dd>
+</dl>
+</section>
+<section id="id39">
+<h3>Returns<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing four elements:
+- new_cost : int, the updated cost of the alignment.
+- new_graph : DCR_Graph, the updated state of the DCR graph.
+- new_trace : list, the updated state of the trace.
+- new_move : tuple, a tuple representing the move made, formatted as (move_type, first_activity).</p>
+</dd>
+</dl>
+</section>
+<section id="id40">
+<h3>Example<a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
+<p>new_cost, new_graph, new_trace, new_move = get_new_state(curr_cost, curr_graph, curr_trace, moves, “sync”)</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.update_closed_and_visited_sets">
+<span class="sig-name descname"><span class="pre">update_closed_and_visited_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state_repr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.update_closed_and_visited_sets"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.update_closed_and_visited_sets" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.process_current_state">
+<span class="sig-name descname"><span class="pre">process_current_state</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.process_current_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.process_current_state" title="Link to this definition">#</a></dt>
+<dd><p>Process the current state in the alignment process.
+This method processes the current state of the alignment, updates the graph handler
+with the current graph, and prepares the state representation for further processing.</p>
+<section id="id41">
+<h3>Parameters<a class="headerlink" href="#id41" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>current<span class="classifier">Tuple</span></dt><dd><p>The current state, which is a tuple containing the current cost, current graph,
+current trace, and the moves made up to this point.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.check_accepting_conditions">
+<span class="sig-name descname"><span class="pre">check_accepting_conditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_accepting</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.check_accepting_conditions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.check_accepting_conditions" title="Link to this definition">#</a></dt>
+<dd><p>Check if the current state meets the accepting conditions and update the global minimum cost and final alignment.</p>
+<section id="id42">
+<h3>Parameters<a class="headerlink" href="#id42" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">float</span></dt><dd><p>The cost associated with the current state.</p>
+</dd>
+<dt>is_accepting<span class="classifier">bool</span></dt><dd><p>Flag indicating whether the current state is an accepting state.</p>
+</dd>
+</dl>
+</section>
+<section id="id43">
+<h3>Returns<a class="headerlink" href="#id43" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>float</dt><dd><p>The final cost if the accepting conditions are met; <cite>float(‘inf’)</cite> otherwise.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.apply_trace">
+<span class="sig-name descname"><span class="pre">apply_trace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.apply_trace"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.apply_trace" title="Link to this definition">#</a></dt>
+<dd><p>Applies the alignment algorithm to a trace in order to find an optimal alignment
+between the DCR graph and the trace based on the algorithm outlined in the paper
+by Axel Kjeld Fjelrad Christfort and Tijs Slaats.
+<a class="reference external" href="https://link.springer.com/chapter/10.1007/978-3-031-41620-0_1">https://link.springer.com/chapter/10.1007/978-3-031-41620-0_1</a></p>
+<section id="id44">
+<h3>Parameters<a class="headerlink" href="#id44" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>parameters<span class="classifier">dict, optional</span></dt><dd><p>A dictionary of parameters to configure the alignment algorithm.
+Possible keys include:
+- Parameters.ACTIVITY_KEY: Specifies the key to use for activity names in the trace data.
+- Parameters.CASE_ID_KEY: Specifies the key to use for case IDs in the trace data.
+If not provided or None, default values are used.</p>
+</dd>
+</dl>
+</section>
+<section id="id45">
+<h3>Returns<a class="headerlink" href="#id45" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary containing the results of the alignment algorithm, with the following keys:
+- ‘alignment’: List of tuples representing the optimal alignment found.
+- ‘cost’: The cost of the optimal alignment.
+- ‘visited’: The number of states visited during the alignment algorithm.
+- ‘closed’: The number of closed states during the alignment algorithm.
+- ‘global_min’: The global minimum cost found during the alignment algorithm.</p>
+</dd>
+</dl>
+</section>
+<section id="id46">
+<h3>Example<a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
+<p>result = alignment_obj.apply_trace()
+optimal_alignment = result[‘alignment’]
+alignment_cost = result[‘cost’]</p>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.skip_current">
+<span class="sig-name descname"><span class="pre">skip_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">result</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.skip_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.skip_current" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.perform_moves">
+<span class="sig-name descname"><span class="pre">perform_moves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curr_cost</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">moves</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.perform_moves"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.perform_moves" title="Link to this definition">#</a></dt>
+<dd><p>Defines available moves based on the trace and model state.</p>
+<p>This method determines which moves are possible (synchronous, model, or log moves)
+so that they can be processed accordingly. Each move type is defined as:
+- Synchronous (sync): The activity is both in the trace and the model, and is currently enabled.
+- Model move: The activity is enabled in the model but not in the trace.
+- Log move: The activity is in the trace but not enabled in the model.</p>
+<section id="id47">
+<h3>Parameters<a class="headerlink" href="#id47" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>curr_cost<span class="classifier">float</span></dt><dd><p>The cost associated with the current state before performing any moves.</p>
+</dd>
+<dt>current<span class="classifier">tuple</span></dt><dd><p>The current state represented as a tuple containing the following:
+- current[0]: The current cumulative cost associated with the trace.
+- current[1]: The current state of the graph representing the model.
+- current[2]: The current position in the trace.
+- current[3]: A placeholder for additional information (if any).
+- current[4]: The list of moves performed to reach this state.</p>
+</dd>
+<dt>moves<span class="classifier">list</span></dt><dd><p>The list of moves performed so far to reach the current state. This will be updated with new moves
+as they are performed.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.construct_results">
+<span class="sig-name descname"><span class="pre">construct_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">visited</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">closed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_cost</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#Alignment.construct_results"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.construct_results" title="Link to this definition">#</a></dt>
+<dd><p>Constructs a dictionary of results from the alignment process containing various metrics
+and outcomes, such as the final alignment, its cost, and statistics about the search process.</p>
+<section id="id48">
+<h3>Parameters<a class="headerlink" href="#id48" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>visited<span class="classifier">int</span></dt><dd><p>The number of states visited during the alignment process.</p>
+</dd>
+<dt>closed<span class="classifier">int</span></dt><dd><p>The number of states that were closed (i.e., fully processed and will not be revisited).</p>
+</dd>
+<dt>final_cost<span class="classifier">float</span></dt><dd><p>The cost associated with the final alignment obtained.</p>
+</dd>
+</dl>
+</section>
+<section id="id49">
+<h3>Returns<a class="headerlink" href="#id49" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary with keys corresponding to various outputs of the alignment process:
+- ‘alignment’: The final alignment between the process model and the trace.
+- ‘cost’: The cost of the final alignment   .
+- ‘visited’: The total number of visited states.
+- ‘closed’: The total number of closed states.
+- ‘model move fitness’: the fitness provided that model moves are used
+- ‘log move fitness’: the fitness provided by the log moves</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trace_or_log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply" title="Link to this definition">#</a></dt>
+<dd><p>Applies the alignment algorithm to either a single trace or an entire event log.</p>
+<p>This function serves as the main entry point for the alignment process. It determines
+whether to use the single-trace alignment or the multi-threaded log alignment based on
+the input type and size.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>trace_or_log (Union[pd.DataFrame, EventLog, Trace]): The input trace or log to be aligned.
+graph (DcrGraph): The DCR graph against which the alignment will be performed.
+parameters (dict, optional): Additional parameters for the alignment process.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Union[List[Dict[str, Any]], Dict[str, Any]]: The alignment results. For a single trace,
+it returns a dictionary. For a log, it returns a list of dictionaries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply_original">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">apply_original</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#apply_original"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply_original" title="Link to this definition">#</a></dt>
+<dd><p>Applies the alignment algorithm to an event log without using multithreading.
+This function is used for smaller logs (less than 100 traces).</p>
+<section id="id50">
+<h3>Parameters:<a class="headerlink" href="#id50" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>log<span class="classifier">EventLog</span></dt><dd><p>The event log to be aligned.</p>
+</dd>
+<dt>graph<span class="classifier">DcrGraph</span></dt><dd><p>The DCR graph against which the alignment will be performed.</p>
+</dd>
+<dt>parameters<span class="classifier">dict, optional</span></dt><dd><p>Additional parameters for the alignment process.</p>
+</dd>
+</dl>
+</section>
+<section id="id51">
+<h3>Returns:<a class="headerlink" href="#id51" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>List[Dict[str, Any]]</dt><dd><p>A list of dictionaries, each containing the alignment results for a single trace.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply_multithreaded">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">apply_multithreaded</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trace_or_log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Trace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#apply_multithreaded"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply_multithreaded" title="Link to this definition">#</a></dt>
+<dd><p>Applies the multithreaded alignment algorithm to either a single trace or an entire event log.</p>
+<p>This function is similar to ‘apply’, but it always uses the multithreaded approach for log alignment,
+regardless of the log size. It’s useful when processing large logs or when maximum performance is required.</p>
+<dl class="simple">
+<dt>Parameters:</dt><dd><p>trace_or_log (Union[pd.DataFrame, EventLog, Trace]): The input trace or log to be aligned.
+graph (DcrGraph): The DCR graph against which the alignment will be performed.
+parameters (dict, optional): Additional parameters for the alignment process.</p>
+</dd>
+<dt>Returns:</dt><dd><p>Union[List[Dict[str, Any]], Dict[str, Any]]: The alignment results. For a single trace,
+it returns a dictionary. For a log, it returns a list of dictionaries.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.get_diagnostics_dataframe">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.</span></span><span class="sig-name descname"><span class="pre">get_diagnostics_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conf_result</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal_multithreaded.html#get_diagnostics_dataframe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.get_diagnostics_dataframe" title="Link to this definition">#</a></dt>
+<dd><p>Gets the diagnostics dataframe from a log and the conformance results</p>
+<section id="id52">
+<h3>Parameters<a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>log</dt><dd><p>Event log</p>
+</dd>
+<dt>conf_result</dt><dd><p>Results of conformance checking</p>
+</dd>
+<dt>variant</dt><dd><p>Variant to be used:
+- Variants.CLASSIC</p>
+</dd>
+<dt>parameters</dt><dd><p>Variant-specific parameters</p>
+</dd>
+</dl>
+</section>
+<section id="id53">
+<h3>Returns<a class="headerlink" href="#id53" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>diagn_dataframe</dt><dd><p>Diagnostics dataframe</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.algo.conformance.alignments.dcr.variants">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pm4py.algo.conformance.alignments.dcr.variants" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.conformance.alignments.dcr.variants.optimal">pm4py.algo.conformance.alignments.dcr.variants.optimal module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment"><code class="docutils literal notranslate"><span class="pre">LogAlignment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment.perform_log_alignment"><code class="docutils literal notranslate"><span class="pre">LogAlignment.perform_log_alignment()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment"><code class="docutils literal notranslate"><span class="pre">TraceAlignment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.perform_alignment"><code class="docutils literal notranslate"><span class="pre">TraceAlignment.perform_alignment()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.get_performance_metrics"><code class="docutils literal notranslate"><span class="pre">TraceAlignment.get_performance_metrics()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters"><code class="docutils literal notranslate"><span class="pre">Parameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.CASE_ID_KEY"><code class="docutils literal notranslate"><span class="pre">Parameters.CASE_ID_KEY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.ACTIVITY_KEY"><code class="docutils literal notranslate"><span class="pre">Parameters.ACTIVITY_KEY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.SYNC_COST"><code class="docutils literal notranslate"><span class="pre">Parameters.SYNC_COST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.MODEL_COST"><code class="docutils literal notranslate"><span class="pre">Parameters.MODEL_COST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters.LOG_COST"><code class="docutils literal notranslate"><span class="pre">Parameters.LOG_COST</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs"><code class="docutils literal notranslate"><span class="pre">Outputs</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.ALIGNMENT"><code class="docutils literal notranslate"><span class="pre">Outputs.ALIGNMENT</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.COST"><code class="docutils literal notranslate"><span class="pre">Outputs.COST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.VISITED"><code class="docutils literal notranslate"><span class="pre">Outputs.VISITED</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.CLOSED"><code class="docutils literal notranslate"><span class="pre">Outputs.CLOSED</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.GLOBAL_MIN"><code class="docutils literal notranslate"><span class="pre">Outputs.GLOBAL_MIN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.ALIGN_FITNESS"><code class="docutils literal notranslate"><span class="pre">Outputs.ALIGN_FITNESS</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs.BEST_WORST_COST"><code class="docutils literal notranslate"><span class="pre">Outputs.BEST_WORST_COST</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance"><code class="docutils literal notranslate"><span class="pre">Performance</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance.calculate_fitness"><code class="docutils literal notranslate"><span class="pre">Performance.calculate_fitness()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler"><code class="docutils literal notranslate"><span class="pre">TraceHandler</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.is_empty"><code class="docutils literal notranslate"><span class="pre">TraceHandler.is_empty()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.get_first_activity"><code class="docutils literal notranslate"><span class="pre">TraceHandler.get_first_activity()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_enabled"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.is_enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.enabled"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_accepting"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.is_accepting()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.execute"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.execute()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment"><code class="docutils literal notranslate"><span class="pre">Alignment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.handle_state"><code class="docutils literal notranslate"><span class="pre">Alignment.handle_state()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.get_new_state"><code class="docutils literal notranslate"><span class="pre">Alignment.get_new_state()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.update_closed_and_visited_sets"><code class="docutils literal notranslate"><span class="pre">Alignment.update_closed_and_visited_sets()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.process_current_state"><code class="docutils literal notranslate"><span class="pre">Alignment.process_current_state()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.check_accepting_conditions"><code class="docutils literal notranslate"><span class="pre">Alignment.check_accepting_conditions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.apply_trace"><code class="docutils literal notranslate"><span class="pre">Alignment.apply_trace()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.skip_current"><code class="docutils literal notranslate"><span class="pre">Alignment.skip_current()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.perform_moves"><code class="docutils literal notranslate"><span class="pre">Alignment.perform_moves()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.construct_results"><code class="docutils literal notranslate"><span class="pre">Alignment.construct_results()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal.get_diagnostics_dataframe"><code class="docutils literal notranslate"><span class="pre">get_diagnostics_dataframe()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded">pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">References</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment"><code class="docutils literal notranslate"><span class="pre">LogAlignment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment.perform_log_alignment"><code class="docutils literal notranslate"><span class="pre">LogAlignment.perform_log_alignment()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.LogAlignment.process_chunk"><code class="docutils literal notranslate"><span class="pre">LogAlignment.process_chunk()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment"><code class="docutils literal notranslate"><span class="pre">TraceAlignment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment.perform_alignment"><code class="docutils literal notranslate"><span class="pre">TraceAlignment.perform_alignment()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceAlignment.get_performance_metrics"><code class="docutils literal notranslate"><span class="pre">TraceAlignment.get_performance_metrics()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters"><code class="docutils literal notranslate"><span class="pre">Parameters</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.CASE_ID_KEY"><code class="docutils literal notranslate"><span class="pre">Parameters.CASE_ID_KEY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.ACTIVITY_KEY"><code class="docutils literal notranslate"><span class="pre">Parameters.ACTIVITY_KEY</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.SYNC_COST"><code class="docutils literal notranslate"><span class="pre">Parameters.SYNC_COST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.MODEL_COST"><code class="docutils literal notranslate"><span class="pre">Parameters.MODEL_COST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Parameters.LOG_COST"><code class="docutils literal notranslate"><span class="pre">Parameters.LOG_COST</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs"><code class="docutils literal notranslate"><span class="pre">Outputs</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.ALIGNMENT"><code class="docutils literal notranslate"><span class="pre">Outputs.ALIGNMENT</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.COST"><code class="docutils literal notranslate"><span class="pre">Outputs.COST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.VISITED"><code class="docutils literal notranslate"><span class="pre">Outputs.VISITED</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.CLOSED"><code class="docutils literal notranslate"><span class="pre">Outputs.CLOSED</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.GLOBAL_MIN"><code class="docutils literal notranslate"><span class="pre">Outputs.GLOBAL_MIN</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.ALIGN_FITNESS"><code class="docutils literal notranslate"><span class="pre">Outputs.ALIGN_FITNESS</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Outputs.BEST_WORST_COST"><code class="docutils literal notranslate"><span class="pre">Outputs.BEST_WORST_COST</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Performance"><code class="docutils literal notranslate"><span class="pre">Performance</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Performance.calculate_fitness"><code class="docutils literal notranslate"><span class="pre">Performance.calculate_fitness()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler"><code class="docutils literal notranslate"><span class="pre">TraceHandler</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler.is_empty"><code class="docutils literal notranslate"><span class="pre">TraceHandler.is_empty()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.TraceHandler.get_first_activity"><code class="docutils literal notranslate"><span class="pre">TraceHandler.get_first_activity()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.is_enabled"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.is_enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.enabled"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.is_accepting"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.is_accepting()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.DCRGraphHandler.execute"><code class="docutils literal notranslate"><span class="pre">DCRGraphHandler.execute()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment"><code class="docutils literal notranslate"><span class="pre">Alignment</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.handle_state"><code class="docutils literal notranslate"><span class="pre">Alignment.handle_state()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.get_new_state"><code class="docutils literal notranslate"><span class="pre">Alignment.get_new_state()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.update_closed_and_visited_sets"><code class="docutils literal notranslate"><span class="pre">Alignment.update_closed_and_visited_sets()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.process_current_state"><code class="docutils literal notranslate"><span class="pre">Alignment.process_current_state()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.check_accepting_conditions"><code class="docutils literal notranslate"><span class="pre">Alignment.check_accepting_conditions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.apply_trace"><code class="docutils literal notranslate"><span class="pre">Alignment.apply_trace()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.skip_current"><code class="docutils literal notranslate"><span class="pre">Alignment.skip_current()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.perform_moves"><code class="docutils literal notranslate"><span class="pre">Alignment.perform_moves()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.Alignment.construct_results"><code class="docutils literal notranslate"><span class="pre">Alignment.construct_results()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply_original"><code class="docutils literal notranslate"><span class="pre">apply_original()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.apply_multithreaded"><code class="docutils literal notranslate"><span class="pre">apply_multithreaded()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.conformance.alignments.dcr.variants.optimal_multithreaded.get_diagnostics_dataframe"><code class="docutils literal notranslate"><span class="pre">get_diagnostics_dataframe()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.conformance.alignments.dcr.variants">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/pm4py.algo.conformance.alignments.dcr.variants.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

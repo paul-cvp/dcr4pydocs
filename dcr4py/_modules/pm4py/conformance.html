@@ -1,0 +1,1353 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.conformance &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/conformance';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.conformance</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.conformance</h1><div class="highlight"><pre>
+<span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This file is part of PM4Py (More Info: https://pm4py.fit.fraunhofer.de).</span>
+
+<span class="sd">    PM4Py is free software: you can redistribute it and/or modify</span>
+<span class="sd">    it under the terms of the GNU General Public License as published by</span>
+<span class="sd">    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="sd">    (at your option) any later version.</span>
+
+<span class="sd">    PM4Py is distributed in the hope that it will be useful,</span>
+<span class="sd">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="sd">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="sd">    GNU General Public License for more details.</span>
+
+<span class="sd">    You should have received a copy of the GNU General Public License</span>
+<span class="sd">    along with PM4Py.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">The ``pm4py.conformance`` module contains the conformance checking algorithms implemented in ``pm4py``</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">Trace</span><span class="p">,</span> <span class="n">Event</span><span class="p">,</span> <span class="n">EventStream</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span>
+<span class="kn">from</span> <span class="nn">pm4py.convert</span> <span class="kn">import</span> <span class="n">convert_to_event_log</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.obj</span> <span class="kn">import</span> <span class="n">ProcessTree</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">DcrGraph</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">xes_constants</span><span class="p">,</span> <span class="n">constants</span>
+<span class="kn">from</span> <span class="nn">pm4py.utils</span> <span class="kn">import</span> <span class="n">get_properties</span><span class="p">,</span> <span class="n">__event_log_deprecation_warning</span>
+<span class="kn">from</span> <span class="nn">pm4py.util.pandas_utils</span> <span class="kn">import</span> <span class="n">check_is_pandas_dataframe</span><span class="p">,</span> <span class="n">check_pandas_dataframe_columns</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">deprecation</span>
+
+
+<div class="viewcode-block" id="conformance_diagnostics_token_based_replay">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_diagnostics_token_based_replay">[docs]</a>
+<span class="k">def</span> <span class="nf">conformance_diagnostics_token_based_replay</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">petri_net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span>
+                                               <span class="n">final_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span><span class="p">,</span> <span class="n">opt_parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply token-based replay for conformance checking analysis.</span>
+<span class="sd">    The methods return the full token-based-replay diagnostics.</span>
+
+<span class="sd">    Token-based replay matches a trace and a Petri net model, starting from the initial place, in order to discover which transitions are executed and in which places we have remaining or missing tokens for the given process instance. Token-based replay is useful for Conformance Checking: indeed, a trace is fitting according to the model if, during its execution, the transitions can be fired without the need to insert any missing token. If the reaching of the final marking is imposed, then a trace is fitting if it reaches the final marking without any missing or remaining tokens.</span>
+
+<span class="sd">    In PM4Py there is an implementation of a token replayer that is able to go across hidden transitions (calculating shortest paths between places) and can be used with any Petri net model with unique visible transitions and hidden transitions. When a visible transition needs to be fired and not all places in the preset are provided with the correct number of tokens, starting from the current marking it is checked if for some place there is a sequence of hidden transitions that could be fired in order to enable the visible transition. The hidden transitions are then fired and a marking that permits to enable the visible transition is reached.</span>
+<span class="sd">    The approach is described in:</span>
+<span class="sd">    Berti, Alessandro, and Wil MP van der Aalst. &quot;Reviving Token-based Replay: Increasing Speed While Improving Diagnostics.&quot; ATAED@ Petri Nets/ACSD. 2019.</span>
+
+<span class="sd">    The output of the token-based replay, stored in the variable replayed_traces, contains for each trace of the log:</span>
+
+<span class="sd">    - trace_is_fit: boolean value (True/False) that is true when the trace is according to the model.</span>
+<span class="sd">    - activated_transitions: list of transitions activated in the model by the token-based replay.</span>
+<span class="sd">    - reached_marking: marking reached at the end of the replay.</span>
+<span class="sd">    - missing_tokens: number of missing tokens.</span>
+<span class="sd">    - consumed_tokens: number of consumed tokens.</span>
+<span class="sd">    - remaining_tokens: number of remaining tokens.</span>
+<span class="sd">    - produced_tokens: number of produced tokens.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param petri_net: petri net</span>
+<span class="sd">    :param initial_marking: initial marking</span>
+<span class="sd">    :param final_marking: final marking</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param return_diagnostics_dataframe: if possible, returns a dataframe with the diagnostics (instead of the usual output)</span>
+<span class="sd">    :param opt_parameters: optional parameters of the token-based replay, including:</span>
+<span class="sd">        * reach_mark_through_hidden: boolean value that decides if we shall try to reach the final marking through hidden transitions</span>
+<span class="sd">        * stop_immediately_unfit: boolean value that decides if we shall stop immediately when a non-conformance is detected</span>
+<span class="sd">        * walk_through_hidden_trans: boolean value that decides if we shall walk through hidden transitions in order to enable visible transitions</span>
+<span class="sd">        * places_shortest_path_by_hidden: shortest paths between places by hidden transitions</span>
+<span class="sd">        * is_reduction: expresses if the token-based replay is called in a reduction attempt</span>
+<span class="sd">        * thread_maximum_ex_time: alignment threads maximum allowed execution time</span>
+<span class="sd">        * cleaning_token_flood: decides if a cleaning of the token flood shall be operated</span>
+<span class="sd">        * disable_variants: disable variants grouping</span>
+<span class="sd">        * return_object_names: decides whether names instead of object pointers shall be returned</span>
+<span class="sd">    :rtype: ``List[Dict[str, Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        tbr_diagnostics = pm4py.conformance_diagnostics_token_based_replay(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">opt_parameters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">opt_parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">opt_parameters</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">properties</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.tokenreplay</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">token_replay</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">token_replay</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">petri_net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">token_replay</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="conformance_diagnostics_alignments">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_diagnostics_alignments">[docs]</a>
+<span class="k">def</span> <span class="nf">conformance_diagnostics_alignments</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">multi_processing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENABLE_MULTIPROCESSING_DEFAULT</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">variant_str</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Apply the alignments algorithm between a log and a process model.</span>
+<span class="sd">    The methods return the full alignment diagnostics.</span>
+
+<span class="sd">    Alignment-based replay aims to find one of the best alignment between the trace and the model. For each trace, the output of an alignment is a list of couples where the first element is an event (of the trace) or » and the second element is a transition (of the model) or ». For each couple, the following classification could be provided:</span>
+
+<span class="sd">    - Sync move: the classification of the event corresponds to the transition label; in this case, both the trace and the model advance in the same way during the replay.</span>
+<span class="sd">    - Move on log: for couples where the second element is », it corresponds to a replay move in the trace that is not mimicked in the model. This kind of move is unfit and signal a deviation between the trace and the model.</span>
+<span class="sd">    - Move on model: for couples where the first element is », it corresponds to a replay move in the model that is not mimicked in the trace. For moves on model, we can have the following distinction:</span>
+<span class="sd">        * Moves on model involving hidden transitions: in this case, even if it is not a sync move, the move is fit.</span>
+<span class="sd">        * Moves on model not involving hidden transitions: in this case, the move is unfit and signals a deviation between the trace and the model.</span>
+
+<span class="sd">    With each trace, a dictionary containing among the others the following information is associated:</span>
+
+<span class="sd">    alignment: contains the alignment (sync moves, moves on log, moves on model)</span>
+<span class="sd">    cost: contains the cost of the alignment according to the provided cost function</span>
+<span class="sd">    fitness: is equal to 1 if the trace is perfectly fitting.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param args: specification of the process model</span>
+<span class="sd">    :param multi_processing: boolean value that enables the multiprocessing</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param variant_str: variant specification (for Petri net alignments)</span>
+<span class="sd">    :param return_diagnostics_dataframe: if possible, returns a dataframe with the diagnostics (instead of the usual output)</span>
+<span class="sd">    :rtype: ``List[Dict[str, Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        alignments_diagnostics = pm4py.conformance_diagnostics_alignments(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">kwargs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">properties</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="n">PetriNet</span><span class="p">:</span>
+            <span class="c1"># Petri net alignments</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.petri_net</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alignments</span>
+            <span class="n">variant</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">DEFAULT_VARIANT</span>
+            <span class="k">if</span> <span class="n">variant_str</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">variant</span> <span class="o">=</span> <span class="n">variant_str</span>
+            <span class="k">if</span> <span class="n">multi_processing</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">apply_multiprocessing</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">variant</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">variant</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">alignments</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="c1"># DFG alignments</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.dfg</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dfg_alignment</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">dfg_alignment</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">result</span>
+    <span class="k">elif</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">is</span> <span class="n">ProcessTree</span><span class="p">:</span>
+            <span class="c1"># process tree alignments</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.process_tree.variants</span> <span class="kn">import</span> <span class="n">search_graph_pt</span>
+            <span class="k">if</span> <span class="n">multi_processing</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">search_graph_pt</span><span class="o">.</span><span class="n">apply_multiprocessing</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">search_graph_pt</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">in</span> <span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+            <span class="c1"># edit distance alignments (log2log)</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.edit_distance</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">edit_distance_alignments</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">edit_distance_alignments</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="n">result</span>
+    <span class="c1"># try to convert to Petri net</span>
+    <span class="kn">import</span> <span class="nn">pm4py</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.petri_net</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alignments</span>
+    <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">convert_to_petri_net</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">multi_processing</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">apply_multiprocessing</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">alignments</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="fitness_token_based_replay">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.fitness_token_based_replay">[docs]</a>
+<span class="k">def</span> <span class="nf">fitness_token_based_replay</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">petri_net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> \
+        <span class="n">Dict</span><span class="p">[</span>
+            <span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the fitness using token-based replay.</span>
+<span class="sd">    The fitness is calculated on a log-based level.</span>
+<span class="sd">    The output dictionary contains the following keys:</span>
+<span class="sd">    - perc_fit_traces (the percentage of fit traces (from 0.0 to 100.0))</span>
+<span class="sd">    - average_trace_fitness (between 0.0 and 1.0; computed as average of the trace fitnesses)</span>
+<span class="sd">    - log_fitness (between 0.0 and 1.0)</span>
+<span class="sd">    - percentage_of_fitting_traces (the percentage of fit traces (from 0.0 to 100.0)</span>
+
+<span class="sd">    Token-based replay matches a trace and a Petri net model, starting from the initial place, in order to discover which transitions are executed and in which places we have remaining or missing tokens for the given process instance. Token-based replay is useful for Conformance Checking: indeed, a trace is fitting according to the model if, during its execution, the transitions can be fired without the need to insert any missing token. If the reaching of the final marking is imposed, then a trace is fitting if it reaches the final marking without any missing or remaining tokens.</span>
+
+<span class="sd">    In PM4Py there is an implementation of a token replayer that is able to go across hidden transitions (calculating shortest paths between places) and can be used with any Petri net model with unique visible transitions and hidden transitions. When a visible transition needs to be fired and not all places in the preset are provided with the correct number of tokens, starting from the current marking it is checked if for some place there is a sequence of hidden transitions that could be fired in order to enable the visible transition. The hidden transitions are then fired and a marking that permits to enable the visible transition is reached.</span>
+<span class="sd">    The approach is described in:</span>
+<span class="sd">    Berti, Alessandro, and Wil MP van der Aalst. &quot;Reviving Token-based Replay: Increasing Speed While Improving Diagnostics.&quot; ATAED@ Petri Nets/ACSD. 2019.</span>
+
+<span class="sd">    The calculation of the replay fitness aim to calculate how much of the behavior in the log is admitted by the process model. We propose two methods to calculate replay fitness, based on token-based replay and alignments respectively.</span>
+
+<span class="sd">    For token-based replay, the percentage of traces that are completely fit is returned, along with a fitness value that is calculated as indicated in the scientific contribution</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param petri_net: petri net</span>
+<span class="sd">    :param initial_marking: initial marking</span>
+<span class="sd">    :param final_marking: final marking</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Dict[str, float]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        fitness_tbr = pm4py.fitness_token_based_replay(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.replay_fitness</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">replay_fitness</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">replay_fitness</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">petri_net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span>
+                                <span class="n">variant</span><span class="o">=</span><span class="n">replay_fitness</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TOKEN_BASED</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="fitness_alignments">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.fitness_alignments">[docs]</a>
+<span class="k">def</span> <span class="nf">fitness_alignments</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">petri_net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">multi_processing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENABLE_MULTIPROCESSING_DEFAULT</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">variant_str</span> <span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> \
+        <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the fitness using alignments</span>
+<span class="sd">    The output dictionary contains the following keys:</span>
+<span class="sd">    - average_trace_fitness (between 0.0 and 1.0; computed as average of the trace fitnesses)</span>
+<span class="sd">    - log_fitness (between 0.0 and 1.0)</span>
+<span class="sd">    - percentage_of_fitting_traces (the percentage of fit traces (from 0.0 to 100.0)</span>
+
+<span class="sd">    Alignment-based replay aims to find one of the best alignment between the trace and the model. For each trace, the output of an alignment is a list of couples where the first element is an event (of the trace) or » and the second element is a transition (of the model) or ». For each couple, the following classification could be provided:</span>
+
+<span class="sd">    - Sync move: the classification of the event corresponds to the transition label; in this case, both the trace and the model advance in the same way during the replay.</span>
+<span class="sd">    - Move on log: for couples where the second element is », it corresponds to a replay move in the trace that is not mimicked in the model. This kind of move is unfit and signal a deviation between the trace and the model.</span>
+<span class="sd">    - Move on model: for couples where the first element is », it corresponds to a replay move in the model that is not mimicked in the trace. For moves on model, we can have the following distinction:</span>
+<span class="sd">        * Moves on model involving hidden transitions: in this case, even if it is not a sync move, the move is fit.</span>
+<span class="sd">        * Moves on model not involving hidden transitions: in this case, the move is unfit and signals a deviation between the trace and the model.</span>
+
+<span class="sd">    The calculation of the replay fitness aim to calculate how much of the behavior in the log is admitted by the process model. We propose two methods to calculate replay fitness, based on token-based replay and alignments respectively.</span>
+
+<span class="sd">    For alignments, the percentage of traces that are completely fit is returned, along with a fitness value that is calculated as the average of the fitness values of the single traces.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param petri_net: petri net</span>
+<span class="sd">    :param initial_marking: initial marking</span>
+<span class="sd">    :param final_marking: final marking</span>
+<span class="sd">    :param multi_processing: boolean value that enables the multiprocessing</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param variant_str: variant specification</span>
+<span class="sd">    :rtype: ``Dict[str, float]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        fitness_alignments = pm4py.fitness_alignments(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.replay_fitness</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">replay_fitness</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;multiprocessing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_processing</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">replay_fitness</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">petri_net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span>
+                                <span class="n">variant</span><span class="o">=</span><span class="n">replay_fitness</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ALIGNMENT_BASED</span><span class="p">,</span> <span class="n">align_variant</span><span class="o">=</span><span class="n">variant_str</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="precision_token_based_replay">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.precision_token_based_replay">[docs]</a>
+<span class="k">def</span> <span class="nf">precision_token_based_replay</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">petri_net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span>
+                                 <span class="n">final_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the precision precision using token-based replay</span>
+
+<span class="sd">    Token-based replay matches a trace and a Petri net model, starting from the initial place, in order to discover which transitions are executed and in which places we have remaining or missing tokens for the given process instance. Token-based replay is useful for Conformance Checking: indeed, a trace is fitting according to the model if, during its execution, the transitions can be fired without the need to insert any missing token. If the reaching of the final marking is imposed, then a trace is fitting if it reaches the final marking without any missing or remaining tokens.</span>
+
+<span class="sd">    In PM4Py there is an implementation of a token replayer that is able to go across hidden transitions (calculating shortest paths between places) and can be used with any Petri net model with unique visible transitions and hidden transitions. When a visible transition needs to be fired and not all places in the preset are provided with the correct number of tokens, starting from the current marking it is checked if for some place there is a sequence of hidden transitions that could be fired in order to enable the visible transition. The hidden transitions are then fired and a marking that permits to enable the visible transition is reached.</span>
+<span class="sd">    The approach is described in:</span>
+<span class="sd">    Berti, Alessandro, and Wil MP van der Aalst. &quot;Reviving Token-based Replay: Increasing Speed While Improving Diagnostics.&quot; ATAED@ Petri Nets/ACSD. 2019.</span>
+
+<span class="sd">    The reference paper for the TBR-based precision (ETConformance) is:</span>
+<span class="sd">    Muñoz-Gama, Jorge, and Josep Carmona. &quot;A fresh look at precision in process conformance.&quot; International Conference on Business Process Management. Springer, Berlin, Heidelberg, 2010.</span>
+
+<span class="sd">    In this approach, the different prefixes of the log are replayed (whether possible) on the model. At the reached marking, the set of transitions that are enabled in the process model is compared with the set of activities that follow the prefix. The more the sets are different, the more the precision value is low. The more the sets are similar, the more the precision value is high.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param petri_net: petri net</span>
+<span class="sd">    :param initial_marking: initial marking</span>
+<span class="sd">    :param final_marking: final marking</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``float``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        precision_tbr = pm4py.precision_token_based_replay(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.precision</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">precision_evaluator</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">precision_evaluator</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">petri_net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span>
+                                     <span class="n">variant</span><span class="o">=</span><span class="n">precision_evaluator</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ETCONFORMANCE_TOKEN</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="precision_alignments">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.precision_alignments">[docs]</a>
+<span class="k">def</span> <span class="nf">precision_alignments</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">petri_net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span>
+                         <span class="n">final_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">multi_processing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENABLE_MULTIPROCESSING_DEFAULT</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the precision of the model w.r.t. the event log using alignments</span>
+
+<span class="sd">    Alignment-based replay aims to find one of the best alignment between the trace and the model. For each trace, the output of an alignment is a list of couples where the first element is an event (of the trace) or » and the second element is a transition (of the model) or ». For each couple, the following classification could be provided:</span>
+
+<span class="sd">    - Sync move: the classification of the event corresponds to the transition label; in this case, both the trace and the model advance in the same way during the replay.</span>
+<span class="sd">    - Move on log: for couples where the second element is », it corresponds to a replay move in the trace that is not mimicked in the model. This kind of move is unfit and signal a deviation between the trace and the model.</span>
+<span class="sd">    - Move on model: for couples where the first element is », it corresponds to a replay move in the model that is not mimicked in the trace. For moves on model, we can have the following distinction:</span>
+<span class="sd">        * Moves on model involving hidden transitions: in this case, even if it is not a sync move, the move is fit.</span>
+<span class="sd">        * Moves on model not involving hidden transitions: in this case, the move is unfit and signals a deviation between the trace and the model.</span>
+
+<span class="sd">    The reference paper for the alignments-based precision (Align-ETConformance) is:</span>
+<span class="sd">    Adriansyah, Arya, et al. &quot;Measuring precision of modeled behavior.&quot; Information systems and e-Business Management 13.1 (2015): 37-67</span>
+
+<span class="sd">    In this approach, the different prefixes of the log are replayed (whether possible) on the model. At the reached marking, the set of transitions that are enabled in the process model is compared with the set of activities that follow the prefix. The more the sets are different, the more the precision value is low. The more the sets are similar, the more the precision value is high.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param petri_net: petri net</span>
+<span class="sd">    :param initial_marking: initial marking</span>
+<span class="sd">    :param final_marking: final marking</span>
+<span class="sd">    :param multi_processing: boolean value that enables the multiprocessing</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``float``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        precision_alignments = pm4py.precision_alignments(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.precision</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">precision_evaluator</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;multiprocessing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_processing</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">precision_evaluator</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">petri_net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span>
+                                     <span class="n">variant</span><span class="o">=</span><span class="n">precision_evaluator</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ALIGN_ETCONFORMANCE</span><span class="p">,</span>
+                                     <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="generalization_tbr">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.generalization_tbr">[docs]</a>
+<span class="k">def</span> <span class="nf">generalization_tbr</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">petri_net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span>
+                                 <span class="n">final_marking</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Computes the generalization of the model (against the event log). The approach is described in the paper:</span>
+
+<span class="sd">    Buijs, Joos CAM, Boudewijn F. van Dongen, and Wil MP van der Aalst. &quot;Quality dimensions in process discovery: The importance of fitness, precision, generalization and simplicity.&quot; International Journal of Cooperative Information Systems 23.01 (2014): 1440001.</span>
+
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param petri_net: petri net</span>
+<span class="sd">    :param initial_marking: initial marking</span>
+<span class="sd">    :param final_marking: final marking</span>
+<span class="sd">    :param multi_processing: boolean value that enables the multiprocessing</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``float``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        generalization_tbr = pm4py.generalization_tbr(dataframe, net, im, fm)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.generalization</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">generalization_evaluator</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">generalization_evaluator</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">petri_net</span><span class="p">,</span> <span class="n">initial_marking</span><span class="p">,</span> <span class="n">final_marking</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">generalization_evaluator</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">GENERALIZATION_TOKEN</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="replay_prefix_tbr">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.replay_prefix_tbr">[docs]</a>
+<span class="k">def</span> <span class="nf">replay_prefix_tbr</span><span class="p">(</span><span class="n">prefix</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">im</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">fm</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Marking</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Replays a prefix (list of activities) on a given accepting Petri net, using Token-Based Replay.</span>
+
+<span class="sd">    :param prefix: list of activities</span>
+<span class="sd">    :param net: Petri net</span>
+<span class="sd">    :param im: initial marking</span>
+<span class="sd">    :param fm: final marking</span>
+<span class="sd">    :param activity_key: attribute to be used as activity</span>
+<span class="sd">    :rtype:  ``Marking``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.read_pnml(&#39;tests/input_data/running-example.pnml&#39;)</span>
+<span class="sd">        marking = pm4py.replay_prefix_tbr([&#39;register request&#39;, &#39;check ticket&#39;], net, im, fm)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">purpose_log</span> <span class="o">=</span> <span class="n">EventLog</span><span class="p">()</span>
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">Trace</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">prefix</span><span class="p">:</span>
+        <span class="n">trace</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Event</span><span class="p">({</span><span class="n">activity_key</span><span class="p">:</span> <span class="n">act</span><span class="p">}))</span>
+    <span class="n">purpose_log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.tokenreplay.variants</span> <span class="kn">import</span> <span class="n">token_replay</span>
+    <span class="n">parameters_tr</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">token_replay</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">CONSIDER_REMAINING_IN_FITNESS</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">token_replay</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">TRY_TO_REACH_FINAL_MARKING_THROUGH_HIDDEN</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="n">token_replay</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">STOP_IMMEDIATELY_UNFIT</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">token_replay</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">WALK_THROUGH_HIDDEN_TRANS</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">token_replay</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">ACTIVITY_KEY</span><span class="p">:</span> <span class="n">activity_key</span>
+    <span class="p">}</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">token_replay</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">purpose_log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters_tr</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">res</span><span class="p">[</span><span class="s2">&quot;reached_marking&quot;</span><span class="p">]</span></div>
+
+
+
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;conformance checking using footprints will not be exposed in a future release&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">__convert_to_fp</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Internal method to convert the provided event log / process model argument</span>
+<span class="sd">    to footprints (using footprints discovery)</span>
+
+<span class="sd">    :param args: event log / process model</span>
+<span class="sd">    :rtype: ``Union[List[Dict[str, Any]], Dict[str, Any]]``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">pm4py</span>
+    <span class="k">while</span> <span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">tuple</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">fp</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">discover_footprints</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">fp</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="ow">or</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">args</span>
+    <span class="n">fp</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">discover_footprints</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">fp</span>
+
+
+<div class="viewcode-block" id="conformance_diagnostics_footprints">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_diagnostics_footprints">[docs]</a>
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;conformance checking using footprints will not be exposed in a future release&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">conformance_diagnostics_footprints</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Provide conformance checking diagnostics using footprints</span>
+
+<span class="sd">    :param args: provided arguments (the first argument is supposed to be an event log (or the footprints discovered from the event log); the other arguments are supposed to be the process model (or the footprints discovered from the process model).</span>
+<span class="sd">    :rtype: ``Union[List[Dict[str, Any]], Dict[str, Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        footprints_diagnostics = pm4py.conformance_diagnostics_footprints(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fp1</span> <span class="o">=</span> <span class="n">__convert_to_fp</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">fp2</span> <span class="o">=</span> <span class="n">__convert_to_fp</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_conformance</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">fp1</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp1</span><span class="p">,</span> <span class="n">fp2</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">footprints_conformance</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TRACE_EXTENSIVE</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp1</span><span class="p">,</span> <span class="n">fp2</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">footprints_conformance</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">LOG_EXTENSIVE</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="fitness_footprints">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.fitness_footprints">[docs]</a>
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;conformance checking using footprints will not be exposed in a future release&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">fitness_footprints</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates fitness using footprints. The output is a dictionary containing two keys:</span>
+<span class="sd">    - perc_fit_traces =&gt; percentage of fit traces (over the log)</span>
+<span class="sd">    - log_fitness =&gt; the fitness value over the log</span>
+
+<span class="sd">    :param args: provided arguments (the first argument is supposed to be an event log (or the footprints discovered from the event log); the other arguments are supposed to be the process model (or the footprints discovered from the process model).</span>
+<span class="sd">    :rtype: ``Dict[str, float]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        fitness_fp = pm4py.fitness_footprints(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fp_conf</span> <span class="o">=</span> <span class="n">conformance_diagnostics_footprints</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">fp1</span> <span class="o">=</span> <span class="n">__convert_to_fp</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">fp2</span> <span class="o">=</span> <span class="n">__convert_to_fp</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.footprints.util</span> <span class="kn">import</span> <span class="n">evaluation</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">evaluation</span><span class="o">.</span><span class="n">fp_fitness</span><span class="p">(</span><span class="n">fp1</span><span class="p">,</span> <span class="n">fp2</span><span class="p">,</span> <span class="n">fp_conf</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="precision_footprints">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.precision_footprints">[docs]</a>
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;conformance checking using footprints will not be exposed in a future release&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">precision_footprints</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates precision using footprints</span>
+
+<span class="sd">    :param args: provided arguments (the first argument is supposed to be an event log (or the footprints discovered from the event log); the other arguments are supposed to be the process model (or the footprints discovered from the process model).</span>
+<span class="sd">    :rtype: ``float``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        precision_fp = pm4py.precision_footprints(dataframe, net, im, fm, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">fp1</span> <span class="o">=</span> <span class="n">__convert_to_fp</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">fp2</span> <span class="o">=</span> <span class="n">__convert_to_fp</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.footprints.util</span> <span class="kn">import</span> <span class="n">evaluation</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">evaluation</span><span class="o">.</span><span class="n">fp_precision</span><span class="p">(</span><span class="n">fp1</span><span class="p">,</span> <span class="n">fp2</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;this method will be removed in a future release.&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">__check_is_fit_process_tree</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">tree</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a trace object is fit against a process tree model</span>
+
+<span class="sd">    :param trace: trace</span>
+<span class="sd">    :param tree: process tree</span>
+<span class="sd">    :rtype: ``bool``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.discovery</span> <span class="kn">import</span> <span class="n">discover_footprints</span>
+    <span class="n">log</span> <span class="o">=</span> <span class="n">EventLog</span><span class="p">()</span>
+    <span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+    <span class="n">fp_tree</span> <span class="o">=</span> <span class="n">discover_footprints</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+    <span class="n">fp_log</span> <span class="o">=</span> <span class="n">discover_footprints</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+    <span class="n">fp_conf_res</span> <span class="o">=</span> <span class="n">conformance_diagnostics_footprints</span><span class="p">(</span><span class="n">fp_log</span><span class="p">,</span> <span class="n">fp_tree</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1"># CHECK 1) if footprints already say is not fit, then return False</span>
+    <span class="c1"># (if they say True, it might be a false positive)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">fp_conf_res</span><span class="p">[</span><span class="s2">&quot;is_footprints_fit&quot;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.convert</span> <span class="kn">import</span> <span class="n">convert_to_petri_net</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">convert_to_petri_net</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+        <span class="n">tbr_conf_res</span> <span class="o">=</span> <span class="n">conformance_diagnostics_token_based_replay</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># CHECK 2) if TBR says that is fit, then return True</span>
+        <span class="c1"># (if they say False, it might be a false negative)</span>
+        <span class="k">if</span> <span class="n">tbr_conf_res</span><span class="p">[</span><span class="s2">&quot;trace_is_fit&quot;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># CHECK 3) alignments definitely say if the trace is fit or not if the previous methods fail</span>
+            <span class="n">align_conf_res</span> <span class="o">=</span> <span class="n">conformance_diagnostics_alignments</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">tree</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">align_conf_res</span><span class="p">[</span><span class="s2">&quot;fitness&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span>
+
+
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;this method will be removed in a future release.&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">__check_is_fit_petri_net</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_NAME_KEY</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a trace object is fit against Petri net object</span>
+
+<span class="sd">    :param trace: trace</span>
+<span class="sd">    :param net: petri net</span>
+<span class="sd">    :param im: initial marking</span>
+<span class="sd">    :param fm: final marking</span>
+<span class="sd">    :param activity_key: attribute to be used as activity</span>
+<span class="sd">    :rtype: ``bool``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+
+    <span class="c1"># avoid checking footprints on Petri net (they are too slow)</span>
+    <span class="n">activities_model</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">trans</span><span class="o">.</span><span class="n">label</span> <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">transitions</span> <span class="k">if</span> <span class="n">trans</span><span class="o">.</span><span class="n">label</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">activities_trace</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">x</span><span class="p">[</span><span class="n">activity_key</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">trace</span><span class="p">])</span>
+    <span class="n">diff</span> <span class="o">=</span> <span class="n">activities_trace</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">activities_model</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">diff</span><span class="p">:</span>
+        <span class="c1"># CHECK 1) there are activities in the trace that are not in the model</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">EventLog</span><span class="p">()</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+        <span class="n">tbr_conf_res</span> <span class="o">=</span> <span class="n">conformance_diagnostics_token_based_replay</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># CHECK 2) if TBR says that is fit, then return True</span>
+        <span class="c1"># (if they say False, it might be a false negative)</span>
+        <span class="k">if</span> <span class="n">tbr_conf_res</span><span class="p">[</span><span class="s2">&quot;trace_is_fit&quot;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># CHECK 3) alignments definitely say if the trace is fit or not if the previous methods fail</span>
+            <span class="n">align_conf_res</span> <span class="o">=</span> <span class="n">conformance_diagnostics_alignments</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+            <span class="k">return</span> <span class="n">align_conf_res</span><span class="p">[</span><span class="s2">&quot;fitness&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span>
+
+
+<div class="viewcode-block" id="check_is_fitting">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.check_is_fitting">[docs]</a>
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;this method will be removed in a future release.&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">check_is_fitting</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_NAME_KEY</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Checks if a trace object is fit against a process model</span>
+
+<span class="sd">    :param args: arguments (trace object; process model (process tree, petri net, BPMN))</span>
+<span class="sd">    :rtype: ``bool``</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">variants_util</span>
+    <span class="kn">from</span> <span class="nn">pm4py.convert</span> <span class="kn">import</span> <span class="n">convert_to_process_tree</span><span class="p">,</span> <span class="n">convert_to_petri_net</span>
+
+    <span class="n">trace</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">convert_to_process_tree</span><span class="p">(</span><span class="o">*</span><span class="n">model</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="c1"># the model cannot be expressed as a process tree, let&#39;s say if at least can be expressed as a Petri net</span>
+        <span class="n">model</span> <span class="o">=</span> <span class="n">convert_to_petri_net</span><span class="p">(</span><span class="o">*</span><span class="n">model</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">Trace</span><span class="p">):</span>
+        <span class="n">activities</span> <span class="o">=</span> <span class="n">variants_util</span><span class="o">.</span><span class="n">get_activities_from_variant</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+        <span class="n">trace</span> <span class="o">=</span> <span class="n">Trace</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">activities</span><span class="p">:</span>
+            <span class="n">trace</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">Event</span><span class="p">({</span><span class="n">activity_key</span><span class="p">:</span> <span class="n">act</span><span class="p">}))</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ProcessTree</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">__check_is_fit_process_tree</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PetriNet</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">__check_is_fit_petri_net</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">model</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">model</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">model</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="conformance_temporal_profile">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_temporal_profile">[docs]</a>
+<span class="k">def</span> <span class="nf">conformance_temporal_profile</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">temporal_profile</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]],</span> <span class="n">zeta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Performs conformance checking on the provided log with the provided temporal profile.</span>
+<span class="sd">    The result is a list of time-based deviations for every case.</span>
+<span class="sd">    E.g. if the log on top of which the conformance is applied is the following (1 case):</span>
+<span class="sd">    A (timestamp: 2000-01)    B (timestamp: 2002-01)</span>
+<span class="sd">    The difference between the timestamps of A and B is two years. If the temporal profile:</span>
+<span class="sd">    {(&#39;A&#39;, &#39;B&#39;): (1.5 months, 0.5 months), (&#39;A&#39;, &#39;C&#39;): (5 months, 0), (&#39;A&#39;, &#39;D&#39;): (2 months, 0)}</span>
+<span class="sd">    is specified, and zeta is set to 1, then the aforementioned case would be deviating</span>
+<span class="sd">    (considering the couple of activities (&#39;A&#39;, &#39;B&#39;)), because 2 years &gt; 1.5 months + 0.5 months.</span>
+
+<span class="sd">    :param log: log object</span>
+<span class="sd">    :param temporal_profile: temporal profile. E.g., if the log has two cases: A (timestamp: 1980-01)   B (timestamp: 1980-03)    C (timestamp: 1980-06); A (timestamp: 1990-01)   B (timestamp: 1990-02)    D (timestamp: 1990-03); The temporal profile will contain: {(&#39;A&#39;, &#39;B&#39;): (1.5 months, 0.5 months), (&#39;A&#39;, &#39;C&#39;): (5 months, 0), (&#39;A&#39;, &#39;D&#39;): (2 months, 0)}</span>
+<span class="sd">    :param zeta: number of standard deviations allowed from the average. E.g. zeta=1 allows every timestamp between AVERAGE-STDEV and AVERAGE+STDEV.</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param return_diagnostics_dataframe: if possible, returns a dataframe with the diagnostics (instead of the usual output)</span>
+<span class="sd">    :rtype: ``List[List[Tuple[float, float, float, float]]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        temporal_profile = pm4py.discover_temporal_profile(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        conformance_temporal_profile = pm4py.conformance_temporal_profile(dataframe, temporal_profile, zeta=1, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;zeta&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">zeta</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.temporal_profile</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">temporal_profile_conformance</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">temporal_profile_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">temporal_profile</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">temporal_profile_conformance</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="conformance_declare">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_declare">[docs]</a>
+<span class="k">def</span> <span class="nf">conformance_declare</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">declare_model</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies conformance checking against a DECLARE model.</span>
+
+<span class="sd">    Reference paper:</span>
+<span class="sd">    F. M. Maggi, A. J. Mooij and W. M. P. van der Aalst, &quot;User-guided discovery of declarative process models,&quot; 2011 IEEE Symposium on Computational Intelligence and Data Mining (CIDM), Paris, France, 2011, pp. 192-199, doi: 10.1109/CIDM.2011.5949297.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param declare_model: DECLARE model</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param return_diagnostics_dataframe: if possible, returns a dataframe with the diagnostics (instead of the usual output)</span>
+<span class="sd">    :rtype: ``List[Dict[str, Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        log = pm4py.read_xes(&quot;C:/receipt.xes&quot;)</span>
+<span class="sd">        declare_model = pm4py.discover_declare(log)</span>
+<span class="sd">        conf_result = pm4py.conformance_declare(log, declare_model)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span>
+                                       <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.declare</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">declare_conformance</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">declare_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">declare_model</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">declare_conformance</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="conformance_log_skeleton">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_log_skeleton">[docs]</a>
+<span class="k">def</span> <span class="nf">conformance_log_skeleton</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">log_skeleton</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Performs conformance checking using the log skeleton</span>
+
+<span class="sd">    Reference paper:</span>
+<span class="sd">    Verbeek, H. M. W., and R. Medeiros de Carvalho. &quot;Log skeletons: A classification approach to process discovery.&quot; arXiv preprint arXiv:1806.08247 (2018).</span>
+
+<span class="sd">    A log skeleton is a declarative model which consists of six different constraints:</span>
+<span class="sd">    - &quot;directly_follows&quot;: specifies for some activities some strict bounds on the activities directly-following. For example,</span>
+<span class="sd">                        &#39;A should be directly followed by B&#39; and &#39;B should be directly followed by C&#39;.</span>
+<span class="sd">    - &quot;always_before&quot;: specifies that some activities may be executed only if some other activities are executed somewhen before</span>
+<span class="sd">                        in the history of the case.</span>
+<span class="sd">                        For example, &#39;C should always be preceded by A&#39;</span>
+<span class="sd">    - &quot;always_after&quot;: specifies that some activities should always trigger the execution of some other activities</span>
+<span class="sd">                        in the future history of the case.</span>
+<span class="sd">                        For example, &#39;A should always be followed by C&#39;</span>
+<span class="sd">    - &quot;equivalence&quot;: specifies that a given couple of activities should happen with the same number of occurrences inside</span>
+<span class="sd">                        a case.</span>
+<span class="sd">                        For example, &#39;B and C should always happen the same number of times&#39;.</span>
+<span class="sd">    - &quot;never_together&quot;: specifies that a given couple of activities should never happen together in the history of the case.</span>
+<span class="sd">                        For example, &#39;there should be no case containing both C and D&#39;.</span>
+<span class="sd">    - &quot;activ_occurrences&quot;: specifies the allowed number of occurrences per activity:</span>
+<span class="sd">                        E.g. A is allowed to be executed 1 or 2 times, B is allowed to be executed 1 or 2 or 3 or 4 times.</span>
+
+<span class="sd">    :param log: log object</span>
+<span class="sd">    :param log_skeleton: log skeleton object, expressed as dictionaries of the six constraints (never_together, always_before ...) along with the discovered rules.</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param return_diagnostics_dataframe: if possible, returns a dataframe with the diagnostics (instead of the usual output)</span>
+<span class="sd">    :rtype: ``List[Set[Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        log_skeleton = pm4py.discover_log_skeleton(dataframe, noise_threshold=0.1, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">        conformance_lsk = pm4py.conformance_log_skeleton(dataframe, log_skeleton, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.log_skeleton</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">log_skeleton_conformance</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">log_skeleton_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">log_skeleton</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">log_skeleton_conformance</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="conformance_dcr">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.conformance_dcr">[docs]</a>
+<span class="k">def</span> <span class="nf">conformance_dcr</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">dcr_graph</span><span class="p">:</span> <span class="n">DcrGraph</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span>
+                    <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span>
+                    <span class="n">group_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;org:group&quot;</span><span class="p">,</span> <span class="n">resource_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;org:resource&quot;</span><span class="p">,</span>
+                    <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">|</span> \
+                                                                                                            <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span>
+                                                                                                                <span class="nb">str</span><span class="p">,</span>
+                                                                                                                <span class="n">Dict</span><span class="p">[</span>
+                                                                                                                    <span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies rule based conformance checking against a DCR model.</span>
+<span class="sd">    reference:</span>
+<span class="sd">    C. Josep et al., &quot;Conformance Checking Software&quot;, Springer International Publishing, 65-74, 2018., https://doi.org/10.1007/978-3-319-99414-7.</span>
+
+<span class="sd">    :param log: event log</span>
+<span class="sd">    :param dcr_graph: DCR graph</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param group_key: attribute to be used as role identifier</span>
+<span class="sd">    :param resource_key: attribute to be used as resource identifier</span>
+<span class="sd">    :param return_diagnostics_dataframe: if possible, returns a dataframe with the diagnostics (instead of the usual output)</span>
+<span class="sd">    :rtype: `DataFrame | List[Tuple[str,Dict[str, Any]]]`</span>
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+<span class="sd">        log = pm4py.read_xes(&quot;C:/receipt.xes&quot;)</span>
+<span class="sd">        grap, la = pm4py.discover_dcr(log)</span>
+<span class="sd">        conf_res = pm4py.conformance_dcr(log, dcr_graph)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">log</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">EventLog</span><span class="p">]:</span> <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+        <span class="s2">&quot;the method can be applied only to a traditional event log!&quot;</span><span class="p">)</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span>
+                                       <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span>
+                                <span class="n">group_key</span><span class="o">=</span><span class="n">group_key</span><span class="p">,</span> <span class="n">resource_key</span><span class="o">=</span><span class="n">resource_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.dcr</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dcr_conformance</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">dcr_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">dcr_graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dcr_conformance</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+
+
+<div class="viewcode-block" id="optimal_alignment_dcr">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.conformance.optimal_alignment_dcr">[docs]</a>
+<span class="k">def</span> <span class="nf">optimal_alignment_dcr</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">Trace</span><span class="p">],</span>
+        <span class="n">dcr_graph</span><span class="p">:</span> <span class="n">DcrGraph</span><span class="p">,</span>
+        <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span>
+        <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span>
+        <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span>
+        <span class="n">return_diagnostics_dataframe</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_RETURN_DIAGNOSTICS_DATAFRAME</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">|</span> <span class="n">Any</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies optimal alignment against a DCR model.</span>
+<span class="sd">    Reference paper:</span>
+<span class="sd">    Axel Kjeld Fjelrad Christfort &amp; Tijs Slaats. &quot;Efficient Optimal Alignment Between Dynamic Condition Response Graphs and Traces&quot; https://doi.org/10.1007/978-3-031-41620-0_1</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    log : EventLog | pd.DataFrame | Trace</span>
+<span class="sd">        Event log to be used for alignment. also supports Trace</span>
+<span class="sd">    dcr_graph : DCRGraph</span>
+<span class="sd">        The DCR graph against which the log is aligned.</span>
+<span class="sd">    activity_key : str</span>
+<span class="sd">        The key to identify activity names in the log.</span>
+<span class="sd">    timestamp_key : str</span>
+<span class="sd">        The key to identify timestamps in the log.</span>
+<span class="sd">    case_id_key : str</span>
+<span class="sd">        The key to identify case identifiers in the log.</span>
+<span class="sd">    return_diagnostics_dataframe : bool, default False</span>
+<span class="sd">        If True, returns a diagnostics dataframe instead of the usual list output.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Union[pd.DataFrame, List[Tuple[str, Dict[str, Any]]]]</span>
+<span class="sd">        Depending on the value of `return_diagnostics_dataframe`, returns either</span>
+<span class="sd">        a pandas DataFrame with diagnostics or a list of alignment results.</span>
+<span class="sd">    Raises</span>
+<span class="sd">    ------</span>
+<span class="sd">    Exception</span>
+<span class="sd">        If the log provided is not an instance of EventLog or pandas DataFrame.</span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+<span class="sd">        graph, la = pm4py.discover_DCR(log)</span>
+<span class="sd">        conf_res = pm4py.optimal_alignment_dcr(log,graph)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">log</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">Trace</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The method can be applied only to a traditional event log or Trace!&quot;</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.dcr</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dcr_alignment</span>
+
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">Trace</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;The method can be applied only to a traditional event log!&quot;</span><span class="p">)</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="kc">None</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">result</span> <span class="o">=</span> <span class="n">dcr_alignment</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">dcr_graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">return_diagnostics_dataframe</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">dcr_alignment</span><span class="o">.</span><span class="n">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">result</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

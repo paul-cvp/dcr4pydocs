@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests.execute_tests &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tests/execute_tests';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">tests.execute_tests</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tests.execute_tests</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">importlib.util</span>
+
+<span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">getfile</span><span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">currentframe</span><span class="p">())))</span>
+<span class="n">parent_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">current_dir</span><span class="p">)</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">parent_dir</span><span class="p">)</span>
+
+<span class="n">EXECUTE_TESTS</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="kn">import</span> <span class="nn">pm4py</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">networkx</span>
+
+<span class="n">pm4py</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">SHOW_PROGRESS_BAR</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">pm4py</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">SHOW_EVENT_LOG_DEPRECATION</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">pm4py</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">SHOW_INTERNAL_WARNINGS</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="c1"># pm4py.util.constants.DEFAULT_TIMESTAMP_PARSE_FORMAT = None</span>
+
+<span class="n">enabled_tests</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;SimplifiedInterfaceTest&quot;</span><span class="p">,</span> <span class="s2">&quot;SimplifiedInterface2Test&quot;</span><span class="p">,</span> <span class="s2">&quot;DocTests&quot;</span><span class="p">,</span> <span class="s2">&quot;RoleDetectionTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;PassedTimeTest&quot;</span><span class="p">,</span> <span class="s2">&quot;Pm4pyImportPackageTest&quot;</span><span class="p">,</span> <span class="s2">&quot;XesImportExportTest&quot;</span><span class="p">,</span> <span class="s2">&quot;CsvImportExportTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;OtherPartsTests&quot;</span><span class="p">,</span> <span class="s2">&quot;AlphaMinerTest&quot;</span><span class="p">,</span> <span class="s2">&quot;InductiveMinerTest&quot;</span><span class="p">,</span> <span class="s2">&quot;InductiveMinerTreeTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;AlignmentTest&quot;</span><span class="p">,</span> <span class="s2">&quot;DfgTests&quot;</span><span class="p">,</span> <span class="s2">&quot;SnaTests&quot;</span><span class="p">,</span> <span class="s2">&quot;PetriImportExportTest&quot;</span><span class="p">,</span> <span class="s2">&quot;BPMNTests&quot;</span><span class="p">,</span> <span class="s2">&quot;ETCTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;DiagnDfConfChecking&quot;</span><span class="p">,</span> <span class="s2">&quot;ProcessModelEvaluationTests&quot;</span><span class="p">,</span> <span class="s2">&quot;DecisionTreeTest&quot;</span><span class="p">,</span> <span class="s2">&quot;GraphsForming&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;HeuMinerTest&quot;</span><span class="p">,</span> <span class="s2">&quot;MainFactoriesTest&quot;</span><span class="p">,</span> <span class="s2">&quot;AlgorithmTest&quot;</span><span class="p">,</span> <span class="s2">&quot;LogFilteringTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;DataframePrefilteringTest&quot;</span><span class="p">,</span> <span class="s2">&quot;StatisticsLogTest&quot;</span><span class="p">,</span> <span class="s2">&quot;StatisticsDfTest&quot;</span><span class="p">,</span> <span class="s2">&quot;TransitionSystemTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;ImpExpFromString&quot;</span><span class="p">,</span> <span class="s2">&quot;WoflanTest&quot;</span><span class="p">,</span> <span class="s2">&quot;OcelFilteringTest&quot;</span><span class="p">,</span> <span class="s2">&quot;OcelDiscoveryTest&quot;</span><span class="p">,</span> <span class="s2">&quot;LlmTest&quot;</span><span class="p">,</span> <span class="s2">&quot;DcrImportExportTest&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;DcrSemanticsTest&quot;</span><span class="p">,</span> <span class="s2">&quot;DcrDiscoveryTest&quot;</span><span class="p">,</span> <span class="s2">&quot;DcrConformanceTest&quot;</span><span class="p">,</span> <span class="s2">&quot;DcrAlignmentTest&quot;</span><span class="p">]</span>
+
+<span class="n">loader</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span>
+<span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestSuite</span><span class="p">()</span>
+
+<span class="n">failed</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;graphviz&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;important! install &#39;grapviz&#39; from pip&quot;</span><span class="p">)</span>
+    <span class="n">failed</span> <span class="o">+=</span><span class="mi">1</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;lxml&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;important! install &#39;lxml&#39; from pip&quot;</span><span class="p">)</span>
+    <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;SimplifiedInterfaceTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.simplified_interface</span> <span class="kn">import</span> <span class="n">SimplifiedInterfaceTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">SimplifiedInterfaceTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SimplifiedInterfaceTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;SimplifiedInterface2Test&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.simplified_interface_2</span> <span class="kn">import</span> <span class="n">SimplifiedInterface2Test</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">SimplifiedInterface2Test</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SimplifiedInterface2Test import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;DocTests&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.doc_tests</span> <span class="kn">import</span> <span class="n">DocTests</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">DocTests</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DocTests import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;RoleDetectionTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.role_detection</span> <span class="kn">import</span> <span class="n">RoleDetectionTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">RoleDetectionTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RoleDetectionTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;PassedTimeTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.passed_time</span> <span class="kn">import</span> <span class="n">PassedTimeTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">PassedTimeTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PassedTimeTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;Pm4pyImportPackageTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.imp_everything</span> <span class="kn">import</span> <span class="n">Pm4pyImportPackageTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">Pm4pyImportPackageTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pm4pyImportPackageTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;XesImportExportTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.xes_impexp_test</span> <span class="kn">import</span> <span class="n">XesImportExportTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">XesImportExportTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;XesImportExportTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;CsvImportExportTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.csv_impexp_test</span> <span class="kn">import</span> <span class="n">CsvImportExportTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">CsvImportExportTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;CsvImportExportTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;OtherPartsTests&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.other_tests</span> <span class="kn">import</span> <span class="n">OtherPartsTests</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">OtherPartsTests</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OtherPartsTests import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;AlphaMinerTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.alpha_test</span> <span class="kn">import</span> <span class="n">AlphaMinerTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">AlphaMinerTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AlphaMinerTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;InductiveMinerTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.inductive_test</span> <span class="kn">import</span> <span class="n">InductiveMinerTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">InductiveMinerTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;InductiveMinerTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;InductiveMinerTreeTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.inductive_tree_test</span> <span class="kn">import</span> <span class="n">InductiveMinerTreeTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">InductiveMinerTreeTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;InductiveMinerTreeTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;AlignmentTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.alignment_test</span> <span class="kn">import</span> <span class="n">AlignmentTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">AlignmentTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AlignmentTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;DfgTests&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.dfg_tests</span> <span class="kn">import</span> <span class="n">DfgTests</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">DfgTests</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DfgTests import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;SnaTests&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.sna_test</span> <span class="kn">import</span> <span class="n">SnaTests</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">SnaTests</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;SnaTests import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;PetriImportExportTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.petri_imp_exp_test</span> <span class="kn">import</span> <span class="n">PetriImportExportTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">PetriImportExportTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PetriImportExportTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;BPMNTests&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.bpmn_tests</span> <span class="kn">import</span> <span class="n">BPMNTests</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">BPMNTests</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BPMNTests import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;ETCTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.etc_tests</span> <span class="kn">import</span> <span class="n">ETCTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">ETCTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ETCTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;DiagnDfConfChecking&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.diagn_df_conf_checking</span> <span class="kn">import</span> <span class="n">DiagnDfConfChecking</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">DiagnDfConfChecking</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DiagnDfConfChecking import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;ProcessModelEvaluationTests&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.evaluation_tests</span> <span class="kn">import</span> <span class="n">ProcessModelEvaluationTests</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">ProcessModelEvaluationTests</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ProcessModelEvaluationTests import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;DecisionTreeTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.dec_tree_test</span> <span class="kn">import</span> <span class="n">DecisionTreeTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">DecisionTreeTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DecisionTreeTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;GraphsForming&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.graphs_forming</span> <span class="kn">import</span> <span class="n">GraphsForming</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">GraphsForming</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;GraphsForming import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;HeuMinerTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.heuminer_test</span> <span class="kn">import</span> <span class="n">HeuMinerTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">HeuMinerTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HeuMinerTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;MainFactoriesTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.main_fac_test</span> <span class="kn">import</span> <span class="n">MainFactoriesTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">MainFactoriesTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;MainFactoriesTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;AlgorithmTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.algorithm_test</span> <span class="kn">import</span> <span class="n">AlgorithmTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">AlgorithmTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AlgorithmTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;LogFilteringTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.filtering_log_test</span> <span class="kn">import</span> <span class="n">LogFilteringTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">LogFilteringTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LogFilteringTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;DataframePrefilteringTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.filtering_pandas_test</span> <span class="kn">import</span> <span class="n">DataframePrefilteringTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">DataframePrefilteringTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;DataframePrefilteringTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;StatisticsLogTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.statistics_log_test</span> <span class="kn">import</span> <span class="n">StatisticsLogTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">StatisticsLogTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;StatisticsLogTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;StatisticsDfTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.statistics_df_test</span> <span class="kn">import</span> <span class="n">StatisticsDfTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">StatisticsDfTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;StatisticsDfTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;TransitionSystemTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.trans_syst_tests</span> <span class="kn">import</span> <span class="n">TransitionSystemTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TransitionSystemTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TransitionSystemTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;ImpExpFromString&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.imp_exp_from_string</span> <span class="kn">import</span> <span class="n">ImpExpFromString</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">ImpExpFromString</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ImpExpFromString import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;WoflanTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.woflan_tests</span> <span class="kn">import</span> <span class="n">WoflanTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">WoflanTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;WoflanTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;OcelFilteringTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.ocel_filtering_test</span> <span class="kn">import</span> <span class="n">OcelFilteringTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">OcelFilteringTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OcelFilteringTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;OcelDiscoveryTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.ocel_discovery_test</span> <span class="kn">import</span> <span class="n">OcelDiscoveryTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">OcelDiscoveryTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OcelDiscoveryTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;LlmTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.llm_test</span> <span class="kn">import</span> <span class="n">LlmTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">LlmTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LlmTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+
+<span class="k">if</span> <span class="n">failed</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- PRESS ENTER TO CONTINUE --&quot;</span><span class="p">)</span>
+    <span class="nb">input</span><span class="p">()</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.ocel_discovery_test</span> <span class="kn">import</span> <span class="n">OcelDiscoveryTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">OcelDiscoveryTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;OcelDiscoveryTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;LlmTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">tests.llm_test</span> <span class="kn">import</span> <span class="n">LlmTest</span>
+        <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">LlmTest</span><span class="p">))</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;LlmTest import failed!&quot;</span><span class="p">)</span>
+        <span class="n">failed</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">if</span> <span class="s2">&quot;DcrImportExportTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">tests.dcr_test</span> <span class="kn">import</span> <span class="n">TestImportExportDCR</span>
+
+    <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestImportExportDCR</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="s2">&quot;DcrSemanticsTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">tests.dcr_test</span> <span class="kn">import</span> <span class="n">TestObjSematics</span>
+
+    <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestObjSematics</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="s2">&quot;DcrDiscoveryTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">tests.dcr_test</span> <span class="kn">import</span> <span class="n">TestDiscoveryDCR</span>
+
+    <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestDiscoveryDCR</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="s2">&quot;DcrConformanceTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">tests.dcr_test</span> <span class="kn">import</span> <span class="n">TestConformanceDCR</span>
+
+    <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestConformanceDCR</span><span class="p">))</span>
+
+<span class="k">if</span> <span class="s2">&quot;DcrAlignmentTest&quot;</span> <span class="ow">in</span> <span class="n">enabled_tests</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">tests.dcr_test</span> <span class="kn">import</span> <span class="n">TestAlignment</span>
+    <span class="n">suite</span><span class="o">.</span><span class="n">addTests</span><span class="p">(</span><span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromTestCase</span><span class="p">(</span><span class="n">TestAlignment</span><span class="p">))</span>
+
+
+<span class="k">if</span> <span class="n">failed</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-- PRESS ENTER TO CONTINUE --&quot;</span><span class="p">)</span>
+    <span class="nb">input</span><span class="p">()</span>
+
+<div class="viewcode-block" id="main">
+<a class="viewcode-back" href="../../tests.html#tests.execute_tests.main">[docs]</a>
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">EXECUTE_TESTS</span><span class="p">:</span>
+        <span class="n">runner</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TextTestRunner</span><span class="p">()</span>
+        <span class="n">runner</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">suite</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;numpy version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">numpy</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pandas version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;networkx version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">networkx</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;scipy&quot;</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">scipy</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;scipy version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">scipy</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;lxml&quot;</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">lxml</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lxml version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">lxml</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;matplotlib&quot;</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">matplotlib</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;matplotlib version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">matplotlib</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+
+    <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;sklearn&quot;</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">sklearn</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sklearn version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sklearn</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;pm4py version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">pm4py</span><span class="o">.</span><span class="n">__version__</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Python version: &quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">))</span></div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">warnings</span>
+    <span class="kn">from</span> <span class="nn">pandas.errors</span> <span class="kn">import</span> <span class="n">SettingWithCopyWarning</span><span class="p">,</span> <span class="n">PerformanceWarning</span>
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;future.no_silent_downcasting&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">SettingWithCopyWarning</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="n">action</span><span class="o">=</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="n">PerformanceWarning</span><span class="p">)</span>
+    <span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span>
+        <span class="n">action</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">UserWarning</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;Boolean Series.*&quot;</span>
+    <span class="p">)</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

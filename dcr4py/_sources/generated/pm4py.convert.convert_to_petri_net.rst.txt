@@ -1,0 +1,6 @@
+﻿pm4py.convert.convert\_to\_petri\_net
+=====================================
+
+.. currentmodule:: pm4py.convert
+
+.. autofunction:: convert_to_petri_net

@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pm4py.objects.dcr.timed package &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=319a7919"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pm4py.objects.dcr.timed';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.algo.html">pm4py.algo package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.algo.conformance.html">pm4py.algo.conformance package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.alignments.html">pm4py.algo.conformance.alignments package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.alignments.dcr.html">pm4py.algo.conformance.alignments.dcr package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.dcr.html">pm4py.algo.conformance.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.decorators.html">pm4py.algo.conformance.dcr.decorators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.rules.html">pm4py.algo.conformance.dcr.rules package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.variants.html">pm4py.algo.conformance.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.algo.discovery.html">pm4py.algo.discovery package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.html">pm4py.algo.discovery.dcr_discover package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.extenstions.html">pm4py.algo.discovery.dcr_discover.extenstions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.variants.html">pm4py.algo.discovery.dcr_discover.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="pm4py.objects.html">pm4py.objects package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.objects.conversion.html">pm4py.objects.conversion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.conversion.dcr.html">pm4py.objects.conversion.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.conversion.dcr.variants.html">pm4py.objects.conversion.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pm4py.objects.dcr.html">pm4py.objects.dcr package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.distributed.html">pm4py.objects.dcr.distributed package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.exporter.html">pm4py.objects.dcr.exporter package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html">pm4py.objects.dcr.exporter.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html">pm4py.objects.dcr.extended package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html">pm4py.objects.dcr.hierarchical package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.importer.html">pm4py.objects.dcr.importer package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html">pm4py.objects.dcr.importer.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">pm4py.objects.dcr.timed package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html">pm4py.objects.dcr.utils package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.visualization.html">pm4py.visualization package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.visualization.dcr.html">pm4py.visualization.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.visualization.dcr.variants.html">pm4py.visualization.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">pm4py.object...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pm4py-objects-dcr-timed-package">
+<h1>pm4py.objects.dcr.timed package<a class="headerlink" href="#pm4py-objects-dcr-timed-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pm4py.objects.dcr.timed.obj">
+<span id="pm4py-objects-dcr-timed-obj-module"></span><h2>pm4py.objects.dcr.timed.obj module<a class="headerlink" href="#module-pm4py.objects.dcr.timed.obj" title="Link to this heading">#</a></h2>
+<p>This module extends the Dynamic Condition Response (DCR) Graph framework to
+include timed constraints and behaviors. It builds upon the NestingSubprocessDcrGraph
+class to incorporate time-based elements into the DCR Graph model.</p>
+<p>The module introduces timing aspects to both the marking of events and the
+relations between events, allowing for more sophisticated process models that
+can represent time-dependent behaviors and constraints.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>TimedMarking: Extends the basic Marking class to include timing information.
+TimedDcrGraph: Extends NestingSubprocessDcrGraph to incorporate timed conditions and responses.</p>
+</dd>
+</dl>
+<p>This module enhances the DCR Graph model with the ability to represent and
+manage time-based constraints, enabling more accurate modelling of real-world
+processes where timing plays a crucial role.</p>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<p>Hildebrandt, T., Mukkamala, R.R., Slaats, T., Zanitti, F. (2013). Contracts for cross-organizational workflows as timed Dynamic Condition Response Graphs. The Journal of Logic and Algebraic Programming, 82(5-7), 164-185. <a class="reference external" href="https://doi.org/10.1016/j.jlap.2013.05.005">DOI</a>.</p>
+</aside>
+</aside>
+</section>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedMarking">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.timed.obj.</span></span><span class="sig-name descname"><span class="pre">TimedMarking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">included</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">executed_time</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending_deadline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/obj.html#TimedMarking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedMarking" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.Marking" title="pm4py.objects.dcr.obj.Marking"><code class="xref py py-class docutils literal notranslate"><span class="pre">Marking</span></code></a></p>
+<p>This class extends the basic Marking class to include timing information
+for executed events and pending deadlines.</p>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>self.__executed_time: Dict[str, datetime]</dt><dd><p>A dictionary mapping events to their execution times.</p>
+</dd>
+<dt>self.__pending_deadline: Dict[str, datetime]</dt><dd><p>A dictionary mapping events to their pending deadlines.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h3>
+<p>No additional methods are explicitly defined in this class.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedMarking.executed_time">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">executed_time</span></span><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedMarking.executed_time" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedMarking.pending_deadline">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pending_deadline</span></span><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedMarking.pending_deadline" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedDcrGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.timed.obj.</span></span><span class="sig-name descname"><span class="pre">TimedDcrGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timing_dict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/obj.html#TimedDcrGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph" title="pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">HierarchicalDcrGraph</span></code></a></p>
+<p>This class extends the NestingSubprocessDcrGraph to incorporate timed
+conditions and responses, allowing for time-based constraints in DCR Graphs.</p>
+<section id="id2">
+<h3>Attributes<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>self.__marking: TimedMarking</dt><dd><p>The marking of the DCR graph, including timing information.</p>
+</dd>
+<dt>self.__timedconditions: Dict[str, Dict[str, timedelta]]</dt><dd><p>A nested dictionary mapping events to their timed conditions.</p>
+</dd>
+<dt>self.__timedresponses: Dict[str, Dict[str, timedelta]]</dt><dd><p>A nested dictionary mapping events to their timed responses.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h3>Methods<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>timed_dict_to_graph(self, timing_dict: Dict) -&gt; None:</dt><dd><p>Converts a timing dictionary to graph format, populating timed conditions and responses.</p>
+</dd>
+<dt>obj_to_template(self) -&gt; dict:</dt><dd><p>Converts the object to a template dictionary, including timed conditions and responses.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedDcrGraph.timed_dict_to_graph">
+<span class="sig-name descname"><span class="pre">timed_dict_to_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timing_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/obj.html#TimedDcrGraph.timed_dict_to_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timed_dict_to_graph" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedDcrGraph.obj_to_template">
+<span class="sig-name descname"><span class="pre">obj_to_template</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/obj.html#TimedDcrGraph.obj_to_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.obj_to_template" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedconditions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timedconditions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">timedelta</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedconditions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedresponses">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timedresponses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">timedelta</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedresponses" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.objects.dcr.timed.semantics">
+<span id="pm4py-objects-dcr-timed-semantics-module"></span><h2>pm4py.objects.dcr.timed.semantics module<a class="headerlink" href="#module-pm4py.objects.dcr.timed.semantics" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.timed.semantics.</span></span><span class="sig-name descname"><span class="pre">TimedSemantics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.semantics.ExtendedSemantics" title="pm4py.objects.dcr.extended.semantics.ExtendedSemantics"><code class="xref py py-class docutils literal notranslate"><span class="pre">ExtendedSemantics</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.execute">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_or_tics</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.execute" title="Link to this definition">#</a></dt>
+<dd><p>Function based on semantics of execution a DCR graph
+will update the graph according to relations of the executed activity</p>
+<p>can extend to allow of execution of milestone activity</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">param graph<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DCR graph</p>
+</dd>
+<dt class="field-even">param event<span class="colon">:</span></dt>
+<dd class="field-even"><p>the event being executed</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DCR graph with updated marking</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.enabled">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.enabled" title="Link to this definition">#</a></dt>
+<dd><p>Creates a list of enabled events, based on included events and conditions constraints met</p>
+<section id="id4">
+<h3>Parameters<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">param graph<span class="colon">:</span></dt>
+<dd class="field-odd"><p>takes the current state of the DCR</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Returns<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">param res<span class="colon">:</span></dt>
+<dd class="field-odd"><p>set of enabled activities</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.weak_execute">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">weak_execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.weak_execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.weak_execute" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.time_step">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tics</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.time_step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.time_step" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.next_deadline">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">next_deadline</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.next_deadline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.next_deadline" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.next_delay">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">next_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.next_delay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.next_delay" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.timed.semantics.TimedSemantics.create_can_execute_time_dict">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_can_execute_time_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/timed/semantics.html#TimedSemantics.create_can_execute_time_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.create_can_execute_time_dict" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pm4py.objects.dcr.timed">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pm4py.objects.dcr.timed" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.objects.dcr.timed.obj">pm4py.objects.dcr.timed.obj module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedMarking"><code class="docutils literal notranslate"><span class="pre">TimedMarking</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedMarking.executed_time"><code class="docutils literal notranslate"><span class="pre">TimedMarking.executed_time</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedMarking.pending_deadline"><code class="docutils literal notranslate"><span class="pre">TimedMarking.pending_deadline</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timed_dict_to_graph"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.timed_dict_to_graph()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.obj_to_template"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.obj_to_template()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedconditions"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.timedconditions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedresponses"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.timedresponses</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.objects.dcr.timed.semantics">pm4py.objects.dcr.timed.semantics module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics"><code class="docutils literal notranslate"><span class="pre">TimedSemantics</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.execute"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.execute()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.enabled"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.weak_execute"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.weak_execute()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.time_step"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.time_step()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.next_deadline"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.next_deadline()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.next_delay"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.next_delay()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.timed.semantics.TimedSemantics.create_can_execute_time_dict"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.create_can_execute_time_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.objects.dcr.timed">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/pm4py.objects.dcr.timed.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

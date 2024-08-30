@@ -1,0 +1,808 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.algo.discovery.dcr_discover.extenstions.nesting &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting';</script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../../../../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.algo.d...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.algo.discovery.dcr_discover.extenstions.nesting</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">auto</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">dcr_template</span><span class="p">,</span> <span class="n">DcrGraph</span><span class="p">,</span> <span class="n">TemplateRelations</span> <span class="k">as</span> <span class="n">Relations</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.hierarchical.obj</span> <span class="kn">import</span> <span class="n">HierarchicalDcrGraph</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span>
+
+
+<div class="viewcode-block" id="NestVariants">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants">[docs]</a>
+<span class="k">class</span> <span class="nc">NestVariants</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">CHOICE</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">NEST</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span>
+    <span class="n">CHOICE_NEST</span> <span class="o">=</span> <span class="n">auto</span><span class="p">()</span></div>
+
+
+
+<div class="viewcode-block" id="apply">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.apply">[docs]</a>
+<span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    this method calls the nesting miner</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    log: EventLog | pandas.Dataframe</span>
+<span class="sd">        Event log to use in the role miner</span>
+<span class="sd">    graph: DCR_Graph</span>
+<span class="sd">        Dcr graph to apply additional attributes to</span>
+<span class="sd">    parameters</span>
+<span class="sd">        Parameters of the algorithm, including:</span>
+<span class="sd">            nest_variant : the nesting algorithm to use from the enum above: CHOICE|NEST|CHOICE_NEST</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :class:´GroupSubprocessDcrGraph`</span>
+<span class="sd">        return a DCR graph, that contains nested groups</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">nesting_mine</span> <span class="o">=</span> <span class="n">NestingMining</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">nesting_mine</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="NestingMining">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining">[docs]</a>
+<span class="k">class</span> <span class="nc">NestingMining</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The NestingMining provides a simple algorithm to mine nestings</span>
+
+<span class="sd">    After initialization, user can call mine(log, G, parameters), which will return a DCR Graph with nested groups.</span>
+
+<span class="sd">    Reference paper:</span>
+<span class="sd">    Cosma et al. &quot;Improving Simplicity by Discovering Nested Groups in Declarative Models&quot; https://doi.org/10.1007/978-3-031-61057-8_26</span>
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    graph: Dict[str,Any]</span>
+<span class="sd">        A template that will be used collecting organizational data</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    -------</span>
+<span class="sd">    mine(log, G, parameters)</span>
+<span class="sd">        calls the main mining function, extract nested groups</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    ------</span>
+<span class="sd">    *</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="NestingMining.mine">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.mine">[docs]</a>
+    <span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Main nested groups mining algorithm</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        graph: DCRGraph</span>
+<span class="sd">            DCR graph to append additional attributes</span>
+<span class="sd">        parameters: Optional[Dict[str, Any]]</span>
+<span class="sd">            optional parameters used for role mining</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        NestedDCRGraph(G, dcr)</span>
+<span class="sd">            returns a DCR graph with nested groups</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">nest_variant</span> <span class="o">=</span> <span class="n">NestVariants</span><span class="o">.</span><span class="n">CHOICE_NEST</span>
+        <span class="k">if</span> <span class="s1">&#39;nest_variant&#39;</span> <span class="ow">in</span> <span class="n">parameters</span><span class="p">:</span>
+            <span class="n">nest_variant</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;nest_variant&#39;</span><span class="p">]</span>
+        <span class="c1"># from the parameters ask which type of nesting do you want</span>
+        <span class="k">match</span> <span class="n">nest_variant</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+            <span class="k">case</span> <span class="n">NestVariants</span><span class="o">.</span><span class="n">CHOICE</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_choice</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+            <span class="k">case</span> <span class="n">NestVariants</span><span class="o">.</span><span class="n">NEST</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_nest</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+            <span class="k">case</span> <span class="n">NestVariants</span><span class="o">.</span><span class="n">CHOICE_NEST</span><span class="o">.</span><span class="n">value</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">apply_nest</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">apply_choice</span><span class="p">(</span><span class="n">graph</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="NestingMining.apply_choice">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_choice">[docs]</a>
+    <span class="k">def</span> <span class="nf">apply_choice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">):</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="n">Choice</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">choice</span><span class="o">.</span><span class="n">apply_choice</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="NestingMining.apply_nest">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_nest">[docs]</a>
+    <span class="k">def</span> <span class="nf">apply_nest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">):</span>
+        <span class="n">existing_nestings</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">nestedgroups</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">nestedgroups</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">nesting</span> <span class="o">=</span> <span class="n">Nesting</span><span class="p">()</span>
+        <span class="n">nesting</span><span class="o">.</span><span class="n">create_encoding</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">obj_to_template</span><span class="p">())</span>
+        <span class="n">nesting</span><span class="o">.</span><span class="n">nest</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="p">)</span>
+        <span class="n">nesting</span><span class="o">.</span><span class="n">remove_redundant_nestings</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">nesting</span><span class="o">.</span><span class="n">get_nested_dcr_graph</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span><span class="n">existing_nestings</span><span class="p">)</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Choice">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice">[docs]</a>
+<span class="k">class</span> <span class="nc">Choice</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nestedgroups&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;nestedgroupsMap&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;subprocesses&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+
+<div class="viewcode-block" id="Choice.apply_choice">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.apply_choice">[docs]</a>
+    <span class="k">def</span> <span class="nf">apply_choice</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_mutual_exclusions</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">me_events</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">marking</span><span class="o">.</span><span class="n">included</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">me_event</span> <span class="ow">in</span> <span class="n">me_events</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span><span class="p">[</span><span class="s1">&#39;nestedgroupsMap&#39;</span><span class="p">][</span><span class="n">me_event</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+                <span class="k">for</span> <span class="n">me_prime</span> <span class="ow">in</span> <span class="n">me_events</span><span class="p">:</span>
+                    <span class="n">graph</span><span class="o">.</span><span class="n">excludes</span><span class="p">[</span><span class="n">me_event</span><span class="p">]</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">me_prime</span><span class="p">)</span>
+                    <span class="n">graph</span><span class="o">.</span><span class="n">excludes</span><span class="p">[</span><span class="n">me_prime</span><span class="p">]</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">me_event</span><span class="p">)</span>
+            <span class="n">graph</span><span class="o">.</span><span class="n">excludes</span><span class="p">[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">name</span><span class="p">])</span>
+
+        <span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">Relations</span> <span class="k">as</span> <span class="n">ObjRel</span>
+        <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">me_events</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">external_events_to_check</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">me_events</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">name</span><span class="p">)))</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="p">[</span><span class="n">ObjRel</span><span class="o">.</span><span class="n">C</span><span class="p">,</span><span class="n">ObjRel</span><span class="o">.</span><span class="n">R</span><span class="p">,</span><span class="n">ObjRel</span><span class="o">.</span><span class="n">I</span><span class="p">,</span><span class="n">ObjRel</span><span class="o">.</span><span class="n">E</span><span class="p">]:</span>
+                <span class="n">rel</span> <span class="o">=</span> <span class="n">r</span><span class="o">.</span><span class="n">value</span>
+                <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">external_events_to_check</span><span class="p">:</span>
+                    <span class="n">all_internal_same_relation</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">for</span> <span class="n">internal_event</span> <span class="ow">in</span> <span class="n">me_events</span><span class="p">:</span>
+                        <span class="n">all_internal_same_relation</span> <span class="o">&amp;=</span> <span class="n">internal_event</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)</span> <span class="ow">and</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">internal_event</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">all_internal_same_relation</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">):</span>
+                            <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                        <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">name</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                        <span class="k">for</span> <span class="n">internal_event</span> <span class="ow">in</span> <span class="n">me_events</span><span class="p">:</span>
+                            <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">internal_event</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">external_events_to_check</span><span class="p">:</span>
+                    <span class="n">all_internal_same_relation</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="k">for</span> <span class="n">internal_event</span> <span class="ow">in</span> <span class="n">me_events</span><span class="p">:</span>
+                        <span class="n">all_internal_same_relation</span> <span class="o">&amp;=</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)</span> <span class="ow">and</span> <span class="n">internal_event</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">e</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">all_internal_same_relation</span><span class="p">:</span>
+                        <span class="k">if</span> <span class="n">name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">):</span>
+                            <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                        <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+                        <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">rel</span><span class="p">)[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">me_events</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">HierarchicalDcrGraph</span><span class="p">({</span><span class="o">**</span><span class="n">graph</span><span class="o">.</span><span class="n">obj_to_template</span><span class="p">(),</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="Choice.get_mutual_exclusions">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutual_exclusions">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_mutual_exclusions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dcr</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span><span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Get nested groups based on cliques. Updates the self.nesting_template dict</span>
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        dcr</span>
+<span class="sd">            A core Dcr Graph as mined from the DisCoveR miner</span>
+<span class="sd">        i</span>
+<span class="sd">            An integer seed for the naming of choice groups</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">graph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_mutually_excluding_graph</span><span class="p">(</span><span class="n">dcr</span><span class="p">)</span>
+        <span class="n">cliques</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">nx</span><span class="o">.</span><span class="n">enumerate_all_cliques</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">cliques</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">cliques</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="nb">len</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">used_cliques</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cliques</span><span class="p">:</span>
+            <span class="n">used_cliques</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+
+        <span class="n">used_events</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">clique</span> <span class="ow">in</span> <span class="n">cliques</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">used_cliques</span><span class="p">[</span><span class="n">clique</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">clique</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">used_events</span><span class="p">))</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="c1"># any new mutually exclusive subprocess must be disjoint from all existing ones</span>
+                    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="sa">f</span><span class="s1">&#39;Choice</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">clique</span><span class="p">)</span>
+                    <span class="n">used_cliques</span><span class="p">[</span><span class="n">clique</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+                    <span class="n">used_events</span> <span class="o">=</span> <span class="n">used_events</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">clique</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Choice.get_mutually_excluding_graph">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutually_excluding_graph">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_mutually_excluding_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">):</span>
+        <span class="n">ind</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">str</span><span class="p">)</span>
+        <span class="n">rel_matrix</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">ind</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">ind</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">e_prime</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">excludes</span> <span class="ow">and</span> <span class="n">e_prime</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">excludes</span><span class="p">[</span><span class="n">e</span><span class="p">]:</span>
+                    <span class="n">rel_matrix</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">e_prime</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+        <span class="n">self_excluding</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">events</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">rel_matrix</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">e</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">self_excluding</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="n">mutually_excluding</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">self_excluding</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">e_prime</span> <span class="ow">in</span> <span class="n">self_excluding</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">e</span> <span class="o">!=</span> <span class="n">e_prime</span> <span class="ow">and</span> <span class="n">rel_matrix</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="n">e_prime</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">rel_matrix</span><span class="o">.</span><span class="n">at</span><span class="p">[</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">e</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">e_prime</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mutually_excluding</span> <span class="ow">and</span> <span class="p">(</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mutually_excluding</span><span class="p">:</span>
+                        <span class="n">mutually_excluding</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">e</span><span class="p">,</span> <span class="n">e_prime</span><span class="p">))</span>
+
+        <span class="k">return</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_edgelist</span><span class="p">(</span><span class="n">mutually_excluding</span><span class="p">)</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Nesting">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting">[docs]</a>
+<span class="k">class</span> <span class="nc">Nesting</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nesting_template</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;nestedgroups&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;nestedgroupsMap&quot;</span><span class="p">:</span> <span class="p">{},</span> <span class="s2">&quot;subprocesses&quot;</span><span class="p">:</span> <span class="p">{}}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nesting_ids</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nest_id</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">in_rec_step</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">out_rec_step</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="kc">False</span>
+
+<div class="viewcode-block" id="Nesting.encode">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.encode">[docs]</a>
+    <span class="k">def</span> <span class="nf">encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">G</span><span class="p">):</span>
+        <span class="n">enc</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]:</span>
+            <span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">e_prime</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]:</span>
+                <span class="k">for</span> <span class="n">rel</span> <span class="ow">in</span> <span class="n">Relations</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="ow">and</span> <span class="n">e_prime</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">][</span><span class="n">e</span><span class="p">]:</span>
+                        <span class="k">if</span> <span class="n">rel</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Relations</span><span class="o">.</span><span class="n">C</span><span class="p">,</span> <span class="n">Relations</span><span class="o">.</span><span class="n">M</span><span class="p">]:</span>
+                            <span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">e_prime</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="ow">and</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">G</span><span class="p">[</span><span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">][</span><span class="n">e_prime</span><span class="p">]:</span>
+                        <span class="k">if</span> <span class="n">rel</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Relations</span><span class="o">.</span><span class="n">C</span><span class="p">,</span> <span class="n">Relations</span><span class="o">.</span><span class="n">M</span><span class="p">]:</span>
+                            <span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;out&#39;</span><span class="p">))</span>
+                        <span class="k">else</span><span class="p">:</span>
+                            <span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">enc</span></div>
+
+
+<div class="viewcode-block" id="Nesting.get_opposite_rel_dict_str">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_opposite_rel_dict_str">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_opposite_rel_dict_str</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relStr</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">nestingId</span><span class="p">):</span>
+        <span class="n">relation_dict_str_del</span> <span class="o">=</span> <span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">relStr</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span> <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s2">&quot;in&quot;</span> <span class="k">else</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
+        <span class="n">relation_dict_str_add</span> <span class="o">=</span> <span class="p">(</span><span class="n">nestingId</span><span class="p">,</span> <span class="n">relStr</span><span class="p">,</span> <span class="s2">&quot;out&quot;</span> <span class="k">if</span> <span class="n">direction</span> <span class="o">==</span> <span class="s2">&quot;in&quot;</span> <span class="k">else</span> <span class="s2">&quot;in&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">relation_dict_str_del</span><span class="p">,</span> <span class="n">relation_dict_str_add</span></div>
+
+
+<div class="viewcode-block" id="Nesting.create_encoding">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.create_encoding">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_encoding</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dcr_graph</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enc</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">dcr_graph</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Nesting.find_largest_nesting">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.find_largest_nesting">[docs]</a>
+    <span class="k">def</span> <span class="nf">find_largest_nesting</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">events_source</span><span class="p">,</span> <span class="n">parent_nesting</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">cands</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">events_source</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+                <span class="n">arrow_s</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">j</span><span class="p">]))</span>
+                <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arrow_s</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="ow">not</span> <span class="n">arrow_s</span> <span class="ow">in</span> <span class="n">cands</span><span class="p">:</span>
+                        <span class="n">cands</span><span class="p">[</span><span class="n">arrow_s</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([])</span>
+                    <span class="n">cands</span><span class="p">[</span><span class="n">arrow_s</span><span class="p">]</span> <span class="o">=</span> <span class="n">cands</span><span class="p">[</span><span class="n">arrow_s</span><span class="p">]</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">e</span><span class="p">,</span> <span class="n">j</span><span class="p">]))</span>
+
+        <span class="n">best_score</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">best</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">for</span> <span class="n">arrow_s</span> <span class="ow">in</span> <span class="n">cands</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">cand_score</span> <span class="o">=</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cands</span><span class="p">[</span><span class="n">arrow_s</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">arrow_s</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">cand_score</span> <span class="o">&gt;</span> <span class="n">best_score</span><span class="p">:</span>
+                <span class="n">best_score</span> <span class="o">=</span> <span class="n">cand_score</span>
+                <span class="n">best</span> <span class="o">=</span> <span class="n">arrow_s</span>
+
+        <span class="k">if</span> <span class="n">best</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">best</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span>
+                    <span class="sa">f</span><span class="s1">&#39;[out]:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">out_rec_step</span><span class="si">}</span><span class="s1"> [in]:</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">in_rec_step</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;     [events] </span><span class="si">{</span><span class="n">events</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;[cands[best]] </span><span class="si">{</span><span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">]</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>  <span class="c1"># these are the events inside the nesting</span>
+                    <span class="sa">f</span><span class="s1">&#39;       [best] </span><span class="si">{</span><span class="n">best</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;        [enc] </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1"> &#39;</span>
+                    <span class="sa">f</span><span class="s1">&#39;      [cands] </span><span class="si">{</span><span class="n">cands</span><span class="si">}</span><span class="s1"> </span><span class="se">\n</span><span class="s1">&#39;</span>
+                <span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nest_id</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">nest_event</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;Group</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nest_id</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nesting_ids</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nest_event</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">nest_event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">parent_nesting</span><span class="p">:</span>
+                <span class="n">parent_nesting</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent_nesting</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">])</span>
+                <span class="n">parent_nesting</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">nest_event</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">nest_event</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent_nesting</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+
+            <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="n">nest_event</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">best</span><span class="p">)</span>
+                <span class="k">for</span> <span class="p">(</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span> <span class="ow">in</span> <span class="n">best</span><span class="p">:</span>
+                    <span class="n">op_rel_del</span><span class="p">,</span> <span class="n">op_rel_add</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_opposite_rel_dict_str</span><span class="p">(</span><span class="n">rel</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">e</span><span class="p">,</span> <span class="n">nest_event</span><span class="p">)</span>
+                    <span class="c1"># TODO: find out why sometimes it tries to remove non-existing encodings</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e_prime</span><span class="p">]</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">op_rel_del</span><span class="p">)</span>  <span class="c1"># .remove(op_rel_del)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e_prime</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">op_rel_add</span><span class="p">)</span>
+
+            <span class="n">retval</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;nestingEvents&#39;</span><span class="p">:</span> <span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">],</span> <span class="s1">&#39;sharedRels&#39;</span><span class="p">:</span> <span class="n">best</span><span class="p">}]</span>
+            <span class="n">found</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="k">while</span> <span class="n">found</span><span class="p">:</span>
+                <span class="n">temp_retval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_largest_nesting</span><span class="p">(</span><span class="n">events_source</span><span class="o">=</span><span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">],</span> <span class="n">parent_nesting</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Group</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">nest_id</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="n">cands</span><span class="p">[</span><span class="n">best</span><span class="p">]})</span>
+                <span class="k">if</span> <span class="n">temp_retval</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp_retval</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">retval</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">temp_retval</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">tmp</span> <span class="ow">in</span> <span class="n">temp_retval</span><span class="p">:</span>
+                        <span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="s1">&#39;nestingEvents&#39;</span><span class="p">])</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">found</span> <span class="o">=</span> <span class="kc">False</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">in_rec_step</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">retval</span></div>
+
+
+<div class="viewcode-block" id="Nesting.nest">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.nest">[docs]</a>
+    <span class="k">def</span> <span class="nf">nest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">events_source</span><span class="p">):</span>
+        <span class="n">nestings_arr</span> <span class="o">=</span> <span class="p">[{</span><span class="s1">&#39;nestingEvents&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">(),</span> <span class="s1">&#39;sharedRels&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">()}]</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">events_source</span><span class="p">)</span>
+
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">temp_retval</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_largest_nesting</span><span class="p">(</span><span class="n">events</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">temp_retval</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">temp_retval</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">nestings_arr</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">temp_retval</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">tmp</span> <span class="ow">in</span> <span class="n">temp_retval</span><span class="p">:</span>
+                    <span class="n">events</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="s1">&#39;nestingEvents&#39;</span><span class="p">])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">out_rec_step</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_ids</span></div>
+
+
+<div class="viewcode-block" id="Nesting.remove_redundant_nestings">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.remove_redundant_nestings">[docs]</a>
+    <span class="k">def</span> <span class="nf">remove_redundant_nestings</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">nestings</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_ids</span><span class="p">:</span>
+            <span class="n">nestings</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">nestings</span><span class="p">[</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+        <span class="c1"># Removing redundant nestings</span>
+        <span class="n">nests_to_remove</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([])</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">nestings</span><span class="p">:</span>
+            <span class="n">val</span> <span class="o">=</span> <span class="n">nestings</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">nests_to_remove</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">val</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+        <span class="k">for</span> <span class="n">nest_to_remove</span> <span class="ow">in</span> <span class="n">nests_to_remove</span><span class="p">:</span>
+            <span class="n">parent</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">nest_to_remove</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+                <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">nest_to_remove</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">parent</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Deleting: &quot;</span><span class="p">,</span> <span class="n">nest_to_remove</span><span class="p">)</span>
+            <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">nest_to_remove</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">nesting_ids</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">nest_to_remove</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">e</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">deepcopy</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="o">.</span><span class="n">items</span><span class="p">())):</span>
+                <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>  <span class="c1">#I get a set changed error here</span>
+                    <span class="p">(</span><span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="p">,</span> <span class="n">direction</span><span class="p">)</span> <span class="o">=</span> <span class="n">r</span>
+                    <span class="k">if</span> <span class="n">e_prime</span> <span class="o">==</span> <span class="n">nest_to_remove</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">((</span><span class="n">parent</span><span class="p">,</span> <span class="n">rel</span><span class="p">,</span> <span class="n">direction</span><span class="p">))</span>
+                <span class="k">if</span> <span class="n">e</span> <span class="o">==</span> <span class="n">nest_to_remove</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">parent</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">parent</span><span class="p">]</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">])</span>
+                    <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="p">[</span><span class="n">e</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="Nesting.should_add">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.should_add">[docs]</a>
+    <span class="k">def</span> <span class="nf">should_add</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rel</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;in&#39;</span> <span class="k">if</span> <span class="n">rel</span> <span class="ow">in</span> <span class="p">[</span><span class="n">Relations</span><span class="o">.</span><span class="n">C</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">Relations</span><span class="o">.</span><span class="n">M</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="k">else</span> <span class="n">direction</span> <span class="o">==</span> <span class="s1">&#39;out&#39;</span></div>
+
+
+<div class="viewcode-block" id="Nesting.get_nested_dcr_graph">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.extenstions.html#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_nested_dcr_graph">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_nested_dcr_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">existing_nestings</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="n">res_dcr</span> <span class="o">=</span> <span class="n">graph</span><span class="o">.</span><span class="n">obj_to_template</span><span class="p">()</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+        <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span>
+        <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;marking&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span>
+
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_ids</span><span class="p">:</span>
+            <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="n">v</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">e</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">enc</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">for</span> <span class="n">e_prime</span><span class="p">,</span> <span class="n">rel</span><span class="p">,</span> <span class="n">direction</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">should_add</span><span class="p">(</span><span class="n">rel</span><span class="p">,</span> <span class="n">direction</span><span class="p">):</span>
+                    <span class="k">if</span> <span class="n">e</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res_dcr</span><span class="p">[</span><span class="n">rel</span><span class="p">]:</span>
+                        <span class="n">res_dcr</span><span class="p">[</span><span class="n">rel</span><span class="p">][</span><span class="n">e</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                    <span class="n">res_dcr</span><span class="p">[</span><span class="n">rel</span><span class="p">][</span><span class="n">e</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">e_prime</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">existing_nestings</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">me</span><span class="p">,</span> <span class="n">me_events</span> <span class="ow">in</span> <span class="n">existing_nestings</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">me</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">]:</span>
+                    <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="n">me</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">me_event</span> <span class="ow">in</span> <span class="n">me_events</span><span class="p">:</span>
+                    <span class="k">if</span> <span class="n">me_event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">:</span>
+                        <span class="n">highest_nesting</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">me_event</span><span class="p">]</span>
+                        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+                            <span class="k">if</span> <span class="n">highest_nesting</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">:</span>
+                                <span class="n">highest_nesting</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">highest_nesting</span><span class="p">]</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="k">break</span>
+                        <span class="k">if</span> <span class="n">highest_nesting</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="n">me</span><span class="p">]:</span>
+                            <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="n">me</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">highest_nesting</span><span class="p">)</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">][</span><span class="n">me</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">me_event</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">me_event</span><span class="p">]</span> <span class="o">=</span> <span class="n">me</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">debug</span><span class="p">:</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">[</span><span class="n">me</span><span class="p">])</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">)</span>
+                    <span class="nb">print</span><span class="p">(</span><span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroups&#39;</span><span class="p">])</span>
+
+        <span class="n">res_dcr</span><span class="p">[</span><span class="s1">&#39;nestedgroupsMap&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">nesting_map</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">HierarchicalDcrGraph</span><span class="p">(</span><span class="n">res_dcr</span><span class="p">)</span></div>
+</div>
+
+        <span class="c1"># return res_dcr</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

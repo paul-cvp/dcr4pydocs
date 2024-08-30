@@ -1,0 +1,1229 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.algo.conformance.alignments.dcr.variants.optimal &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/algo/conformance/alignments/dcr/variants/optimal';</script>
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../../../../../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.algo.c...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.algo.conformance.alignments.dcr.variants.optimal</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This module contains the object-oriented implementation of the Optimal Alignments algorithm,</span>
+<span class="sd">based on the paper by Axel Kjeld Fjelrad Christfort and Tijs Slaats [1].</span>
+
+<span class="sd">Overview:</span>
+<span class="sd">The implementation encapsulates the core components of the algorithm and provides.</span>
+
+<span class="sd">The calculation of the alignments and graph-trace handling are encapsulated in separate,</span>
+<span class="sd">dedicated classes, thereby facilitating modularity and reuse.</span>
+<span class="sd">Central to the module are the following classes:</span>
+
+<span class="sd">- `LogAlignment`: A simplified interface to perform optimal alignment through the other classes.</span>
+<span class="sd">- `TraceAlignment`: Serves as the primary interface for interacting with the algorithm.</span>
+<span class="sd">  orchestrating the alignment process and providing access to performance metrics.</span>
+<span class="sd">- `TraceHandler`: Manages the conversion and handling of event traces, preparing them for alignment.</span>
+<span class="sd">- `DCRGraphHandler`: Encapsulates operations and checks on DCR graphs relevant for the alignment.</span>
+<span class="sd">- `Alignment`: Implements the actual algorithm, managing the search space, and constructing optimal alignments.</span>
+
+<span class="sd">The module&#39;s classes interact to process an input DCR graph and a trace abd execute the alignment algorithm. This process helps in understanding how closely the behavior described by</span>
+<span class="sd">the trace matches the behavior allowed by the DCR graph, which is essential in the analysis and optimization of business processes.</span>
+
+<span class="sd">References</span>
+<span class="sd">----------</span>
+<span class="sd">.. [1]</span>
+<span class="sd">    A. K. F. Christfort, T. Slaats, &quot;Efficient Optimal Alignment Between Dynamic Condition Response Graphs and Traces&quot;,</span>
+<span class="sd">    in Business Process Management, Springer International Publishing, 2023, pp. 3-19.</span>
+<span class="sd">    DOI &lt;https://doi.org/10.1007/978-3-031-41620-0_1&gt;_.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span><span class="p">,</span> <span class="n">copy</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">from</span> <span class="nn">heapq</span> <span class="kn">import</span> <span class="n">heappop</span><span class="p">,</span> <span class="n">heappush</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">DcrGraph</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.semantics</span> <span class="kn">import</span> <span class="n">DcrSemantics</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">xes_constants</span><span class="p">,</span> <span class="n">exec_utils</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">Trace</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.conversion.log</span> <span class="kn">import</span> <span class="n">converter</span> <span class="k">as</span> <span class="n">log_converter</span>
+
+
+<div class="viewcode-block" id="LogAlignment">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment">[docs]</a>
+<span class="k">class</span> <span class="nc">LogAlignment</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The LogAlignment provides the simplified interface to perform optimal alignment for DCR graphs, with a provided event log.</span>
+<span class="sd">    Calls TraceAlignment for each trace to compute optimal alignment for each trace.</span>
+
+<span class="sd">    After intilializing Log alignment, can call perform_log_alignment() to execute the alignment process for all traces in log</span>
+<span class="sd">    which returns a list of result for each alignment procedure</span>
+
+<span class="sd">    Example usage:</span>
+<span class="sd">        \nDefine your instances of DCR graph and trace representation as &#39;graph&#39; and &#39;trace&#39;\n</span>
+<span class="sd">        align_log = LogAlignment(log, parameters)\n</span>
+<span class="sd">        alignment_result = align_log.perform_log_alignment(graph, parameters)\n</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">    - The user is expected to have a basic understanding of DCR graphs and trace alignment in the context of process mining.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        traces (list[Tuple]): the list of traces as tuples.</span>
+<span class="sd">        Trace_alignments (list[Alignments]): Instance that holds the result of the alignment processes, initialized as an empty list [].</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        perform_log_alignment(graph, parameters): Performs trace alignment for a log against the DCR graph and returns the list of alignment results.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the LogAlignment instance for performing alignment of traces in an event log.</span>
+
+<span class="sd">        This constructor converts the provided log into a list of traces, each represented as a tuple of activities.</span>
+<span class="sd">        It extracts the activities using the &#39;activity_key&#39; and groups events into traces using the &#39;case_id_key&#39;.</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            log (Union[EventLog, pd.DataFrame]): The event log to be aligned. Can be in the form of a pandas DataFrame</span>
+<span class="sd">                                                 or an EventLog object.</span>
+<span class="sd">            parameters (Optional[Dict]): Optional parameters for the log conversion, such as custom activity and case</span>
+<span class="sd">                                         ID keys. The default values are taken from the constants module if not provided.</span>
+
+<span class="sd">        Attributes:</span>
+<span class="sd">            self.traces (List[Tuple[Any]]): A list of traces where each trace is represented as a tuple of activities.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">activity_key</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_param_value</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">ACTIVITY_KEY</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_NAME_KEY</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_param_value</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">CASE_ID_KEY</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">CASE_CONCEPT_NAME</span><span class="p">)</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">traces</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">log</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">case_id_key</span><span class="p">)[</span><span class="n">activity_key</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="nb">tuple</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">log</span> <span class="o">=</span> <span class="n">log_converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">log_converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_EVENT_LOG</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">traces</span> <span class="o">=</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">activity_key</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">trace</span><span class="p">)</span> <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="n">log</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_alignments</span> <span class="o">=</span> <span class="p">[]</span>
+
+<div class="viewcode-block" id="LogAlignment.perform_log_alignment">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.LogAlignment.perform_log_alignment">[docs]</a>
+    <span class="k">def</span> <span class="nf">perform_log_alignment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">:</span> <span class="n">DcrGraph</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Processes an event log and applies a specific operation to each trace.</span>
+
+<span class="sd">        This method iterates through all traces in the log, and performs alignment operations,</span>
+<span class="sd">        and store it in a list</span>
+
+<span class="sd">        Parameters:</span>
+<span class="sd">            graph (DcrGraph): the event log used for aligning the traces</span>
+<span class="sd">            parameters (Optional[Dict]): A dictionary of parameters that control the behavior of the trace processing.</span>
+<span class="sd">                                         This can include custom activity and case ID keys, among others.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[Dict]: a list of dictionaries containing info on alignment and move fitness</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">aligned_traces</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">traces</span><span class="p">:</span>
+            <span class="n">trace_alignment</span> <span class="o">=</span> <span class="n">TraceAlignment</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">trace</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+            <span class="n">aligned_traces</span> <span class="o">=</span> <span class="n">aligned_traces</span> <span class="o">+</span> <span class="n">trace_alignment</span><span class="o">.</span><span class="n">perform_alignment</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">aligned_traces</span></div>
+</div>
+
+
+<div class="viewcode-block" id="TraceAlignment">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment">[docs]</a>
+<span class="k">class</span> <span class="nc">TraceAlignment</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The TraceAlignment class provides a simplified interface to perform optimal alignment for DCR graphs,</span>
+<span class="sd">    abstracting the complexity of direct interactions with the DCRGraphHandler, TraceHandler, and Alignment classes.</span>
+
+<span class="sd">    Users should initialize TraceAlignment with a DCR_Graph object and a trace object, which can be a list of events, a Pandas DataFrame,</span>
+<span class="sd">    an EventLog, or a Trace. Optional parameters can also be passed to customize the processing, such as specifying custom activity</span>
+<span class="sd">    and case ID keys.</span>
+
+<span class="sd">    After initializing TraceAlignment, users can call perform_alignment() to execute the alignment process, which returns the result of</span>
+<span class="sd">    the alignment procedure.</span>
+
+<span class="sd">    Example usage:</span>
+<span class="sd">        Define your instances of DCR graph and trace representation as &#39;graph&#39; and &#39;trace&#39;</span>
+<span class="sd">        facade = Facade(graph, trace)</span>
+<span class="sd">        alignment_result = facade.perform_alignment()</span>
+
+<span class="sd">    Note:</span>
+<span class="sd">    - The user is expected to have a basic understanding of DCR graphs and trace alignment in the context of process mining.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        graph_handler (DCRGraphHandler): Handler for DCR graph operations.</span>
+<span class="sd">        trace_handler (TraceHandler): Handler for trace operations.</span>
+<span class="sd">        alignment (Alignment): Instance that holds the result of the alignment process, initialized to None.</span>
+
+<span class="sd">    Methods:</span>
+<span class="sd">        perform_alignment(): Performs trace alignment against the DCR graph and returns the alignment result.</span>
+<span class="sd">        get_performance_metrics(): Calculates and returns the alignment fitness.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">:</span> <span class="n">DcrGraph</span><span class="p">,</span> <span class="n">trace</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">]],</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">Trace</span><span class="p">],</span>
+                 <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the facade with a DCR graph and a trace to be processed.</span>
+
+<span class="sd">        The facade serves as a simplified interface to perform alignment between</span>
+<span class="sd">        the provided DCR graph and the trace, handling the creation and coordination</span>
+<span class="sd">        of the necessary handler objects.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        graph : DcrGraph</span>
+<span class="sd">            The DCR graph against which the trace will be aligned. The graph should</span>
+<span class="sd">            encapsulate the behavior model.</span>
+<span class="sd">        trace : Union[List[Dict[str, Any]], pd.DataFrame, EventLog, Trace]</span>
+<span class="sd">            The trace to be aligned with the DCR graph. The trace can be in various</span>
+<span class="sd">            forms, such as a list of dictionaries representing events, a pandas</span>
+<span class="sd">            DataFrame, an EventLog object, or a Trace object.</span>
+<span class="sd">        parameters : Optional[Dict], optional</span>
+<span class="sd">            A dictionary of parameters that can be used to fine-tune the handling</span>
+<span class="sd">            of the graph and trace. The exact parameters that can be provided will</span>
+<span class="sd">            depend on the implementation of the DCRGraphHandler and TraceHandler.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        self.graph_handler : DCRGraphHandler</span>
+<span class="sd">            An instance of DCRGraphHandler to manage operations related to the DCR graph.</span>
+<span class="sd">        self.trace_handler : TraceHandler</span>
+<span class="sd">            An instance of TraceHandler to manage the conversion and processing of the trace.</span>
+<span class="sd">        self.alignment : Alignment or None</span>
+<span class="sd">            An instance of the Alignment class that will be initialized after</span>
+<span class="sd">            perform_alignment is called. This will hold the result of the trace</span>
+<span class="sd">            alignment against the DCR graph.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span> <span class="o">=</span> <span class="n">DCRGraphHandler</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span> <span class="o">=</span> <span class="n">TraceHandler</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># This will hold an instance of Alignment class after perform_alignment is called</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="kc">None</span>
+
+<div class="viewcode-block" id="TraceAlignment.perform_alignment">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.perform_alignment">[docs]</a>
+    <span class="k">def</span> <span class="nf">perform_alignment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Perform the alignment process and store the result in the self.alignment attribute</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="n">Alignment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">alignment</span><span class="o">.</span><span class="n">apply_trace</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">get_performance_metrics</span><span class="p">()</span>
+        <span class="k">return</span> <span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">]</span></div>
+
+
+<div class="viewcode-block" id="TraceAlignment.get_performance_metrics">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceAlignment.get_performance_metrics">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_performance_metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1"># Ensure that alignment has been performed before calculating performance metrics</span>
+        <span class="c1"># Calculate and return fitness and precision based on the alignment result</span>
+        <span class="n">performance</span> <span class="o">=</span> <span class="n">Performance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alignment</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="p">)</span>
+        <span class="n">fitness_bwc</span> <span class="o">=</span> <span class="n">performance</span><span class="o">.</span><span class="n">calculate_fitness</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="n">Outputs</span><span class="o">.</span><span class="n">ALIGN_FITNESS</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitness_bwc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="n">Outputs</span><span class="o">.</span><span class="n">BEST_WORST_COST</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">fitness_bwc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="Parameters">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Parameters">[docs]</a>
+<span class="k">class</span> <span class="nc">Parameters</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Enumeration that defines keys and constants for various parameters used in the alignment process.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        CASE_ID_KEY: The key used to identify the case ID in the event log.</span>
+<span class="sd">        ACTIVITY_KEY: The key used to identify the activity in the event log.</span>
+<span class="sd">        SYNC_COST: The cost of a synchronous move during the alignment.</span>
+<span class="sd">        MODEL_COST: The cost of a model move during the alignment.</span>
+<span class="sd">        LOG_COST: The cost of a log move during the alignment.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">CASE_ID_KEY</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">PARAMETER_CONSTANT_CASEID_KEY</span>
+    <span class="n">ACTIVITY_KEY</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">PARAMETER_CONSTANT_ACTIVITY_KEY</span>
+    <span class="n">SYNC_COST</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">MODEL_COST</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">LOG_COST</span> <span class="o">=</span> <span class="mi">1</span></div>
+
+
+
+<div class="viewcode-block" id="Outputs">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Outputs">[docs]</a>
+<span class="k">class</span> <span class="nc">Outputs</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Enumeration that defines constants for various outputs of the alignment process.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        ALIGNMENT: The key for accessing the final alignment from the result.</span>
+<span class="sd">        COST: The key for accessing the total cost of the alignment.</span>
+<span class="sd">        VISITED: The key for accessing the number of visited states during the alignment process.</span>
+<span class="sd">        CLOSED: The key for accessing the number of closed states during the alignment process.</span>
+<span class="sd">        GLOBAL_MIN: The key for accessing the global minimum cost encountered during the alignment.</span>
+<span class="sd">        MODEL_MOVE_FITNESS = the key for accessing the model move fitness</span>
+<span class="sd">        LOG_MOVE_FITNESS = the key for accessing the log move fitness</span>
+<span class="sd">        ALIGN_FITNESS = the key for accessing the alignment fitness</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ALIGNMENT</span> <span class="o">=</span> <span class="s2">&quot;alignment&quot;</span>
+    <span class="n">COST</span> <span class="o">=</span> <span class="s2">&quot;cost&quot;</span>
+    <span class="n">VISITED</span> <span class="o">=</span> <span class="s2">&quot;visited_states&quot;</span>
+    <span class="n">CLOSED</span> <span class="o">=</span> <span class="s2">&quot;closed&quot;</span>
+    <span class="n">GLOBAL_MIN</span> <span class="o">=</span> <span class="s2">&quot;global_min&quot;</span>
+    <span class="n">ALIGN_FITNESS</span> <span class="o">=</span> <span class="s1">&#39;fitness&#39;</span>
+    <span class="n">BEST_WORST_COST</span> <span class="o">=</span> <span class="s2">&quot;bwc&quot;</span></div>
+
+
+<div class="viewcode-block" id="Performance">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance">[docs]</a>
+<span class="k">class</span> <span class="nc">Performance</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">alignment</span><span class="p">,</span> <span class="n">graph_handler</span><span class="p">,</span> <span class="n">trace_handler</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">alignment</span> <span class="o">=</span> <span class="n">alignment</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_hanlder</span> <span class="o">=</span> <span class="n">graph_handler</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span> <span class="o">=</span> <span class="n">trace_handler</span>
+
+<div class="viewcode-block" id="Performance.calculate_fitness">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Performance.calculate_fitness">[docs]</a>
+    <span class="k">def</span> <span class="nf">calculate_fitness</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        From the Conformance Checking book [1].</span>
+<span class="sd">        Calculate the fitness of the alignment based on the optimal and worst-case costs.</span>
+
+<span class="sd">        The fitness is calculated as one minus the ratio of the optimal alignment cost to</span>
+<span class="sd">        the worst-case alignment cost. If the worst-case alignment cost is zero,</span>
+<span class="sd">        fitness is set to zero to avoid division by zero.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        float</span>
+<span class="sd">            The calculated fitness value, where higher values indicate a better fit.</span>
+
+<span class="sd">        References</span>
+<span class="sd">        ----------</span>
+<span class="sd">        * [1] C. Josep et al., &quot;Conformance Checking Software&quot;,  Springer International Publishing, 82-91, 2018. `DOI &lt;https://doi.org/10.1007/978-3-319-99414-7&gt;`_.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># run model with empty trace</span>
+        <span class="n">worst_case_trace</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">trace</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">trace</span> <span class="o">=</span> <span class="p">()</span>
+        <span class="c1"># compute worst_best_alignment</span>
+        <span class="n">best_worst_alignment</span> <span class="o">=</span> <span class="n">Alignment</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_hanlder</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="p">)</span>
+        <span class="n">best_worst_result</span> <span class="o">=</span> <span class="n">best_worst_alignment</span><span class="o">.</span><span class="n">apply_trace</span><span class="p">()</span>
+        <span class="n">bwc</span> <span class="o">=</span> <span class="p">(</span><span class="n">worst_case_trace</span> <span class="o">+</span> <span class="n">best_worst_result</span><span class="p">[</span><span class="n">Outputs</span><span class="o">.</span><span class="n">COST</span><span class="o">.</span><span class="n">value</span><span class="p">])</span>
+        <span class="n">fitness</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">alignment</span><span class="o">.</span><span class="n">global_min</span> <span class="o">/</span> <span class="p">(</span><span class="n">bwc</span><span class="p">)</span> <span class="k">if</span> <span class="n">bwc</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">fitness</span><span class="p">,</span> <span class="n">bwc</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="TraceHandler">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler">[docs]</a>
+<span class="k">class</span> <span class="nc">TraceHandler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        TraceHandler is responsible for managing and converting traces into a format suitable</span>
+<span class="sd">        for the alignment algorithm. This class provides functionalities to check if the trace is</span>
+<span class="sd">        empty, retrieve the first activity from the trace, and convert the trace format as needed.</span>
+
+<span class="sd">        A trace can be provided as a list of dictionaries, a pandas DataFrame, an EventLog, or a Trace object.</span>
+<span class="sd">        The TraceHandler takes care of converting these into a uniform internal representation.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        trace : Tuple[Any] | Trace</span>
+<span class="sd">            The trace to be managed and converted. It&#39;s stored internally in a list of dictionaries</span>
+<span class="sd">            regardless of the input format.</span>
+<span class="sd">        activity_key : str</span>
+<span class="sd">            The key to identify activities within the trace data.</span>
+
+<span class="sd">        Methods</span>
+<span class="sd">        -------</span>
+<span class="sd">        is_empty() -&gt; bool:</span>
+<span class="sd">            Checks if the trace is empty (contains no events).</span>
+
+<span class="sd">        get_first_activity() -&gt; Any:</span>
+<span class="sd">            Retrieves the first activity from the trace, if available.</span>
+
+<span class="sd">        convert_trace(activity_key, case_id_key, parameters):</span>
+<span class="sd">            Converts the trace into a tuple-based format required for processing by the alignment algorithm.</span>
+<span class="sd">            This conversion handles both DataFrame and Event Log traces and can be configured via parameters.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        trace : Tuple[str] | Trace</span>
+<span class="sd">            The initial trace data provided in one of the acceptable formats.</span>
+<span class="sd">        parameters : Optional[Dict]</span>
+<span class="sd">            Optional parameters for trace conversion. These can define the keys for activity and case ID within</span>
+<span class="sd">            the trace data and can include other conversion-related parameters.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Trace</span><span class="p">],</span>
+                 <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initializes the TraceHandler object, converting the input trace into a standard format</span>
+<span class="sd">        and storing the specified parameters.</span>
+
+<span class="sd">        The conversion process varies depending on the type of trace input provided. The trace is</span>
+<span class="sd">        converted to a list of dictionary records for consistent internal processing.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        trace : Tuple[str] | Trace</span>
+<span class="sd">            The initial trace data provided in one of: Pandas DataFrame, an EventLog, or a single Trace.</span>
+<span class="sd">        parameters : Optional[Dict]</span>
+<span class="sd">            Optional parameters for trace conversion. These can define the keys for activity and case ID within</span>
+<span class="sd">            the trace data and can include other conversion-related parameters. If None or not a dictionary,</span>
+<span class="sd">            defaults will be used.</span>
+
+<span class="sd">        The activity key used in the trace is determined by the provided parameters or defaults to</span>
+<span class="sd">        a standard key from the xes_constants if not specified.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+            <span class="n">parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">activity_key</span> <span class="o">=</span> <span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">ACTIVITY_KEY</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_NAME_KEY</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trace</span><span class="p">,</span> <span class="n">Trace</span><span class="p">):</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trace</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">activity_key</span><span class="p">]</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">trace</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trace</span> <span class="o">=</span> <span class="n">trace</span>
+
+<div class="viewcode-block" id="TraceHandler.is_empty">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.is_empty">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_empty</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="ow">not</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trace</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="TraceHandler.get_first_activity">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.TraceHandler.get_first_activity">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_first_activity</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace</span> <span class="k">else</span> <span class="kc">None</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="DCRGraphHandler">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler">[docs]</a>
+<span class="k">class</span> <span class="nc">DCRGraphHandler</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        DCRGraphHandler manages operations on a DCR graph within the context of an alignment algorithm.</span>
+<span class="sd">        It provides methods to check if an event is enabled, if the graph is in an accepting state,</span>
+<span class="sd">        and to execute an event on the graph.</span>
+
+<span class="sd">        The DCR graph follows the semantics defined in the DCR semantics module, and this class</span>
+<span class="sd">        acts as an interface to apply these semantics for the purpose of alignment computation.</span>
+
+<span class="sd">        Attributes</span>
+<span class="sd">        ----------</span>
+<span class="sd">        graph : DcrGraph</span>
+<span class="sd">            The DCR graph on which the operations are to be performed.</span>
+
+<span class="sd">        Methods</span>
+<span class="sd">        -------</span>
+<span class="sd">        is_enabled(event: Any) -&gt; bool:</span>
+<span class="sd">            Determines if an event is enabled in the current state of the DCR graph.</span>
+
+<span class="sd">        is_accepting() -&gt; bool:</span>
+<span class="sd">            Checks if the current state of the DCR graph is an accepting state.</span>
+
+<span class="sd">        execute(event: Any, curr_graph) -&gt; Any:</span>
+<span class="sd">            Executes an event on the DCR graph, which may result in a transition to a new state.</span>
+<span class="sd">            If the execution is not possible, it returns the current graph state.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        graph : DcrGraph</span>
+<span class="sd">            An instance of a DCR_Graph object which the handler will manage and manipulate.</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        TypeError</span>
+<span class="sd">            If the provided graph is not an instance of DCR_Graph.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph</span><span class="p">:</span> <span class="n">DcrGraph</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">DcrGraph</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Expected a DCR_Graph object, got </span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span><span class="si">}</span><span class="s2"> instead&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">graph</span>
+
+<div class="viewcode-block" id="DCRGraphHandler.is_enabled">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_enabled">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">DcrSemantics</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DCRGraphHandler.enabled">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.enabled">[docs]</a>
+    <span class="k">def</span> <span class="nf">enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">DcrSemantics</span><span class="o">.</span><span class="n">enabled</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DCRGraphHandler.is_accepting">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.is_accepting">[docs]</a>
+    <span class="k">def</span> <span class="nf">is_accepting</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">DcrSemantics</span><span class="o">.</span><span class="n">is_accepting</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DCRGraphHandler.execute">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.DCRGraphHandler.execute">[docs]</a>
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">Any</span><span class="p">,</span> <span class="n">curr_graph</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span><span class="p">:</span>
+        <span class="n">new_graph</span> <span class="o">=</span> <span class="n">DcrSemantics</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">curr_graph</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">new_graph</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">curr_graph</span>
+        <span class="k">return</span> <span class="n">new_graph</span></div>
+</div>
+
+
+<div class="viewcode-block" id="Alignment">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment">[docs]</a>
+<span class="k">class</span> <span class="nc">Alignment</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">graph_handler</span><span class="p">:</span> <span class="n">DCRGraphHandler</span><span class="p">,</span> <span class="n">trace_handler</span><span class="p">:</span> <span class="n">TraceHandler</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the Alignment instance.</span>
+<span class="sd">        This constructor initializes the alignment with the provided DCR graph and trace handlers. It sets up</span>
+<span class="sd">        all necessary data structures for computing the alignment and its costs.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        graph_handler : DCRGraphHandler</span>
+<span class="sd">            An instance of DCRGraphHandler to manage the DCR graph.</span>
+<span class="sd">        trace_handler : TraceHandler</span>
+<span class="sd">            An instance of TraceHandler to manage the event log trace.</span>
+<span class="sd">        parameters : Optional[Dict]</span>
+<span class="sd">            A dictionary of parameters to configure the alignment process. Defaults are used if None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span> <span class="o">=</span> <span class="n">graph_handler</span>
+
+        <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">parameters</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">activity_key</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_param_value</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">ACTIVITY_KEY</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_NAME_KEY</span><span class="p">)</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="n">Parameters</span><span class="o">.</span><span class="n">ACTIVITY_KEY</span><span class="o">.</span><span class="n">value</span><span class="p">]</span> <span class="o">=</span> <span class="n">activity_key</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span> <span class="o">=</span> <span class="n">TraceHandler</span><span class="p">(</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">trace</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_set</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">max_cost</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">global_min</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">closed_set</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visited_states</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">new_moves</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">final_alignment</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">initial_marking</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Alignment.handle_state">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.handle_state">[docs]</a>
+    <span class="k">def</span> <span class="nf">handle_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curr_cost</span><span class="p">,</span> <span class="n">curr_graph</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">moves</span><span class="p">,</span> <span class="n">move_type</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Manages the transition to a new state in the alignment algorithm based on the specified move type.</span>
+<span class="sd">        It computes the new state, checks for execution equivalency to avoid re-processing, and if unique,</span>
+<span class="sd">        updates the visited states and the priority queue for further processing.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        curr_cost : int</span>
+<span class="sd">            The current cost of the alignment.</span>
+<span class="sd">        curr_graph : DcrGraph</span>
+<span class="sd">            The current state of the DCR graph.</span>
+<span class="sd">        curr_trace : list</span>
+<span class="sd">            The current state of the trace.</span>
+<span class="sd">        event : Any</span>
+<span class="sd">                The event from the trace that is being considered in the current alignment step.</span>
+<span class="sd">        moves : list</span>
+<span class="sd">            The list of moves made so far.</span>
+<span class="sd">        move_type : str, optional</span>
+<span class="sd">            The type of move to make. This should be one of &quot;sync&quot;, &quot;model&quot;, or &quot;log&quot;. Default is None.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Raises</span>
+<span class="sd">        ------</span>
+<span class="sd">        None</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        - This method interfaces with the `get_new_state` method to compute the new state.</span>
+<span class="sd">        - It employs a heap-based priority queue to manage the processing order of states based on their costs.</span>
+<span class="sd">        - Execution equivalency check is performed to reduce redundant processing of similar states.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">moves</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">moves</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">new_cost</span><span class="p">,</span> <span class="n">new_graph</span><span class="p">,</span> <span class="n">new_trace</span><span class="p">,</span> <span class="n">new_move</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_new_state</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="n">curr_graph</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span>
+                                                                      <span class="n">move_type</span><span class="p">)</span>
+
+        <span class="n">state_representation</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">new_graph</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">new_trace</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">state_representation</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">visited_states</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">visited_states</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">state_representation</span><span class="p">)</span>
+            <span class="n">new_moves</span> <span class="o">=</span> <span class="n">moves</span> <span class="o">+</span> <span class="p">[</span><span class="n">new_move</span><span class="p">]</span>
+            <span class="n">heappush</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">open_set</span><span class="p">,</span> <span class="p">(</span><span class="n">new_cost</span><span class="p">,</span> <span class="n">new_graph</span><span class="p">,</span> <span class="n">new_trace</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">new_graph</span><span class="p">),</span> <span class="n">new_moves</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="Alignment.get_new_state">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.get_new_state">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_new_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curr_cost</span><span class="p">,</span> <span class="n">curr_marking</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">move_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Computes the new state of the alignment algorithm based on the current state and</span>
+<span class="sd">        the specified move type. The new state includes the updated cost, graph, trace,</span>
+<span class="sd">        and move. This method handles three types of moves: synchronous, model, and log.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        curr_cost : int</span>
+<span class="sd">            The current cost of the alignment.</span>
+<span class="sd">        curr_graph : DcrGraph</span>
+<span class="sd">            The current state of the DCR graph.</span>
+<span class="sd">        curr_trace : list</span>
+<span class="sd">            The current state of the trace.</span>
+<span class="sd">        moves : list</span>
+<span class="sd">            The list of moves made so far.</span>
+<span class="sd">        move_type : str</span>
+<span class="sd">            The type of move to make. This should be one of &quot;sync&quot;, &quot;model&quot;, or &quot;log&quot;.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        tuple</span>
+<span class="sd">            A tuple containing four elements:</span>
+<span class="sd">            - new_cost : int, the updated cost of the alignment.</span>
+<span class="sd">            - new_graph : DCR_Graph, the updated state of the DCR graph.</span>
+<span class="sd">            - new_trace : list, the updated state of the trace.</span>
+<span class="sd">            - new_move : tuple, a tuple representing the move made, formatted as (move_type, first_activity).</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        new_cost, new_graph, new_trace, new_move = get_new_state(curr_cost, curr_graph, curr_trace, moves, &quot;sync&quot;)</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">new_cost</span> <span class="o">=</span> <span class="n">curr_cost</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">curr_marking</span><span class="p">)</span>
+        <span class="n">new_graph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span>
+        <span class="n">new_trace</span> <span class="o">=</span> <span class="n">curr_trace</span>
+        <span class="n">new_move</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">move_type</span> <span class="o">==</span> <span class="s2">&quot;sync&quot;</span><span class="p">:</span>
+            <span class="n">new_cost</span> <span class="o">+=</span> <span class="n">Parameters</span><span class="o">.</span><span class="n">SYNC_COST</span><span class="o">.</span><span class="n">value</span>
+            <span class="n">new_move</span> <span class="o">=</span> <span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+            <span class="n">new_trace</span> <span class="o">=</span> <span class="n">curr_trace</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">new_graph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">new_graph</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">move_type</span> <span class="o">==</span> <span class="s2">&quot;model&quot;</span><span class="p">:</span>
+            <span class="n">new_cost</span> <span class="o">+=</span> <span class="n">Parameters</span><span class="o">.</span><span class="n">MODEL_COST</span><span class="o">.</span><span class="n">value</span>
+            <span class="n">new_move</span> <span class="o">=</span> <span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="s2">&quot;&gt;&gt;&quot;</span><span class="p">)</span>
+            <span class="n">new_graph</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">new_graph</span><span class="p">)</span>
+
+        <span class="k">elif</span> <span class="n">move_type</span> <span class="o">==</span> <span class="s2">&quot;log&quot;</span><span class="p">:</span>
+            <span class="n">new_cost</span> <span class="o">+=</span> <span class="n">Parameters</span><span class="o">.</span><span class="n">LOG_COST</span><span class="o">.</span><span class="n">value</span>
+            <span class="n">new_move</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;&gt;&gt;&quot;</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span>
+            <span class="n">new_trace</span> <span class="o">=</span> <span class="n">curr_trace</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+
+        <span class="k">return</span> <span class="n">new_cost</span><span class="p">,</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">new_graph</span><span class="o">.</span><span class="n">marking</span><span class="p">),</span> <span class="n">new_trace</span><span class="p">,</span> <span class="n">new_move</span></div>
+
+
+<div class="viewcode-block" id="Alignment.update_closed_and_visited_sets">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.update_closed_and_visited_sets">[docs]</a>
+    <span class="k">def</span> <span class="nf">update_closed_and_visited_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curr_cost</span><span class="p">,</span> <span class="n">state_repr</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">closed_set</span><span class="p">[</span><span class="n">state_repr</span><span class="p">]</span> <span class="o">=</span> <span class="n">curr_cost</span></div>
+
+
+<div class="viewcode-block" id="Alignment.process_current_state">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.process_current_state">[docs]</a>
+    <span class="k">def</span> <span class="nf">process_current_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Process the current state in the alignment process.</span>
+<span class="sd">        This method processes the current state of the alignment, updates the graph handler</span>
+<span class="sd">        with the current graph, and prepares the state representation for further processing.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        current : Tuple</span>
+<span class="sd">            The current state, which is a tuple containing the current cost, current graph,</span>
+<span class="sd">            current trace, and the moves made up to this point.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">curr_cost</span><span class="p">,</span> <span class="n">curr_marking</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">moves</span> <span class="o">=</span> <span class="n">current</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">curr_marking</span><span class="p">)</span>
+        <span class="n">state_repr</span> <span class="o">=</span> <span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">)))</span>
+        <span class="k">return</span> <span class="n">curr_cost</span><span class="p">,</span> <span class="n">curr_marking</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">,</span> <span class="n">state_repr</span><span class="p">,</span> <span class="n">moves</span></div>
+
+
+<div class="viewcode-block" id="Alignment.check_accepting_conditions">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.check_accepting_conditions">[docs]</a>
+    <span class="k">def</span> <span class="nf">check_accepting_conditions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curr_cost</span><span class="p">,</span> <span class="n">is_accepting</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Check if the current state meets the accepting conditions and update the global minimum cost and final alignment.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        curr_cost : float</span>
+<span class="sd">            The cost associated with the current state.</span>
+<span class="sd">        is_accepting : bool</span>
+<span class="sd">            Flag indicating whether the current state is an accepting state.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        float</span>
+<span class="sd">            The final cost if the accepting conditions are met; `float(&#39;inf&#39;)` otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">is_accepting</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">curr_cost</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_min</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">global_min</span> <span class="o">=</span> <span class="n">curr_cost</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">final_alignment</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_moves</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_min</span></div>
+
+
+<div class="viewcode-block" id="Alignment.apply_trace">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.apply_trace">[docs]</a>
+    <span class="k">def</span> <span class="nf">apply_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Applies the alignment algorithm to a trace in order to find an optimal alignment</span>
+<span class="sd">        between the DCR graph and the trace based on the algorithm outlined in the paper</span>
+<span class="sd">        by Axel Kjeld Fjelrad Christfort and Tijs Slaats.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        parameters : dict, optional</span>
+<span class="sd">            A dictionary of parameters to configure the alignment algorithm.</span>
+<span class="sd">            Possible keys include:</span>
+<span class="sd">            - Parameters.ACTIVITY_KEY: Specifies the key to use for activity names in the trace data.</span>
+<span class="sd">            - Parameters.CASE_ID_KEY: Specifies the key to use for case IDs in the trace data.</span>
+<span class="sd">            If not provided or None, default values are used.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary containing the results of the alignment algorithm, with the following keys:</span>
+<span class="sd">            - &#39;alignment&#39;: List of tuples representing the optimal alignment found.</span>
+<span class="sd">            - &#39;cost&#39;: The cost of the optimal alignment.</span>
+<span class="sd">            - &#39;visited&#39;: The number of states visited during the alignment algorithm.</span>
+<span class="sd">            - &#39;closed&#39;: The number of closed states during the alignment algorithm.</span>
+<span class="sd">            - &#39;global_min&#39;: The global minimum cost found during the alignment algorithm.</span>
+
+<span class="sd">        Example</span>
+<span class="sd">        -------</span>
+<span class="sd">        result = alignment_obj.apply_trace()</span>
+<span class="sd">        optimal_alignment = result[&#39;alignment&#39;]</span>
+<span class="sd">        alignment_cost = result[&#39;cost&#39;]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">visited</span><span class="p">,</span> <span class="n">closed</span><span class="p">,</span> <span class="n">cost</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">final_alignment</span><span class="p">,</span> <span class="n">final_cost</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">open_set</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">cost</span><span class="p">,</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">trace</span><span class="p">,</span>
+             <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span><span class="p">),</span> <span class="p">[]))</span>
+
+        <span class="c1"># perform while loop to iterate through all states</span>
+        <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">open_set</span><span class="p">:</span>
+            <span class="n">current</span> <span class="o">=</span> <span class="n">heappop</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">open_set</span><span class="p">)</span>
+            <span class="n">visited</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">process_current_state</span><span class="p">(</span><span class="n">current</span><span class="p">)</span>
+            <span class="c1"># if the state has already been visited, and associated cost with the state is lower than skip</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">skip_current</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="ow">and</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">curr_cost</span><span class="p">,</span> <span class="n">curr_trace</span><span class="p">,</span> <span class="n">state_repr</span><span class="p">,</span> <span class="n">moves</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+            <span class="c1"># if curr_cost is greater than final cost, no reason to explore this branch</span>
+            <span class="k">if</span> <span class="n">curr_cost</span> <span class="o">&gt;</span> <span class="n">final_cost</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_closed_and_visited_sets</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="n">state_repr</span><span class="p">)</span>
+            <span class="n">closed</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">trace</span> <span class="o">=</span> <span class="n">curr_trace</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">is_accepting</span><span class="p">()</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">is_empty</span><span class="p">():</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">new_moves</span> <span class="o">=</span> <span class="n">moves</span>
+                <span class="n">final_cost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">check_accepting_conditions</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">is_accepting</span><span class="p">())</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">max_cost</span> <span class="o">=</span> <span class="n">final_cost</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">perform_moves</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">moves</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">construct_results</span><span class="p">(</span><span class="n">visited</span><span class="p">,</span> <span class="n">closed</span><span class="p">,</span> <span class="n">final_cost</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Alignment.skip_current">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.skip_current">[docs]</a>
+    <span class="k">def</span> <span class="nf">skip_current</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">result</span><span class="p">):</span>
+        <span class="c1"># if state is visited, and cost is the same skip</span>
+        <span class="n">curr_cost</span><span class="p">,</span> <span class="n">state_repr</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">result</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">visitCost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">closed_set</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">state_repr</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">visitCost</span> <span class="o">&lt;=</span> <span class="n">curr_cost</span> <span class="ow">and</span> <span class="n">visitCost</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">float</span><span class="p">(</span><span class="s2">&quot;inf&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Alignment.perform_moves">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.perform_moves">[docs]</a>
+    <span class="k">def</span> <span class="nf">perform_moves</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">curr_cost</span><span class="p">,</span> <span class="n">current</span><span class="p">,</span> <span class="n">moves</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Defines available moves based on the trace and model state.</span>
+
+<span class="sd">        This method determines which moves are possible (synchronous, model, or log moves)</span>
+<span class="sd">        so that they can be processed accordingly. Each move type is defined as:</span>
+<span class="sd">        - Synchronous (sync): The activity is both in the trace and the model, and is currently enabled.</span>
+<span class="sd">        - Model move: The activity is enabled in the model but not in the trace.</span>
+<span class="sd">        - Log move: The activity is in the trace but not enabled in the model.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        curr_cost : float</span>
+<span class="sd">            The cost associated with the current state before performing any moves.</span>
+<span class="sd">        current : tuple</span>
+<span class="sd">            The current state represented as a tuple containing the following:</span>
+<span class="sd">            - current[0]: The current cumulative cost associated with the trace.</span>
+<span class="sd">            - current[1]: The current state of the graph representing the model.</span>
+<span class="sd">            - current[2]: The current position in the trace.</span>
+<span class="sd">            - current[3]: A placeholder for additional information (if any).</span>
+<span class="sd">            - current[4]: The list of moves performed to reach this state.</span>
+<span class="sd">        moves : list</span>
+<span class="sd">            The list of moves performed so far to reach the current state. This will be updated with new moves</span>
+<span class="sd">            as they are performed.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span> <span class="o">=</span> <span class="n">current</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">first_activity</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">get_event</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">trace_handler</span><span class="o">.</span><span class="n">get_first_activity</span><span class="p">())</span>
+        <span class="n">enabled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">enabled</span><span class="p">()</span>
+        <span class="n">is_enabled</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">is_enabled</span><span class="p">(</span><span class="n">first_activity</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">first_activity</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">is_enabled</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">handle_state</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="n">current</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">current</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">first_activity</span><span class="p">,</span> <span class="n">moves</span><span class="p">,</span> <span class="s2">&quot;sync&quot;</span><span class="p">)</span>
+                <span class="k">return</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle_state</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="n">current</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">current</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">first_activity</span><span class="p">,</span> <span class="n">moves</span><span class="p">,</span> <span class="s2">&quot;log&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">enabled</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">handle_state</span><span class="p">(</span><span class="n">curr_cost</span><span class="p">,</span> <span class="n">current</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">current</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">event</span><span class="p">,</span> <span class="n">moves</span><span class="p">,</span> <span class="s2">&quot;model&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Alignment.construct_results">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.Alignment.construct_results">[docs]</a>
+    <span class="k">def</span> <span class="nf">construct_results</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">visited</span><span class="p">,</span> <span class="n">closed</span><span class="p">,</span> <span class="n">final_cost</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructs a dictionary of results from the alignment process containing various metrics</span>
+<span class="sd">        and outcomes, such as the final alignment, its cost, and statistics about the search process.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        visited : int</span>
+<span class="sd">            The number of states visited during the alignment process.</span>
+<span class="sd">        closed : int</span>
+<span class="sd">            The number of states that were closed (i.e., fully processed and will not be revisited).</span>
+<span class="sd">        final_cost : float</span>
+<span class="sd">            The cost associated with the final alignment obtained.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        dict</span>
+<span class="sd">            A dictionary with keys corresponding to various outputs of the alignment process:</span>
+<span class="sd">            - &#39;alignment&#39;: The final alignment between the process model and the trace.</span>
+<span class="sd">            - &#39;cost&#39;: The cost of the final alignment   .</span>
+<span class="sd">            - &#39;visited&#39;: The total number of visited states.</span>
+<span class="sd">            - &#39;closed&#39;: The total number of closed states.</span>
+<span class="sd">            - &#39;model move fitness&#39;: the fitness provided that model moves are used</span>
+<span class="sd">            - &#39;log move fitness&#39;: the fitness provided by the log moves</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph_handler</span><span class="o">.</span><span class="n">graph</span><span class="o">.</span><span class="n">marking</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">initial_marking</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="n">Outputs</span><span class="o">.</span><span class="n">ALIGNMENT</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">final_alignment</span><span class="p">,</span>
+            <span class="n">Outputs</span><span class="o">.</span><span class="n">COST</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="n">final_cost</span><span class="p">,</span>
+            <span class="n">Outputs</span><span class="o">.</span><span class="n">VISITED</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="n">visited</span><span class="p">,</span>
+            <span class="n">Outputs</span><span class="o">.</span><span class="n">CLOSED</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="n">closed</span><span class="p">,</span>
+            <span class="n">Outputs</span><span class="o">.</span><span class="n">GLOBAL_MIN</span><span class="o">.</span><span class="n">value</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">global_min</span><span class="p">,</span>
+        <span class="p">}</span></div>
+</div>
+
+
+<div class="viewcode-block" id="apply">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.apply">[docs]</a>
+<span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">trace_or_log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span><span class="n">EventLog</span><span class="p">,</span><span class="n">Trace</span><span class="p">],</span> <span class="n">graph</span><span class="p">:</span> <span class="n">DcrGraph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Applies an alignment operation on a given trace or log against a specified DCR graph.</span>
+
+<span class="sd">    Depending on the type of input, this function handles the alignment of a single trace or multiple traces contained</span>
+<span class="sd">    in an event log. For a single trace, it creates an instance of TraceAlignment and performs the alignment.</span>
+<span class="sd">    For an event log, it initializes a LogAlignment object and aligns each trace contained within.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">        trace_or_log (Union[pd.DataFrame, EventLog, Trace]): The event log or single trace to align.</span>
+<span class="sd">        graph (DcrGraph): The DCR graph against which the alignment is to be performed.</span>
+<span class="sd">        parameters (Optional[Dict]): A dictionary of parameters for the alignment (default is None).</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        - If a single trace is provided, returns the result of the TraceAlignment.</span>
+<span class="sd">        - If an event log is provided, returns a list of results from LogAlignment for each trace.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">trace_or_log</span><span class="p">,</span> <span class="n">Trace</span><span class="p">):</span>
+        <span class="n">alignment</span> <span class="o">=</span> <span class="n">TraceAlignment</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">trace_or_log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">alignment</span><span class="o">.</span><span class="n">perform_alignment</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">alignment</span> <span class="o">=</span> <span class="n">LogAlignment</span><span class="p">(</span><span class="n">trace_or_log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">alignment</span><span class="o">.</span><span class="n">perform_log_alignment</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_diagnostics_dataframe">
+<a class="viewcode-back" href="../../../../../../../pm4py.algo.conformance.alignments.dcr.variants.html#pm4py.algo.conformance.alignments.dcr.variants.optimal.get_diagnostics_dataframe">[docs]</a>
+<span class="k">def</span> <span class="nf">get_diagnostics_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">conf_result</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the diagnostics dataframe from a log and the conformance results</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    --------------</span>
+<span class="sd">    log</span>
+<span class="sd">        Event log</span>
+<span class="sd">    conf_result</span>
+<span class="sd">        Results of conformance checking</span>
+<span class="sd">    variant</span>
+<span class="sd">        Variant to be used:</span>
+<span class="sd">        - Variants.CLASSIC</span>
+<span class="sd">    parameters</span>
+<span class="sd">        Variant-specific parameters</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    --------------</span>
+<span class="sd">    diagn_dataframe</span>
+<span class="sd">        Diagnostics dataframe</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">parameters</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">parameters</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="n">case_id_key</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_param_value</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">CASE_ID_KEY</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span>
+                                             <span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_TRACEID_KEY</span><span class="p">)</span>
+
+    <span class="n">diagn_stream</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">log</span><span class="p">)):</span>
+        <span class="n">case_id</span> <span class="o">=</span> <span class="n">log</span><span class="p">[</span><span class="n">index</span><span class="p">]</span><span class="o">.</span><span class="n">attributes</span><span class="p">[</span><span class="n">case_id_key</span><span class="p">]</span>
+        <span class="n">cost</span> <span class="o">=</span> <span class="n">conf_result</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">Outputs</span><span class="o">.</span><span class="n">COST</span><span class="o">.</span><span class="n">value</span><span class="p">]</span>
+        <span class="n">align_fitness</span> <span class="o">=</span> <span class="n">conf_result</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">Outputs</span><span class="o">.</span><span class="n">ALIGN_FITNESS</span><span class="o">.</span><span class="n">value</span><span class="p">]</span>
+        <span class="n">is_fit</span> <span class="o">=</span> <span class="n">align_fitness</span> <span class="o">==</span> <span class="mf">1.0</span>
+        <span class="n">diagn_stream</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;case_id&quot;</span><span class="p">:</span> <span class="n">case_id</span><span class="p">,</span> <span class="s2">&quot;cost&quot;</span><span class="p">:</span> <span class="n">cost</span><span class="p">,</span> <span class="s2">&quot;fitness&quot;</span><span class="p">:</span> <span class="n">align_fitness</span><span class="p">,</span> <span class="s2">&quot;is_fit&quot;</span><span class="p">:</span> <span class="n">is_fit</span><span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">diagn_stream</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

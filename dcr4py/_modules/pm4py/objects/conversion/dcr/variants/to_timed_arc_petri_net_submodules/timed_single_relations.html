@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/objects/conversion/dcr/variants/to_timed_arc_petri_net_submodules/timed_single_relations';</script>
+    <link rel="index" title="Index" href="../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../../../../../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.object...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="kn">from</span> <span class="nn">pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules</span> <span class="kn">import</span> <span class="n">timed_utils</span>
+
+<div class="viewcode-block" id="TimedSingleRelations">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations">[docs]</a>
+<span class="k">class</span> <span class="nc">TimedSingleRelations</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">helper_struct</span><span class="p">,</span> <span class="n">mapping_exceptions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span> <span class="o">=</span> <span class="n">helper_struct</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span> <span class="o">=</span> <span class="n">mapping_exceptions</span>
+
+<div class="viewcode-block" id="TimedSingleRelations.create_include_pattern">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations.create_include_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_include_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">event_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PetriNet</span><span class="p">:</span>
+        <span class="n">inc_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span>
+        <span class="n">pend_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending&#39;</span><span class="p">]</span>
+        <span class="n">pend_excl_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending_excluded&#39;</span><span class="p">]</span>
+        <span class="n">copy_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span>
+        <span class="n">len_copy_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">copy_0</span><span class="p">)</span>
+        <span class="n">len_internal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;len_internal&#39;</span><span class="p">]</span>
+        <span class="n">len_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">len_copy_0</span> <span class="o">/</span> <span class="n">len_internal</span><span class="p">)</span>
+        <span class="n">new_transitions</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># copy 1</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_excl_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">pend_excl_place_e_prime</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;pending_pairs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                    <span class="c1"># (exists) for each event create a transition with a transport arc link (independent of the other pending places)</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                    <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                        <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="c1"># timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn, type=&#39;inhibitor&#39;)</span>
+
+                        <span class="n">pex_to_t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;transport&#39;</span><span class="p">)</span>
+                        <span class="n">t_to_p</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;transport&#39;</span><span class="p">)</span>
+                        <span class="n">pex_to_t</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;transportindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span>
+                        <span class="n">t_to_p</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;transportindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="c1"># copy 2</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="c1"># timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn, type=&#39;inhibitor&#39;)</span>
+                    <span class="c1"># (for all) inhibitor arcs to all pending excluded places</span>
+                    <span class="k">for</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pend_excl_places_e_prime</span><span class="p">:</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># map the copy_0 last but before adding the new transitions</span>
+        <span class="c1"># copy 0</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">copy_0</span><span class="p">:</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_transitions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tapn</span></div>
+
+
+<div class="viewcode-block" id="TimedSingleRelations.create_exclude_pattern">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations.create_exclude_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_exclude_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">event_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PetriNet</span><span class="p">:</span>
+        <span class="n">inc_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span>
+        <span class="n">pend_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending&#39;</span><span class="p">]</span>
+        <span class="n">pend_excl_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending_excluded&#39;</span><span class="p">]</span>
+        <span class="n">copy_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span>
+        <span class="n">len_copy_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">copy_0</span><span class="p">)</span>
+        <span class="n">len_internal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;len_internal&#39;</span><span class="p">]</span>
+        <span class="n">len_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">len_copy_0</span> <span class="o">/</span> <span class="n">len_internal</span><span class="p">)</span>
+        <span class="n">new_transitions</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># copy 1</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="c1">#(for all) no pending event executes this transition</span>
+                    <span class="k">for</span> <span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pend_places_e_prime</span><span class="p">:</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># copy 2</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_excl_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">pend_excl_place_e_prime</span><span class="p">)</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;pending_pairs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                    <span class="c1"># (for each) pairwise transport arcs for each pair of pending places</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                    <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                        <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                        <span class="n">p_to_t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;transport&#39;</span><span class="p">)</span>
+                        <span class="n">t_to_pex</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;transport&#39;</span><span class="p">)</span>
+                        <span class="n">p_to_t</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;transportindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span>
+                        <span class="n">t_to_pex</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;transportindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="c1"># copy 0</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">copy_0</span><span class="p">:</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_transitions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tapn</span></div>
+
+
+<div class="viewcode-block" id="TimedSingleRelations.create_response_pattern">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations.create_response_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_response_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">event_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PetriNet</span><span class="p">:</span>
+        <span class="n">inc_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span>
+        <span class="n">pend_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;pend_matrix&#39;</span><span class="p">][</span><span class="n">event_prime</span><span class="p">][</span><span class="n">event</span><span class="p">]</span>
+        <span class="n">pend_excl_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;pend_exc_matrix&#39;</span><span class="p">][</span><span class="n">event_prime</span><span class="p">][</span><span class="n">event</span><span class="p">]</span>
+        <span class="n">copy_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span>
+        <span class="n">len_copy_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">copy_0</span><span class="p">)</span>
+        <span class="n">len_internal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;len_internal&#39;</span><span class="p">]</span>
+        <span class="n">len_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">len_copy_0</span> <span class="o">/</span> <span class="n">len_internal</span><span class="p">)</span>
+        <span class="n">new_transitions</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="n">pend_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending&#39;</span><span class="p">]</span>
+        <span class="n">pend_excl_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending_excluded&#39;</span><span class="p">]</span>
+        <span class="n">pending_others</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pend_places_e_prime</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">event</span><span class="p">]</span>
+        <span class="n">pending_exc_others</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">pend_excl_places_e_prime</span> <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">!=</span> <span class="n">event</span><span class="p">]</span>
+        <span class="c1"># copy 1</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span><span class="c1"># and self.helper_struct[event][&#39;firstResp&#39;]:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">pend_other</span> <span class="ow">in</span> <span class="n">pending_others</span><span class="p">:</span>
+                        <span class="c1"># timed_utils.add_arc_from_to(t, pend_other, tapn)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_other</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+                    <span class="c1"># timed_utils.add_arc_from_to(t, inc_place_e_prime, tapn)</span>
+                    <span class="c1"># timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn)</span>
+                    <span class="c1">#</span>
+                    <span class="c1"># timed_utils.add_arc_from_to(t, pend_place_e_prime, tapn)</span>
+                    <span class="c1"># timed_utils.add_arc_from_to(pend_place_e_prime, t, tapn)</span>
+                    <span class="c1">#</span>
+                    <span class="c1"># # for pend_other in pending_others:</span>
+                    <span class="c1"># #     timed_utils.add_arc_from_to(pend_other, t, tapn, type=&#39;inhibitor&#39;)</span>
+
+        <span class="c1"># copy 2</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_excl_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1">#if self.helper_struct[event][&#39;firstResp&#39;]:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">pend_exc_other</span> <span class="ow">in</span> <span class="n">pending_exc_others</span><span class="p">:</span>
+                        <span class="c1"># timed_utils.add_arc_from_to(t, pend_exc_other, tapn)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_exc_other</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+            <span class="c1"># copy 2X</span>
+            <span class="k">for</span> <span class="n">pend_exc_other</span> <span class="ow">in</span> <span class="n">pending_exc_others</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                    <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                        <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="c1"># timed_utils.add_arc_from_to(pend_excl_place_e_prime, t, tapn, type=&#39;inhibitor&#39;)</span>
+
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_exc_other</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+        <span class="c1"># copy 3</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_excl_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="c1"># for pend_exc_other in pending_exc_others:</span>
+                    <span class="c1">#     timed_utils.add_arc_from_to(pend_exc_other,t,tapn,type=&#39;inhibitor&#39;)</span>
+
+        <span class="c1"># copy 0</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># copy 0X</span>
+            <span class="k">for</span> <span class="n">pend_other</span> <span class="ow">in</span> <span class="n">pending_others</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                    <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                        <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span> <span class="o">*</span> <span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="c1"># TODO: check if I was right in removing this</span>
+                        <span class="c1"># timed_utils.add_arc_from_to(pend_place_e_prime, t, tapn, type=&#39;inhibitor&#39;)</span>
+
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_other</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">copy_0</span><span class="p">:</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                <span class="c1"># timed_utils.add_arc_from_to(t, inc_place_e_prime, tapn)</span>
+                <span class="c1"># timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn)</span>
+                <span class="c1">#</span>
+                <span class="c1"># timed_utils.add_arc_from_to(t, pend_place_e_prime, tapn)</span>
+                <span class="c1"># timed_utils.add_arc_from_to(pend_place_e_prime, t, tapn, type=&#39;inhibitor&#39;)</span>
+                <span class="c1"># for pend_other in pending_others:</span>
+                <span class="c1">#     timed_utils.add_arc_from_to(t, pend_other, tapn)</span>
+                <span class="c1">#     timed_utils.add_arc_from_to(pend_other, t, tapn, type=&#39;inhibitor&#39;)</span>
+
+        <span class="c1"># self.helper_struct[event][&#39;firstResp&#39;] = False</span>
+        <span class="c1"># when here I ask: have I done the first response?</span>
+        <span class="c1"># If the answer is yes. Then</span>
+        <span class="c1"># Do not create a new transition (do not copy any past behaviour)</span>
+        <span class="c1"># Simply retrieve the transition that behaves towards the other place in that way and</span>
+        <span class="c1"># add the same behaviour towards this transition</span>
+        <span class="c1"># this applies the same way to a response or a no-response</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_transitions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tapn</span></div>
+
+
+<div class="viewcode-block" id="TimedSingleRelations.create_no_response_pattern">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations.create_no_response_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_no_response_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">event_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PetriNet</span><span class="p">:</span>
+        <span class="n">inc_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span>
+        <span class="n">pend_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending&#39;</span><span class="p">]</span>
+        <span class="n">pend_excl_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending_excluded&#39;</span><span class="p">]</span>
+        <span class="n">copy_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span>
+        <span class="n">len_copy_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">copy_0</span><span class="p">)</span>
+        <span class="n">len_internal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;len_internal&#39;</span><span class="p">]</span>
+        <span class="n">len_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">len_copy_0</span> <span class="o">/</span> <span class="n">len_internal</span><span class="p">)</span>
+        <span class="n">new_transitions</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="c1"># pend_place_e_prime = self.helper_struct[&#39;pend_matrix&#39;][event_prime][event]</span>
+        <span class="c1"># pending_others = [x[0] for x in pend_places_e_prime if x[1] != event]</span>
+        <span class="c1"># copy 1</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span><span class="c1"># and self.helper_struct[event][&#39;firstResp&#39;]:</span>
+            <span class="c1"># (for all) if included and not pending then fire</span>
+            <span class="c1"># for delta in range(len_delta):</span>
+            <span class="c1">#     tapn, ts = timed_utils.create_event_pattern_transitions_and_arcs(tapn, event, self.helper_struct, self.mapping_exceptions)</span>
+            <span class="c1">#     new_transitions.extend(ts)</span>
+            <span class="c1">#     for t in ts:</span>
+            <span class="c1">#         tapn, t = timed_utils.map_existing_transitions_of_copy_0(delta*len_internal, copy_0, t, tapn)</span>
+            <span class="c1">#         timed_utils.add_arc_from_to(t, inc_place_e_prime, tapn)</span>
+            <span class="c1">#         timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn)</span>
+            <span class="c1">#         for pp_e_prime, _ in pend_places_e_prime:</span>
+            <span class="c1">#             timed_utils.add_arc_from_to(pp_e_prime, t, tapn, type=&#39;inhibitor&#39;)</span>
+
+            <span class="k">for</span> <span class="n">pp_e_prime</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="n">pend_places_e_prime</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                    <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                        <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pp_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+        <span class="c1"># copy 2</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_excl_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span><span class="c1"># and self.helper_struct[event][&#39;firstNoResp&#39;]:</span>
+            <span class="c1"># (for all) if no pending excl place is pending and not included then it fires</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pend_excl_places_e_prime</span><span class="p">:</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># copy 3</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_excl_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># (exists) for each pending excluded place if it is pending make it unpending when event is not included</span>
+            <span class="k">for</span> <span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pend_excl_places_e_prime</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                    <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                        <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+                        <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_excl_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+        <span class="c1"># copy 0</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="c1"># (exists) for each pending incl place we need to make the specific place unpending and inhibitor arcs to the rest</span>
+            <span class="c1"># for pend_other in pending_others:</span>
+            <span class="c1">#     for delta in range(len_delta):</span>
+            <span class="c1">#         tapn, ts = timed_utils.create_event_pattern_transitions_and_arcs(tapn, event, self.helper_struct, self.mapping_exceptions)</span>
+            <span class="c1">#         new_transitions.extend(ts)</span>
+            <span class="c1">#         for t in ts:</span>
+            <span class="c1">#             tapn, t = timed_utils.map_existing_transitions_of_copy_0(delta * len_internal, copy_0, t, tapn)</span>
+            <span class="c1">#             timed_utils.add_arc_from_to(t, inc_place_e_prime, tapn)</span>
+            <span class="c1">#             timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn)</span>
+            <span class="c1">#</span>
+            <span class="c1">#             timed_utils.add_arc_from_to(pend_other, t, tapn)</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">copy_0</span><span class="p">:</span>
+                <span class="c1"># timed_utils.add_arc_from_to(t, inc_place_e_prime, tapn)</span>
+                <span class="c1"># timed_utils.add_arc_from_to(inc_place_e_prime, t, tapn)</span>
+                <span class="c1">#</span>
+                <span class="c1"># timed_utils.add_arc_from_to(pend_place_e_prime, t, tapn)</span>
+
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">pp_e_prime</span><span class="p">,</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">pend_places_e_prime</span><span class="p">:</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pp_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># self.helper_struct[event][&#39;firstResp&#39;] = False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_transitions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tapn</span></div>
+
+
+<div class="viewcode-block" id="TimedSingleRelations.create_condition_pattern">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations.create_condition_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_condition_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">event_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="n">delay</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PetriNet</span><span class="p">:</span>
+        <span class="n">inc_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span>
+        <span class="n">exec_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;executed&#39;</span><span class="p">]</span>
+
+        <span class="n">copy_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span>
+        <span class="n">len_copy_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">copy_0</span><span class="p">)</span>
+        <span class="n">len_internal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;len_internal&#39;</span><span class="p">]</span>
+        <span class="n">len_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">len_copy_0</span> <span class="o">/</span> <span class="n">len_internal</span><span class="p">)</span>
+        <span class="n">new_transitions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># copy 1</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span> <span class="ow">and</span> <span class="n">exec_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># copy 0</span>
+        <span class="k">if</span> <span class="n">exec_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">copy_0</span><span class="p">:</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                <span class="n">t_to_p</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">exec_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;transport&#39;</span><span class="p">)</span>
+                <span class="n">p_to_t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">exec_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;transport&#39;</span><span class="p">)</span>
+                <span class="n">t_to_p</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;transportindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span>
+                <span class="n">p_to_t</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;transportindex&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="s1">&#39;transport_index&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+                <span class="k">if</span> <span class="n">delay</span> <span class="ow">and</span> <span class="n">delay</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="n">p_to_t</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s1">&#39;agemin&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">delay</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_transitions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tapn</span></div>
+
+
+<div class="viewcode-block" id="TimedSingleRelations.create_milestone_pattern">
+<a class="viewcode-back" href="../../../../../../../pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.html#pm4py.objects.conversion.dcr.variants.to_timed_arc_petri_net_submodules.timed_single_relations.TimedSingleRelations.create_milestone_pattern">[docs]</a>
+    <span class="k">def</span> <span class="nf">create_milestone_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">event_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PetriNet</span><span class="p">:</span>
+        <span class="n">inc_place_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span>
+        <span class="n">pend_places_e_prime</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event_prime</span><span class="p">][</span><span class="s1">&#39;places&#39;</span><span class="p">][</span><span class="s1">&#39;pending&#39;</span><span class="p">]</span>
+        <span class="c1"># pend_excluded_places_e_prime = self.helper_struct[event_prime][&#39;places&#39;][&#39;pending_excluded&#39;]</span>
+
+        <span class="n">copy_0</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span>
+        <span class="n">len_copy_0</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">copy_0</span><span class="p">)</span>
+        <span class="n">len_internal</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;len_internal&#39;</span><span class="p">]</span>
+        <span class="n">len_delta</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">len_copy_0</span> <span class="o">/</span> <span class="n">len_internal</span><span class="p">)</span>
+        <span class="n">new_transitions</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="c1"># copy 1</span>
+        <span class="k">if</span> <span class="n">inc_place_e_prime</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">delta</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">len_delta</span><span class="p">):</span>
+                <span class="n">tapn</span><span class="p">,</span> <span class="n">ts</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">create_event_pattern_transitions_and_arcs</span><span class="p">(</span><span class="n">tapn</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">mapping_exceptions</span><span class="p">)</span>
+                <span class="n">new_transitions</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">ts</span><span class="p">)</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">ts</span><span class="p">:</span>
+                    <span class="n">tapn</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">timed_utils</span><span class="o">.</span><span class="n">map_existing_transitions_of_copy_0</span><span class="p">(</span><span class="n">delta</span><span class="o">*</span><span class="n">len_internal</span><span class="p">,</span> <span class="n">copy_0</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="c1"># copy 0</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pend_places_e_prime</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">copy_0</span><span class="p">:</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+                <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">inc_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">)</span>
+
+                <span class="k">for</span> <span class="n">pend_place_e_prime</span><span class="p">,</span><span class="n">_</span> <span class="ow">in</span> <span class="n">pend_places_e_prime</span><span class="p">:</span>
+                    <span class="n">timed_utils</span><span class="o">.</span><span class="n">add_arc_from_to_with_check</span><span class="p">(</span><span class="n">pend_place_e_prime</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">tapn</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="s1">&#39;inhibitor&#39;</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">helper_struct</span><span class="p">[</span><span class="n">event</span><span class="p">][</span><span class="s1">&#39;transitions&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">new_transitions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tapn</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

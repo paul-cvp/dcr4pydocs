@@ -1,0 +1,879 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.convert &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/convert';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.convert</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.convert</h1><div class="highlight"><pre>
+<span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This file is part of PM4Py (More Info: https://pm4py.fit.fraunhofer.de).</span>
+
+<span class="sd">    PM4Py is free software: you can redistribute it and/or modify</span>
+<span class="sd">    it under the terms of the GNU General Public License as published by</span>
+<span class="sd">    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="sd">    (at your option) any later version.</span>
+
+<span class="sd">    PM4Py is distributed in the hope that it will be useful,</span>
+<span class="sd">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="sd">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="sd">    GNU General Public License for more details.</span>
+
+<span class="sd">    You should have received a copy of the GNU General Public License</span>
+<span class="sd">    along with PM4Py.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">The ``pm4py.convert`` module contains the cross-conversions implemented in ``pm4py``</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Collection</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="kn">from</span> <span class="nn">pm4py.objects.bpmn.obj</span> <span class="kn">import</span> <span class="n">BPMN</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">DcrGraph</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.timed.obj</span> <span class="kn">import</span> <span class="n">TimedDcrGraph</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.ocel.obj</span> <span class="kn">import</span> <span class="n">OCEL</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.powl.obj</span> <span class="kn">import</span> <span class="n">POWL</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.heuristics_net.obj</span> <span class="kn">import</span> <span class="n">HeuristicsNet</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">EventStream</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">Marking</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.obj</span> <span class="kn">import</span> <span class="n">ProcessTree</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">PetriNet</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">nx_utils</span>
+<span class="kn">from</span> <span class="nn">pm4py.utils</span> <span class="kn">import</span> <span class="n">get_properties</span><span class="p">,</span> <span class="n">__event_log_deprecation_warning</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.transition_system.obj</span> <span class="kn">import</span> <span class="n">TransitionSystem</span>
+<span class="kn">from</span> <span class="nn">pm4py.util.pandas_utils</span> <span class="kn">import</span> <span class="n">check_is_pandas_dataframe</span><span class="p">,</span> <span class="n">check_pandas_dataframe_columns</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+
+<div class="viewcode-block" id="convert_to_event_log">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_event_log">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_event_log</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">EventStream</span><span class="p">],</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EventLog</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a DataFrame/EventStream object to an event log object</span>
+
+<span class="sd">    :param obj: DataFrame or EventStream object</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``EventLog``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">       import pandas as pd</span>
+<span class="sd">       import pm4py</span>
+
+<span class="sd">       dataframe = pm4py.read_csv(&quot;tests/input_data/running-example.csv&quot;)</span>
+<span class="sd">       dataframe = pm4py.format_dataframe(dataframe, case_id_column=&#39;case:concept:name&#39;, activity_column=&#39;concept:name&#39;, timestamp_column=&#39;time:timestamp&#39;)</span>
+<span class="sd">       log = pm4py.convert_to_event_log(dataframe)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.log</span> <span class="kn">import</span> <span class="n">converter</span>
+    <span class="n">log</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_EVENT_LOG</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">log</span></div>
+
+
+
+<div class="viewcode-block" id="convert_to_event_stream">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_event_stream">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_event_stream</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EventStream</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a log object to an event stream</span>
+
+<span class="sd">    :param obj: log object</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``EventStream``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">       import pm4py</span>
+
+<span class="sd">       log = pm4py.read_xes(&quot;tests/input_data/running-example.xes&quot;)</span>
+<span class="sd">       event_stream = pm4py.convert_to_event_stream(log)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.log</span> <span class="kn">import</span> <span class="n">converter</span>
+    <span class="n">stream</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_EVENT_STREAM</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">stream</span></div>
+
+
+
+<div class="viewcode-block" id="convert_to_dataframe">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_dataframe">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_dataframe</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventStream</span><span class="p">,</span> <span class="n">EventLog</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a log object to a dataframe</span>
+
+<span class="sd">    :param obj: log object</span>
+<span class="sd">    :rtype: ``pd.DataFrame``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">       import pm4py</span>
+
+<span class="sd">       log = pm4py.read_xes(&quot;tests/input_data/running-example.xes&quot;)</span>
+<span class="sd">       dataframe = pm4py.convert_to_dataframe(log)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">obj</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">parameters</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+    
+    <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.log</span> <span class="kn">import</span> <span class="n">converter</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_DATA_FRAME</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span></div>
+
+
+
+<div class="viewcode-block" id="convert_to_bpmn">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_bpmn">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_bpmn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">],</span> <span class="n">ProcessTree</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">BPMN</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an object to a BPMN diagram.</span>
+<span class="sd">    As an input, either a Petri net (with corresponding initial and final marking) or a process tree can be provided.</span>
+<span class="sd">    A process tree can always be converted into a BPMN model and thus quality of the result object is guaranteed.</span>
+<span class="sd">    For Petri nets, the quality of the converison largely depends on the net provided (e.g., sound WF-nets are likely to produce reasonable BPMN models)    </span>
+
+<span class="sd">    :param args: petri net (with initial and final marking) or process tree</span>
+<span class="sd">    :rtype: ``BPMN``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">       import pm4py</span>
+
+<span class="sd">       # import a Petri net from a file</span>
+<span class="sd">       net, im, fm = pm4py.read_pnml(&quot;tests/input_data/running-example.pnml&quot;)</span>
+<span class="sd">       bpmn_graph = pm4py.convert_to_bpmn(net, im, fm)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.obj</span> <span class="kn">import</span> <span class="n">ProcessTree</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.bpmn.obj</span> <span class="kn">import</span> <span class="n">BPMN</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">BPMN</span><span class="p">):</span>
+        <span class="c1"># the object is already a BPMN</span>
+        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ProcessTree</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.process_tree.variants</span> <span class="kn">import</span> <span class="n">to_bpmn</span>
+        <span class="k">return</span> <span class="n">to_bpmn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># try to convert the object to a Petri net. Then, use the PM4Py PN-to-BPMN converter</span>
+        <span class="c1"># to get the BPMN object</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">convert_to_petri_net</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+            <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.wf_net.variants</span> <span class="kn">import</span> <span class="n">to_bpmn</span>
+            <span class="k">return</span> <span class="n">to_bpmn</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="c1"># don&#39;t do nothing and throw the following exception</span>
+            <span class="k">pass</span>
+    <span class="c1"># if no conversion is done, then the format of the arguments is unsupported</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;unsupported conversion of the provided object to BPMN&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_to_petri_net">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_petri_net">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_petri_net</span><span class="p">(</span><span class="n">obj</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">BPMN</span><span class="p">,</span> <span class="n">ProcessTree</span><span class="p">,</span> <span class="n">HeuristicsNet</span><span class="p">,</span> <span class="n">DcrGraph</span><span class="p">,</span> <span class="n">POWL</span><span class="p">,</span> <span class="nb">dict</span><span class="p">],</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an input model to an (accepting) Petri net.</span>
+<span class="sd">    The input objects can either be a process tree, BPMN model, a Heuristic net or a Dcr Graph.</span>
+<span class="sd">    The output is a triple, containing the Petri net and the initial and final markings. The markings are only returned if they can be reasonable derived from the input model.</span>
+
+<span class="sd">    :param args: process tree, Heuristics net, BPMN, POWL model or Dcr Graph</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">       import pm4py</span>
+
+<span class="sd">       # imports a process tree from a PTML file</span>
+<span class="sd">       process_tree = pm4py.read_ptml(&quot;tests/input_data/running-example.ptml&quot;)</span>
+<span class="sd">       net, im, fm = pm4py.convert_to_petri_net(process_tree)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">PetriNet</span><span class="p">):</span>
+        <span class="c1"># the object is already a Petri net</span>
+        <span class="k">return</span> <span class="n">obj</span><span class="p">,</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">ProcessTree</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">POWL</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.powl</span> <span class="kn">import</span> <span class="n">converter</span>
+            <span class="k">return</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.process_tree.variants</span> <span class="kn">import</span> <span class="n">to_petri_net</span>
+        <span class="k">return</span> <span class="n">to_petri_net</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">BPMN</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.bpmn.variants</span> <span class="kn">import</span> <span class="n">to_petri_net</span>
+        <span class="k">return</span> <span class="n">to_petri_net</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">HeuristicsNet</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.heuristics_net.variants</span> <span class="kn">import</span> <span class="n">to_petri_net</span>
+        <span class="k">return</span> <span class="n">to_petri_net</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="c1"># DFG</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.dfg.variants</span> <span class="kn">import</span> <span class="n">to_petri_net_activity_defines_place</span>
+        <span class="k">return</span> <span class="n">to_petri_net_activity_defines_place</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span>
+            <span class="n">to_petri_net_activity_defines_place</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_ACTIVITIES</span><span class="p">:</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+            <span class="n">to_petri_net_activity_defines_place</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">END_ACTIVITIES</span><span class="p">:</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">]})</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">TimedDcrGraph</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.dcr</span> <span class="kn">import</span> <span class="n">converter</span>
+        <span class="k">return</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_TIMED_ARC_PETRI_NET</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">DcrGraph</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.dcr</span> <span class="kn">import</span> <span class="n">converter</span>
+        <span class="k">return</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_INHIBITOR_NET</span> <span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="c1"># if no conversion is done, then the format of the arguments is unsupported</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;unsupported conversion of the provided object to Petri net&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_to_process_tree">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_process_tree">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_process_tree</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">],</span> <span class="n">BPMN</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">ProcessTree</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an input model to a process tree.</span>
+<span class="sd">    The input models can either be Petri nets (marked) or BPMN models.</span>
+<span class="sd">    For both input types, the conversion is not guaranteed to work, hence, invocation of the method can yield an Exception.</span>
+
+<span class="sd">    :param args: petri net (along with initial and final marking) or BPMN</span>
+<span class="sd">    :rtype: ``ProcessTree``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">       import pm4py</span>
+
+<span class="sd">       # imports a BPMN file</span>
+<span class="sd">       bpmn_graph = pm4py.read_bpmn(&quot;tests/input_data/running-example.bpmn&quot;)</span>
+<span class="sd">       # converts the BPMN to a process tree (through intermediate conversion to a Petri net)</span>
+<span class="sd">       process_tree = pm4py.convert_to_process_tree(bpmn_graph)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.obj</span> <span class="kn">import</span> <span class="n">ProcessTree</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">PetriNet</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ProcessTree</span><span class="p">):</span>
+        <span class="c1"># the object is already a process tree</span>
+        <span class="k">return</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PetriNet</span><span class="p">):</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">convert_to_petri_net</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.wf_net.variants</span> <span class="kn">import</span> <span class="n">to_process_tree</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">to_process_tree</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">tree</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">tree</span>
+
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;the object represents a model that cannot be represented as a process tree!&quot;</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_to_reachability_graph">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_to_reachability_graph">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_to_reachability_graph</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">],</span> <span class="n">BPMN</span><span class="p">,</span> <span class="n">ProcessTree</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">TransitionSystem</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an input model to a reachability graph (transition system).</span>
+<span class="sd">    The input models can either be Petri nets (with markings), BPMN models or process trees.</span>
+<span class="sd">    The output is the state-space of the model (i.e., the reachability graph), enocdoed as a ``TransitionSystem`` object.</span>
+
+<span class="sd">    :param args: petri net (along with initial and final marking), process tree or BPMN</span>
+<span class="sd">    :rtype: ``TransitionSystem``</span>
+<span class="sd">    </span>
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        # reads a Petri net from a file</span>
+<span class="sd">        net, im, fm = pm4py.read_pnml(&quot;tests/input_data/running-example.pnml&quot;)</span>
+<span class="sd">        # converts it to reachability graph</span>
+<span class="sd">        reach_graph = pm4py.convert_to_reachability_graph(net, im, fm)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">PetriNet</span><span class="p">):</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">args</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">convert_to_petri_net</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.utils</span> <span class="kn">import</span> <span class="n">reachability_graph</span>
+    <span class="k">return</span> <span class="n">reachability_graph</span><span class="o">.</span><span class="n">construct_reachability_graph</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_log_to_ocel">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_log_to_ocel">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_log_to_ocel</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">EventStream</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_column</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_column</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">object_types</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Collection</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">obj_separator</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot; AND &quot;</span><span class="p">,</span> <span class="n">additional_event_attributes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Collection</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">additional_object_attributes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Collection</span><span class="p">[</span><span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">OCEL</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an event log to an object-centric event log with one or more than one</span>
+<span class="sd">    object types.</span>
+
+<span class="sd">    :param log_obj: log object</span>
+<span class="sd">    :param activity_column: activity column</span>
+<span class="sd">    :param timestamp_column: timestamp column</span>
+<span class="sd">    :param object_types: list of columns to consider as object types</span>
+<span class="sd">    :param obj_separator: separator between different objects in the same column</span>
+<span class="sd">    :param additional_event_attributes: additional attributes to be considered as event attributes in the OCEL</span>
+<span class="sd">    :param additional_object_attributes: additional attributes per object type to be considered as object attributes in the OCEL (dictionary in which object types are associated to their attributes, i.e., {&quot;order&quot;: [&quot;quantity&quot;, &quot;cost&quot;], &quot;invoice&quot;: [&quot;date&quot;, &quot;due date&quot;]})</span>
+<span class="sd">    :rtype: ``OCEL``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        ocel = pm4py.convert_log_to_ocel(log, activity_column=&#39;concept:name&#39;, timestamp_column=&#39;time:timestamp&#39;,</span>
+<span class="sd">                        object_types=[&#39;case:concept:name&#39;])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">EventStream</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">convert_to_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">object_types</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">object_types</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">log</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s2">&quot;case:concept:name&quot;</span> <span class="ow">or</span> <span class="n">x</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;ocel:type&quot;</span><span class="p">)))</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.objects.ocel.util</span> <span class="kn">import</span> <span class="n">log_ocel</span>
+    <span class="k">return</span> <span class="n">log_ocel</span><span class="o">.</span><span class="n">log_to_ocel_multiple_obj_types</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_column</span><span class="p">,</span> <span class="n">timestamp_column</span><span class="p">,</span> <span class="n">object_types</span><span class="p">,</span> <span class="n">obj_separator</span><span class="p">,</span> <span class="n">additional_event_attributes</span><span class="o">=</span><span class="n">additional_event_attributes</span><span class="p">,</span> <span class="n">additional_object_attributes</span><span class="o">=</span><span class="n">additional_object_attributes</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_ocel_to_networkx">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_ocel_to_networkx">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_ocel_to_networkx</span><span class="p">(</span><span class="n">ocel</span><span class="p">:</span> <span class="n">OCEL</span><span class="p">,</span> <span class="n">variant</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;ocel_to_nx&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an OCEL to a NetworkX DiGraph object.</span>
+
+<span class="sd">    :param ocel: object-centric event log</span>
+<span class="sd">    :param variant: variant of the conversion to use: &quot;ocel_to_nx&quot; -&gt; graph containing event and object IDS and two type of relations (REL=related objects, DF=directly-follows); &quot;ocel_features_to_nx&quot; -&gt; graph containing different types of interconnection at the object level</span>
+<span class="sd">    :rtype: ``nx.DiGraph``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        nx_digraph = pm4py.convert_ocel_to_networkx(ocel, variant=&#39;ocel_to_nx&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.ocel</span> <span class="kn">import</span> <span class="n">converter</span>
+
+    <span class="n">variant1</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">variant</span> <span class="o">==</span> <span class="s2">&quot;ocel_to_nx&quot;</span><span class="p">:</span>
+        <span class="n">variant1</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">OCEL_TO_NX</span>
+    <span class="k">elif</span> <span class="n">variant</span> <span class="o">==</span> <span class="s2">&quot;ocel_features_to_nx&quot;</span><span class="p">:</span>
+        <span class="n">variant1</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">OCEL_FEATURES_TO_NX</span>
+
+    <span class="k">return</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">variant1</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_log_to_networkx">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_log_to_networkx">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_log_to_networkx</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">EventStream</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">include_df</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">other_case_attributes_as_nodes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Collection</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">event_attributes_as_nodes</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Collection</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts an event log object to a NetworkX DiGraph object.</span>
+<span class="sd">    The nodes of the graph are the events, the cases (and possibly the attributes of the log).</span>
+<span class="sd">    The edges are:</span>
+<span class="sd">    - Connecting each event to the corresponding case (BELONGS_TO type)</span>
+<span class="sd">    - Connecting every event to the directly-following one (DF type, if enabled)</span>
+<span class="sd">    - Connecting every case/event to the given attribute values (ATTRIBUTE_EDGE type)</span>
+
+<span class="sd">    :param log: log object (EventLog, EventStream, Pandas dataframe)</span>
+<span class="sd">    :param include_df: include the directly-follows graph relation in the graph (bool)</span>
+<span class="sd">    :param case_id_attribute: specify which attribute at the case level should be considered the case ID (str)</span>
+<span class="sd">    :param other_case_attributes_as_nodes: specify which attributes at the case level should be inserted in the graph as nodes (other than the caseID) (list, default empty)</span>
+<span class="sd">    :param event_attributes_as_nodes: specify which attributes at the event level should be inserted in the graph as nodes (list, default empty)</span>
+<span class="sd">    :rtype: ``nx.DiGraph``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        nx_digraph = pm4py.convert_log_to_networkx(log, other_case_attributes_as_nodes=[&#39;responsible&#39;, &#39;department&#39;], event_attributes_as_nodes=[&#39;concept:name&#39;, &#39;org:resource&#39;])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.log</span> <span class="kn">import</span> <span class="n">converter</span>
+
+    <span class="k">return</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_NX</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;include_df&quot;</span><span class="p">:</span> <span class="n">include_df</span><span class="p">,</span> <span class="s2">&quot;case_id_attribute&quot;</span><span class="p">:</span> <span class="n">case_id_key</span><span class="p">,</span> <span class="s2">&quot;other_case_attributes_as_nodes&quot;</span><span class="p">:</span> <span class="n">other_case_attributes_as_nodes</span><span class="p">,</span> <span class="s2">&quot;event_attributes_as_nodes&quot;</span><span class="p">:</span> <span class="n">event_attributes_as_nodes</span><span class="p">})</span></div>
+
+
+
+<div class="viewcode-block" id="convert_log_to_time_intervals">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_log_to_time_intervals">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_log_to_time_intervals</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">filter_activity_couple</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                                  <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span>
+                                  <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span>
+                                  <span class="n">start_timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span>
+                                  <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets a list of intervals from an event log.</span>
+<span class="sd">    Each interval contains two temporally consecutive events and measures the time between the two events</span>
+<span class="sd">    (complete timestamp of the first against start timestamp of the second).</span>
+
+<span class="sd">    :param log: log object</span>
+<span class="sd">    :param filter_activity_couple: (optional) filters the intervals to only consider a given couple of activities of the log</span>
+<span class="sd">    :param activity_key: the attribute to be used as activity</span>
+<span class="sd">    :param timestamp_key: the attribute to be used as timestamp</span>
+<span class="sd">    :param case_id_key: the attribute to be used as case identifier</span>
+<span class="sd">    :param start_timestamp_key: the attribute to be used as start timestamp</span>
+<span class="sd">    :rtype: ``List[List[Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        log = pm4py.read_xes(&#39;tests/input_data/receipt.xes&#39;)</span>
+<span class="sd">        time_intervals = pm4py.convert_log_to_time_intervals(log)</span>
+<span class="sd">        print(len(time_intervals))</span>
+<span class="sd">        time_intervals = pm4py.convert_log_to_time_intervals(log, (&#39;Confirmation of receipt&#39;, &#39;T02 Check confirmation of receipt&#39;))</span>
+<span class="sd">        print(len(time_intervals))</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">)</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;filter_activity_couple&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filter_activity_couple</span>
+    <span class="n">properties</span><span class="p">[</span><span class="n">constants</span><span class="o">.</span><span class="n">PARAMETER_CONSTANT_START_TIMESTAMP_KEY</span><span class="p">]</span> <span class="o">=</span> <span class="n">start_timestamp_key</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.log_to_interval_tree.variants</span> <span class="kn">import</span> <span class="n">open_paths</span>
+    <span class="k">return</span> <span class="n">open_paths</span><span class="o">.</span><span class="n">log_to_intervals</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="convert_petri_net_to_networkx">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_petri_net_to_networkx">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_petri_net_to_networkx</span><span class="p">(</span><span class="n">net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">im</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">fm</span><span class="p">:</span> <span class="n">Marking</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts a Petri net to a NetworkX DiGraph.</span>
+<span class="sd">    Each place and transition is corresponding to a node in the graph.</span>
+
+<span class="sd">    :param net: Petri net</span>
+<span class="sd">    :param im: initial marking</span>
+<span class="sd">    :param fm: final marking</span>
+<span class="sd">    :rtype: ``nx.DiGraph``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.read_pnml(&#39;tests/input_data/running-example.pnml&#39;)</span>
+<span class="sd">        nx_digraph = pm4py.convert_petri_to_networkx(net, im, fm)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx_utils</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">place</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">places</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">place</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">place</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;is_in_im&quot;</span><span class="p">:</span> <span class="n">place</span> <span class="ow">in</span> <span class="n">im</span><span class="p">,</span> <span class="s2">&quot;is_in_fm&quot;</span><span class="p">:</span> <span class="n">place</span> <span class="ow">in</span> <span class="n">fm</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;place&quot;</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">transitions</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">trans</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">trans</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;label&quot;</span><span class="p">:</span> <span class="n">trans</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;transition&quot;</span><span class="p">})</span>
+    <span class="k">for</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">arcs</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">arc</span><span class="o">.</span><span class="n">source</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">arc</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="n">attr</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;weight&quot;</span><span class="p">:</span> <span class="n">arc</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="s2">&quot;properties&quot;</span><span class="p">:</span> <span class="n">arc</span><span class="o">.</span><span class="n">properties</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">G</span></div>
+
+
+
+<div class="viewcode-block" id="convert_petri_net_type">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.convert.convert_petri_net_type">[docs]</a>
+<span class="k">def</span> <span class="nf">convert_petri_net_type</span><span class="p">(</span><span class="n">net</span><span class="p">:</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">im</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">fm</span><span class="p">:</span> <span class="n">Marking</span><span class="p">,</span> <span class="nb">type</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;classic&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Changes the Petri net (internal) type</span>
+
+<span class="sd">    :param net: petri net</span>
+<span class="sd">    :param im: initial marking</span>
+<span class="sd">    :param fm: final marking</span>
+<span class="sd">    :param type: internal type (classic, reset, inhibitor, reset_inhibitor)</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.read_pnml(&#39;tests/input_data/running-example.pnml&#39;)</span>
+<span class="sd">        reset_net, new_im, new_fm = pm4py.convert_petri_net_type(net, im, fm, type=&#39;reset_inhibitor&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.utils</span> <span class="kn">import</span> <span class="n">petri_utils</span>
+
+    <span class="p">[</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">([</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">])</span>
+    <span class="n">new_net</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;classic&quot;</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">PetriNet</span>
+        <span class="n">new_net</span> <span class="o">=</span> <span class="n">PetriNet</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;reset&quot;</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">ResetNet</span>
+        <span class="n">new_net</span> <span class="o">=</span> <span class="n">ResetNet</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;inhibitor&quot;</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">InhibitorNet</span>
+        <span class="n">new_net</span> <span class="o">=</span> <span class="n">InhibitorNet</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">type</span> <span class="o">==</span> <span class="s2">&quot;reset_inhibitor&quot;</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">ResetInhibitorNet</span>
+        <span class="n">new_net</span> <span class="o">=</span> <span class="n">ResetInhibitorNet</span><span class="p">(</span><span class="n">net</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">place</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">places</span><span class="p">:</span>
+        <span class="n">new_net</span><span class="o">.</span><span class="n">places</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">place</span><span class="p">)</span>
+        <span class="n">in_arcs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">place</span><span class="o">.</span><span class="n">in_arcs</span><span class="p">)</span>
+        <span class="n">out_arcs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">place</span><span class="o">.</span><span class="n">out_arcs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">in_arcs</span><span class="p">:</span>
+            <span class="n">place</span><span class="o">.</span><span class="n">in_arcs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">out_arcs</span><span class="p">:</span>
+            <span class="n">place</span><span class="o">.</span><span class="n">out_arcs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">trans</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">transitions</span><span class="p">:</span>
+        <span class="n">new_net</span><span class="o">.</span><span class="n">transitions</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">trans</span><span class="p">)</span>
+        <span class="n">in_arcs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">trans</span><span class="o">.</span><span class="n">in_arcs</span><span class="p">)</span>
+        <span class="n">out_arcs</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">trans</span><span class="o">.</span><span class="n">out_arcs</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">in_arcs</span><span class="p">:</span>
+            <span class="n">trans</span><span class="o">.</span><span class="n">in_arcs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">out_arcs</span><span class="p">:</span>
+            <span class="n">trans</span><span class="o">.</span><span class="n">out_arcs</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">arc</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">arc</span> <span class="ow">in</span> <span class="n">net</span><span class="o">.</span><span class="n">arcs</span><span class="p">:</span>
+        <span class="n">arc_type</span> <span class="o">=</span> <span class="n">arc</span><span class="o">.</span><span class="n">properties</span><span class="p">[</span><span class="s2">&quot;arctype&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="s2">&quot;arctype&quot;</span> <span class="ow">in</span> <span class="n">arc</span><span class="o">.</span><span class="n">properties</span> <span class="k">else</span> <span class="kc">None</span>
+        <span class="n">new_arc</span> <span class="o">=</span> <span class="n">petri_utils</span><span class="o">.</span><span class="n">add_arc_from_to</span><span class="p">(</span><span class="n">arc</span><span class="o">.</span><span class="n">source</span><span class="p">,</span> <span class="n">arc</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">new_net</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">arc</span><span class="o">.</span><span class="n">weight</span><span class="p">,</span> <span class="nb">type</span><span class="o">=</span><span class="n">arc_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">new_net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

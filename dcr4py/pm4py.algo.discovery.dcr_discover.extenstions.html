@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pm4py.algo.discovery.dcr_discover.extenstions package &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=319a7919"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pm4py.algo.discovery.dcr_discover.extenstions';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="pm4py.algo.html">pm4py.algo package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.algo.conformance.html">pm4py.algo.conformance package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.alignments.html">pm4py.algo.conformance.alignments package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.alignments.dcr.html">pm4py.algo.conformance.alignments.dcr package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.dcr.html">pm4py.algo.conformance.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.decorators.html">pm4py.algo.conformance.dcr.decorators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.rules.html">pm4py.algo.conformance.dcr.rules package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.variants.html">pm4py.algo.conformance.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pm4py.algo.discovery.html">pm4py.algo.discovery package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.html">pm4py.algo.discovery.dcr_discover package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">pm4py.algo.discovery.dcr_discover.extenstions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.variants.html">pm4py.algo.discovery.dcr_discover.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.objects.html">pm4py.objects package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.objects.conversion.html">pm4py.objects.conversion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.conversion.dcr.html">pm4py.objects.conversion.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.conversion.dcr.variants.html">pm4py.objects.conversion.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.objects.dcr.html">pm4py.objects.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.distributed.html">pm4py.objects.dcr.distributed package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.exporter.html">pm4py.objects.dcr.exporter package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html">pm4py.objects.dcr.exporter.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html">pm4py.objects.dcr.extended package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html">pm4py.objects.dcr.hierarchical package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.importer.html">pm4py.objects.dcr.importer package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html">pm4py.objects.dcr.importer.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html">pm4py.objects.dcr.timed package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html">pm4py.objects.dcr.utils package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.visualization.html">pm4py.visualization package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.visualization.dcr.html">pm4py.visualization.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.visualization.dcr.variants.html">pm4py.visualization.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">pm4py.algo.d...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pm4py-algo-discovery-dcr-discover-extenstions-package">
+<h1>pm4py.algo.discovery.dcr_discover.extenstions package<a class="headerlink" href="#pm4py-algo-discovery-dcr-discover-extenstions-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pm4py.algo.discovery.dcr_discover.extenstions.nesting">
+<span id="pm4py-algo-discovery-dcr-discover-extenstions-nesting-module"></span><h2>pm4py.algo.discovery.dcr_discover.extenstions.nesting module<a class="headerlink" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.nesting" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.nesting.</span></span><span class="sig-name descname"><span class="pre">NestVariants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#NestVariants"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.CHOICE">
+<span class="sig-name descname"><span class="pre">CHOICE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.CHOICE" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.NEST">
+<span class="sig-name descname"><span class="pre">NEST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.NEST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.CHOICE_NEST">
+<span class="sig-name descname"><span class="pre">CHOICE_NEST</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">3</span></em><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.CHOICE_NEST" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.apply">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.nesting.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.apply" title="Link to this definition">#</a></dt>
+<dd><p>this method calls the nesting miner</p>
+<section id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>log: EventLog | pandas.Dataframe</dt><dd><p>Event log to use in the role miner</p>
+</dd>
+<dt>graph: DCR_Graph</dt><dd><p>Dcr graph to apply additional attributes to</p>
+</dd>
+<dt>parameters</dt><dd><dl class="simple">
+<dt>Parameters of the algorithm, including:</dt><dd><p>nest_variant : the nesting algorithm to use from the enum above: CHOICE|NEST|CHOICE_NEST</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h3>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>:class:´GroupSubprocessDcrGraph`</dt><dd><p>return a DCR graph, that contains nested groups</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.nesting.</span></span><span class="sig-name descname"><span class="pre">NestingMining</span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#NestingMining"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The NestingMining provides a simple algorithm to mine nestings</p>
+<p>After initialization, user can call mine(log, G, parameters), which will return a DCR Graph with nested groups.</p>
+<p>Reference paper:
+Cosma et al. “Improving Simplicity by Discovering Nested Groups in Declarative Models” <a class="reference external" href="https://doi.org/10.1007/978-3-031-61057-8_26">https://doi.org/10.1007/978-3-031-61057-8_26</a>
+Attributes
+———-
+graph: Dict[str,Any]</p>
+<blockquote>
+<div><p>A template that will be used collecting organizational data</p>
+</div></blockquote>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>mine(log, G, parameters)</dt><dd><p>calls the main mining function, extract nested groups</p>
+</dd>
+</dl>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.mine">
+<span class="sig-name descname"><span class="pre">mine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#NestingMining.mine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.mine" title="Link to this definition">#</a></dt>
+<dd><p>Main nested groups mining algorithm</p>
+<section id="id1">
+<h4>Parameters<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>graph: DCRGraph</dt><dd><p>DCR graph to append additional attributes</p>
+</dd>
+<dt>parameters: Optional[Dict[str, Any]]</dt><dd><p>optional parameters used for role mining</p>
+</dd>
+</dl>
+</section>
+<section id="id2">
+<h4>Returns<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>NestedDCRGraph(G, dcr)</dt><dd><p>returns a DCR graph with nested groups</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_choice">
+<span class="sig-name descname"><span class="pre">apply_choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#NestingMining.apply_choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_choice" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_nest">
+<span class="sig-name descname"><span class="pre">apply_nest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#NestingMining.apply_nest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_nest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.nesting.</span></span><span class="sig-name descname"><span class="pre">Choice</span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.apply_choice">
+<span class="sig-name descname"><span class="pre">apply_choice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Choice.apply_choice"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.apply_choice" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutual_exclusions">
+<span class="sig-name descname"><span class="pre">get_mutual_exclusions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dcr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Choice.get_mutual_exclusions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutual_exclusions" title="Link to this definition">#</a></dt>
+<dd><p>Get nested groups based on cliques. Updates the self.nesting_template dict
+Parameters
+———-
+dcr</p>
+<blockquote>
+<div><p>A core Dcr Graph as mined from the DisCoveR miner</p>
+</div></blockquote>
+<dl class="simple">
+<dt>i</dt><dd><p>An integer seed for the naming of choice groups</p>
+</dd>
+</dl>
+<section id="id3">
+<h3>Returns<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutually_excluding_graph">
+<span class="sig-name descname"><span class="pre">get_mutually_excluding_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Choice.get_mutually_excluding_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutually_excluding_graph" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.nesting.</span></span><span class="sig-name descname"><span class="pre">Nesting</span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.encode">
+<span class="sig-name descname"><span class="pre">encode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">G</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.encode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.encode" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_opposite_rel_dict_str">
+<span class="sig-name descname"><span class="pre">get_opposite_rel_dict_str</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relStr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nestingId</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.get_opposite_rel_dict_str"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_opposite_rel_dict_str" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.create_encoding">
+<span class="sig-name descname"><span class="pre">create_encoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dcr_graph</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.create_encoding"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.create_encoding" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.find_largest_nesting">
+<span class="sig-name descname"><span class="pre">find_largest_nesting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events_source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_nesting</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.find_largest_nesting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.find_largest_nesting" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.nest">
+<span class="sig-name descname"><span class="pre">nest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">events_source</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.nest"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.nest" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.remove_redundant_nestings">
+<span class="sig-name descname"><span class="pre">remove_redundant_nestings</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.remove_redundant_nestings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.remove_redundant_nestings" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.should_add">
+<span class="sig-name descname"><span class="pre">should_add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.should_add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.should_add" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_nested_dcr_graph">
+<span class="sig-name descname"><span class="pre">get_nested_dcr_graph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">existing_nestings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/nesting.html#Nesting.get_nested_dcr_graph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_nested_dcr_graph" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pm4py.algo.discovery.dcr_discover.extenstions.pending">
+<span id="pm4py-algo-discovery-dcr-discover-extenstions-pending-module"></span><h2>pm4py.algo.discovery.dcr_discover.extenstions.pending module<a class="headerlink" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.pending" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.pending.apply">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.pending.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/pending.html#apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.pending.apply" title="Link to this definition">#</a></dt>
+<dd><p>An extension to the DCR Graphs discovery algorithm for the discovery of initially pending events
+Parameters
+———-
+log</p>
+<blockquote>
+<div><p>Event log / Pandas dataframe</p>
+</div></blockquote>
+<dl class="simple">
+<dt>graph</dt><dd><p>DCR Graph</p>
+</dd>
+<dt>ignore_lifecycle</dt><dd><p>If True it does not take into account the ‘lifecycle:transition’  attribute of the log event else False</p>
+</dd>
+</dl>
+<section id="id4">
+<h3>Returns<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>An updated DCR Graph with the Pending Marking updated to contain initially pending events</p>
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.algo.discovery.dcr_discover.extenstions.roles">
+<span id="pm4py-algo-discovery-dcr-discover-extenstions-roles-module"></span><h2>pm4py.algo.discovery.dcr_discover.extenstions.roles module<a class="headerlink" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.roles" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.roles.apply">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.roles.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph" title="pm4py.objects.dcr.distributed.obj.DistributedDcrGraph"><span class="pre">DistributedDcrGraph</span></a></span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/roles.html#apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.roles.apply" title="Link to this definition">#</a></dt>
+<dd><p>this method calls the role miner</p>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>log: EventLog | pandas.Dataframe</dt><dd><p>Event log to use in the role miner</p>
+</dd>
+<dt>graph: DCRGraph</dt><dd><p>Dcr graph to apply additional attributes to</p>
+</dd>
+<dt>parameters</dt><dd><dl class="simple">
+<dt>Parameters of the algorithm, including:</dt><dd><p>activity_key: activity identifier, used for assigning the events to
+resource_key: resource identifier, used to determine the principals and role assignmed if specified
+group_key: group identifier, used to determine the access right, i.e. the Role assignments for event in log</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Returns<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>:class:´RoleDCR_Graph`</dt><dd><p>return a DCR graph, that contains organizational attributes</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.roles.RoleMining">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.roles.</span></span><span class="sig-name descname"><span class="pre">RoleMining</span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/roles.html#RoleMining"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.roles.RoleMining" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The RoleMining provides a simple algorithm to mine for organizational data of an event log for DCR graphs</p>
+<p>After initialization, user can call mine(log, G, parameters), which will return a DCR Graph with distributed.</p>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>graph: Dict[str,Any]</dt><dd><p>A template that will be used collecting organizational data</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h3>Methods<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>mine(log, G, parameters)</dt><dd><p>calls the main mining function, extract distributed and principals from the log and perform rol</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h3>Notes<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>NaN values are disregarded, if event in log has event with both, it will not store NaN as a role assignment</p></li>
+<li><p>Currently no useful implementation for analysis of principalsAssignments, but is included for future improvement</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.roles.RoleMining.mine">
+<span class="sig-name descname"><span class="pre">mine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/roles.html#RoleMining.mine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.roles.RoleMining.mine" title="Link to this definition">#</a></dt>
+<dd><p>Main role mine algorithm, will mine for principals and distributed in a DCR graphs, and associated role assignment.
+determine principals, distributed and roleAssignment through unique occurrences in log.</p>
+<section id="id9">
+<h4>Parameters<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>log: pandas.DataFrame | EventLog</dt><dd><p>Event log used for mining</p>
+</dd>
+<dt>graph: DCRGraph</dt><dd><p>DCR graph to append additional attributes</p>
+</dd>
+<dt>parameters: Optional[Dict[str, Any]]</dt><dd><p>optional parameters used for role mining</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h4>Returns<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>RoleDCR_Graph(G, dcr)</dt><dd><p>returns a DCR graph with organizational attributes, store in a variant of DCR
+<code class="xref py py-class docutils literal notranslate"><span class="pre">pm4py.objects.dcr.distributed.obj.RoleDCR_Graph</span></code></p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.algo.discovery.dcr_discover.extenstions.time_constraints">
+<span id="pm4py-algo-discovery-dcr-discover-extenstions-time-constraints-module"></span><h2>pm4py.algo.discovery.dcr_discover.extenstions.time_constraints module<a class="headerlink" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.time_constraints" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.apply">
+<span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.</span></span><span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="pm4py.objects.dcr.html#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedDcrGraph" title="pm4py.objects.dcr.timed.obj.TimedDcrGraph"><span class="pre">TimedDcrGraph</span></a></span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/time_constraints.html#apply"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.apply" title="Link to this definition">#</a></dt>
+<dd><p>this method calls the time miner</p>
+<section id="id11">
+<h3>Parameters<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>log: EventLog | pandas.Dataframe</dt><dd><p>Event log to use in the time miner</p>
+</dd>
+<dt>graph: DCR_Graph</dt><dd><p>Dcr graph to apply additional attributes to</p>
+</dd>
+<dt>parameters</dt><dd><p>Parameters of the algorithm, including:</p>
+</dd>
+</dl>
+</section>
+<section id="id12">
+<h3>Returns<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>:class:´TimedDcrGraph`</dt><dd><p>return a DCR graph</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.</span></span><span class="sig-name descname"><span class="pre">TimeMining</span></span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/time_constraints.html#TimeMining"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The TimeMining provides a simple algorithm to mine timing data of an event log for DCR graphs</p>
+<p>After initialization, user can call mine(log, G, parameters), which will return a DCR Graph with time.</p>
+<section id="id13">
+<h3>Attributes<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>graph: Dict[str,Any]</p>
+</section>
+<section id="id14">
+<h3>Methods<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>mine(log, G, parameters)</p>
+</section>
+<section id="id15">
+<h3>Notes<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.get_log_with_pair">
+<span class="sig-name descname"><span class="pre">get_log_with_pair</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event_log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/time_constraints.html#TimeMining.get_log_with_pair"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.get_log_with_pair" title="Link to this definition">#</a></dt>
+<dd><p>when selecting the case ids (cids) here there is a difference when taking
+strictly less than &lt; and strictly less than or equal &lt;=
+Less than or equal &lt;= allows for instant executions (so a time of 0 between events e1 and e2)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.get_delta_between_events">
+<span class="sig-name descname"><span class="pre">get_delta_between_events</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filtered_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">event_pair</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rule</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/time_constraints.html#TimeMining.get_delta_between_events"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.get_delta_between_events" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.mine">
+<span class="sig-name descname"><span class="pre">mine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">log</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">EventLog</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/algo/discovery/dcr_discover/extenstions/time_constraints.html#TimeMining.mine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.mine" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.algo.discovery.dcr_discover.extenstions">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pm4py.algo.discovery.dcr_discover.extenstions" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.nesting">pm4py.algo.discovery.dcr_discover.extenstions.nesting module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants"><code class="docutils literal notranslate"><span class="pre">NestVariants</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.CHOICE"><code class="docutils literal notranslate"><span class="pre">NestVariants.CHOICE</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.NEST"><code class="docutils literal notranslate"><span class="pre">NestVariants.NEST</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestVariants.CHOICE_NEST"><code class="docutils literal notranslate"><span class="pre">NestVariants.CHOICE_NEST</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining"><code class="docutils literal notranslate"><span class="pre">NestingMining</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.mine"><code class="docutils literal notranslate"><span class="pre">NestingMining.mine()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_choice"><code class="docutils literal notranslate"><span class="pre">NestingMining.apply_choice()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.NestingMining.apply_nest"><code class="docutils literal notranslate"><span class="pre">NestingMining.apply_nest()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice"><code class="docutils literal notranslate"><span class="pre">Choice</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.apply_choice"><code class="docutils literal notranslate"><span class="pre">Choice.apply_choice()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutual_exclusions"><code class="docutils literal notranslate"><span class="pre">Choice.get_mutual_exclusions()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Choice.get_mutually_excluding_graph"><code class="docutils literal notranslate"><span class="pre">Choice.get_mutually_excluding_graph()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting"><code class="docutils literal notranslate"><span class="pre">Nesting</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.encode"><code class="docutils literal notranslate"><span class="pre">Nesting.encode()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_opposite_rel_dict_str"><code class="docutils literal notranslate"><span class="pre">Nesting.get_opposite_rel_dict_str()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.create_encoding"><code class="docutils literal notranslate"><span class="pre">Nesting.create_encoding()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.find_largest_nesting"><code class="docutils literal notranslate"><span class="pre">Nesting.find_largest_nesting()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.nest"><code class="docutils literal notranslate"><span class="pre">Nesting.nest()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.remove_redundant_nestings"><code class="docutils literal notranslate"><span class="pre">Nesting.remove_redundant_nestings()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.should_add"><code class="docutils literal notranslate"><span class="pre">Nesting.should_add()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.nesting.Nesting.get_nested_dcr_graph"><code class="docutils literal notranslate"><span class="pre">Nesting.get_nested_dcr_graph()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.pending">pm4py.algo.discovery.dcr_discover.extenstions.pending module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.pending.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.roles">pm4py.algo.discovery.dcr_discover.extenstions.roles module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.roles.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.roles.RoleMining"><code class="docutils literal notranslate"><span class="pre">RoleMining</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.roles.RoleMining.mine"><code class="docutils literal notranslate"><span class="pre">RoleMining.mine()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.discovery.dcr_discover.extenstions.time_constraints">pm4py.algo.discovery.dcr_discover.extenstions.time_constraints module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining"><code class="docutils literal notranslate"><span class="pre">TimeMining</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.get_log_with_pair"><code class="docutils literal notranslate"><span class="pre">TimeMining.get_log_with_pair()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.get_delta_between_events"><code class="docutils literal notranslate"><span class="pre">TimeMining.get_delta_between_events()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.algo.discovery.dcr_discover.extenstions.time_constraints.TimeMining.mine"><code class="docutils literal notranslate"><span class="pre">TimeMining.mine()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.algo.discovery.dcr_discover.extenstions">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/pm4py.algo.discovery.dcr_discover.extenstions.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

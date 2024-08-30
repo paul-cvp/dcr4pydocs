@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Release Notes &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=319a7919"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'release_notes';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Release Notes</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Link to this heading">#</a></h1>
+<section id="pm4py-2-7-0-release-notes">
+<h2>pm4py 2.7.0 - Release Notes<a class="headerlink" href="#pm4py-2-7-0-release-notes" title="Link to this heading">#</a></h2>
+<p>The major changes in pm4py 2.7.0 are as follows:</p>
+<ol class="arabic simple">
+<li><p>We added an initial integration to ChatGPT</p></li>
+<li><p>We added some connectors for workstation-supported processes (Outlook mail and calendar; web browsers).</p></li>
+</ol>
+</section>
+<section id="pm4py-2-6-0-release-notes">
+<h2>pm4py 2.6.0 - Release Notes<a class="headerlink" href="#pm4py-2-6-0-release-notes" title="Link to this heading">#</a></h2>
+<p>The major changes in pm4py 2.6.0 are as follows:</p>
+<ol class="arabic simple">
+<li><p>We added the ILP Miner as process discovery algorithm</p></li>
+<li><p>We added two log filters: “timestamp grouping” and “consecutive activities”</p></li>
+</ol>
+<p>3. We added the insertion of the case arrival/finish rate and of the waiting/service/sojourn times
+in the simplified interface</p>
+<ol class="arabic simple" start="4">
+<li><p>We added a baseline clustering algorithm, based on the pre-existing feature extraction</p></li>
+<li><p>We added the extraction of the “target vector” from event logs for machine learning purposes</p></li>
+</ol>
+</section>
+<section id="pm4py-2-5-0-release-notes">
+<h2>pm4py 2.5.0 - Release Notes<a class="headerlink" href="#pm4py-2-5-0-release-notes" title="Link to this heading">#</a></h2>
+<p>The major changes in pm4py 2.5.0 are as follows:</p>
+<ol class="arabic simple">
+<li><p>We added the Cardoso and extended Cardoso simplicity metrics to pm4py</p></li>
+<li><p>We added discovery of Stochastic Arc Weight nets based on OCEL logs.</p></li>
+<li><p>We added Murata-based Petri net simplification to the simplified interface (implicit place removal)</p></li>
+</ol>
+</section>
+<section id="pm4py-2-4-0-release-notes">
+<h2>pm4py 2.4.0 - Release Notes<a class="headerlink" href="#pm4py-2-4-0-release-notes" title="Link to this heading">#</a></h2>
+<p>Today, we released pm4py 2.4.0.
+We have adopted our release policy slightly, i.e., as of now, the pm4py versioning follows the MAJOR.MINOR.FIX pattern.
+We will also report all MAJOR and MINOR releases in the release notes.</p>
+<p>As today’s release is a minor release, we report on the main changes here.</p>
+<ol class="arabic simple">
+<li><p>We added the Murata algorithm (Berthelot implementation) to remove the structurally redundant places, which is now available in the simplified interface.</p></li>
+<li><p>We added the reduction of invisible transitions in Petri nets to the simplified interface.</p></li>
+<li><p>We added support for calcuating stochastic languages of process models</p></li>
+<li><p>We adde support for calculating EMD between two stochastic languages</p></li>
+<li><p>we added a visualization of alignments in simplified interface</p></li>
+<li><p>We added visualization of footprint table in simplified interface</p></li>
+<li><p>We added a conversion of Petri net objects to networkX DiGraphs</p></li>
+<li><p>We added support for stochastic Petri nets</p></li>
+<li><p>We added support for stochastic arc-weight nets (the paper describing this class of nets is submitted to the Petri nets 2023 conference)</p></li>
+</ol>
+</section>
+<section id="pm4py-2-3-0-release-notes">
+<h2>pm4py 2.3.0 - Release Notes<a class="headerlink" href="#pm4py-2-3-0-release-notes" title="Link to this heading">#</a></h2>
+<p>Finally, pm4py 2.3.0 has arrived!
+The 2.3.0 release contains various significant updates and improvements concerning its predecessors.
+The release consists of approximately 550 commits and 47.000 LoC!
+The main changes are as follows:</p>
+<p>1. <em>Flexible parameter passing in the simplified method invocation</em>, e.g., <a class="reference internal" href="pm4py.html#pm4py.discovery.discover_petri_net_inductive" title="pm4py.discovery.discover_petri_net_inductive"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.discovery.discover_petri_net_inductive()</span></code></a>;
+For example, in <code class="docutils literal notranslate"><span class="pre">`pm4py`</span></code> 2.2.X, the columns used in process discovery were fixed (i.e., case:concept:name, concept:name, time:timestamp). Hence, changing the perspective implied changing column headers.
+In pm4py 2.3.X, the columns used in process discovery are now part of the function arguments.
+A simple comparison:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Discovering a Petri net in pm4py 2.2.X:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">pm4py.discover_petri_net_inductive(dataframe,</span> <span class="pre">noise_threshold=0.2)</span></code></p>
+<ul class="simple">
+<li><p>Discovering a Petri net in pm4py 2.3.X:</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">pm4py.discover_petri_net_inductive(dataframe,</span> <span class="pre">noise_threshold=0.2,</span> <span class="pre">activity_key=&quot;activity&quot;,</span> <span class="pre">timestamp_key=&quot;timestamp&quot;,</span> <span class="pre">case_id_key=&quot;case&quot;)</span></code></p>
+</div></blockquote>
+<p>2. <em>Dataframes are primary citizens</em>;
+pm4py used to support both Pandas <code class="docutils literal notranslate"><span class="pre">Dataframes</span></code> and our custom-defined event log object. We have decided to adapt all algorithms to work on Dataframes. As such, event data is expected to be represented as a Dataframe in pm4py (i.e., we are dropping the explicit use of our custom event log object). There are two main reasons for this design decision:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><em>Performance</em>; Generally, Pandas Dataframes are performing significantly better on most operations compared to our custom event log object</p></li>
+<li><p><em>Practice</em>; Most real event data is of tabular form.</p></li>
+</ol>
+</div></blockquote>
+<p>Of course, pm4py still supports importing .xes files. However, when importing an event log using <a class="reference internal" href="pm4py.html#pm4py.read.read_xes" title="pm4py.read.read_xes"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.read.read_xes()</span></code></a>, the object is directly converted into a Dataframe.
+A general drawback of this design decision is that pm4py no longer appropriately supports nested objects (generally supported by the .xes standard). However, as indicated in point b), such nested objects are rarely used in practice.</p>
+<p>3. <em>Typing Information in the simplified interface</em>;
+All methods in the simplified interface are guaranteed to have typing information on their input and output objects.</p>
+<p>4. <em>Variant Representation</em>;
+In pm4py 2.3.X, trace variants are represented as a tuple of Strings (representing activity names) instead of a String where a ‘,’ symbol indicates activity separation. For example, a variant of the form &lt;A,B,C&gt; is now represented as a tuple (‘A’,’B’,’C’) and was previously represented as ‘A,B,C’. This fix allows activity names to contain a ‘,’ symbol.</p>
+<p>5. <em>Inductive Miner Revised</em>;
+We have re-implemented and restructured the code of the inductive miner. The new version is closer to the reference implementation in ProM and is more performant than the previous version.</p>
+<p>6. <em>Business Hours Revised</em>;
+The business hours functionality in pm4py has been revised completely. In pm4py 2.2.X, one could only specify the working days and hours, which were fixed. In pm4py 2.3.X, one can define week-day-based activity slots (e.g., to model breaks). One slot, i.e., one tuple consists of one start and one end time given in seconds since week start, e.g. [(7 * 60 * 60, 17 * 60 * 60), ((24 + 7) * 60 * 60, (24 + 12) * 60 * 60), ((24 + 13) * 60 * 60, (24 + 17) * 60 * 60),] meaning that business hours are Mondays 07:00 - 17:00 and Tuesdays 07:00 - 12:00 and 13:00 - 17:00</p>
+<p>7. <em>Auto-Generated Docs</em>;
+As you may have noticed, this website serves as the new documentation hub for pm4py. It contains all previously available information on the project website related to ‘installation’ and ‘getting started’. For the simplified interface, we have merged the general documentation with the API docs to improve the overall understanding of working with pm4py. The docs are now generated directly from the pm4py source. Hence, feel free to share a pull request if you find any issues.</p>
+<p>Happy #processmining!</p>
+<p>The #pm4py development team.</p>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py-2-7-0-release-notes">pm4py 2.7.0 - Release Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py-2-6-0-release-notes">pm4py 2.6.0 - Release Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py-2-5-0-release-notes">pm4py 2.5.0 - Release Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py-2-4-0-release-notes">pm4py 2.4.0 - Release Notes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py-2-3-0-release-notes">pm4py 2.3.0 - Release Notes</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/release_notes.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

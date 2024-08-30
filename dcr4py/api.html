@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API Reference &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=319a7919"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pm4py.read.read_dcr_xml" href="generated/pm4py.read.read_dcr_xml.html" />
+    <link rel="prev" title="Documentation" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.read.read_dcr_xml.html">pm4py.read.read_dcr_xml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.write.write_dcr_xml.html">pm4py.write.write_dcr_xml</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.convert.convert_to_petri_net.html">pm4py.convert.convert_to_petri_net</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.discovery.discover_dcr.html">pm4py.discovery.discover_dcr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.conformance.conformance_dcr.html">pm4py.conformance.conformance_dcr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.conformance.optimal_alignment_dcr.html">pm4py.conformance.optimal_alignment_dcr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.vis.view_dcr.html">pm4py.vis.view_dcr</a></li>
+<li class="toctree-l1"><a class="reference internal" href="generated/pm4py.vis.save_vis_dcr.html">pm4py.vis.save_vis_dcr</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">API Reference</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="api-reference">
+<h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">#</a></h1>
+<p>This page provides an overview the extension <code class="docutils literal notranslate"><span class="pre">DCR4Py</span></code> for <code class="docutils literal notranslate"><span class="pre">pm4py</span></code>.</p>
+<p>Note the pm4py.discovery, pm4py.conformance etc. contain the top level api calls for pm4py, in which the function found here have been implemented.
+However the subpackages should only the implemented extension.</p>
+<section id="process-discovery-pm4py-discovery">
+<h2>Process Discovery (<a class="reference internal" href="pm4py.html#module-pm4py.discovery" title="pm4py.discovery"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.discovery</span></code></a>)<a class="headerlink" href="#process-discovery-pm4py-discovery" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DCR4Py</span></code> allows for discovery of DCR graphs.
+Note that the implemented algorithm always discover a perfect fitting graph.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="pm4py.html#pm4py.discovery.discover_dcr" title="pm4py.discovery.discover_dcr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.discovery.discover_dcr()</span></code></a>; discovers a <em>DCR Graph</em>.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="conformance-checking-pm4py-conformance">
+<h2>Conformance Checking (<a class="reference internal" href="pm4py.html#module-pm4py.conformance" title="pm4py.conformance"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.conformance</span></code></a>)<a class="headerlink" href="#conformance-checking-pm4py-conformance" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DCR4Py</span></code> contains two conformance checking methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="pm4py.html#pm4py.conformance.conformance_dcr" title="pm4py.conformance.conformance_dcr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.conformance.conformance_dcr()</span></code></a>; rule based conformance checking using a <em>DCR Graph</em></p></li>
+<li><p><a class="reference internal" href="pm4py.html#pm4py.conformance.optimal_alignment_dcr" title="pm4py.conformance.optimal_alignment_dcr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.conformance.optimal_alignment_dcr()</span></code></a>; optimal alignment conformance checking using a <em>DCR Graph</em></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="visualization-pm4py-vis">
+<h2>Visualization (<a class="reference internal" href="pm4py.html#module-pm4py.vis" title="pm4py.vis"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.vis</span></code></a>)<a class="headerlink" href="#visualization-pm4py-vis" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DCR4Py</span></code> allow visualization of DCR graphs and storing them.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="pm4py.html#pm4py.vis.view_dcr" title="pm4py.vis.view_dcr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.vis.view_dcr()</span></code></a>; views a <em>DCR graph</em>.</p></li>
+<li><p><a class="reference internal" href="pm4py.html#pm4py.vis.save_vis_dcr" title="pm4py.vis.save_vis_dcr"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.vis.save_vis_dcr()</span></code></a>; saves the visualization of a <em>DCR graph</em>.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="read-pm4py-read-and-pm4py-write">
+<h2>Read (<a class="reference internal" href="pm4py.html#module-pm4py.read" title="pm4py.read"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.read</span></code></a> and <a class="reference internal" href="pm4py.html#module-pm4py.write" title="pm4py.write"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.write</span></code></a>)<a class="headerlink" href="#read-pm4py-read-and-pm4py-write" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DCR4Py</span></code> can import and export dcr graphs as xml.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="pm4py.html#pm4py.write.write_dcr_xml" title="pm4py.write.write_dcr_xml"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.write.write_dcr_xml()</span></code></a>; exports a <em>DCR graph</em> to xml.</p></li>
+<li><p><a class="reference internal" href="pm4py.html#pm4py.read.read_dcr_xml" title="pm4py.read.read_dcr_xml"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.read.read_dcr_xml()</span></code></a>; imports a <em>DCR graph</em> from xml.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="conversion-pm4py-convert">
+<h2>Conversion (<a class="reference internal" href="pm4py.html#module-pm4py.convert" title="pm4py.convert"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.convert</span></code></a>)<a class="headerlink" href="#conversion-pm4py-convert" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DCR4Py</span></code> also allows for the conversion of a DCR graph to petri net.
+The current existing function within pm4py has been extended to also handle DCR graphs.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="pm4py.html#pm4py.convert.convert_to_petri_net" title="pm4py.convert.convert_to_petri_net"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pm4py.convert.convert_to_petri_net()</span></code></a> converts a process model to Petri net</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="overall-list-of-methods">
+<h2>Overall List of Methods<a class="headerlink" href="#overall-list-of-methods" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="pm4py.html#pm4py.read.read_dcr_xml" title="pm4py.read.read_dcr_xml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.read.read_dcr_xml</span></code></a>(file_path, **parameters)</p></td>
+<td><p>Reads a DCR graph from an XML file :param file_path: path to the DCR graph :param parameters: parameters of the importer :rtype: <code class="docutils literal notranslate"><span class="pre">DCR</span></code> .. code-block:: python3     import pm4py     dcr = pm4py.read_dcr_xml(&quot;&lt;path_to_dcr_file&gt;&quot;, variant).</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pm4py.html#pm4py.write.write_dcr_xml" title="pm4py.write.write_dcr_xml"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.write.write_dcr_xml</span></code></a>(dcr_graph, path, ...)</p></td>
+<td><p>Writes a DCR graph object to disk in the <code class="docutils literal notranslate"><span class="pre">.xml</span></code> file format (exported as <code class="docutils literal notranslate"><span class="pre">.xml</span></code> file).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pm4py.html#pm4py.convert.convert_to_petri_net" title="pm4py.convert.convert_to_petri_net"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.convert.convert_to_petri_net</span></code></a>(obj, ...)</p></td>
+<td><p>Converts an input model to an (accepting) Petri net.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pm4py.html#pm4py.discovery.discover_dcr" title="pm4py.discovery.discover_dcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.discovery.discover_dcr</span></code></a>(log[, ...])</p></td>
+<td><p>Discovers a DCR graph from an event log based on the DisCoveR algorithm. This method implements the DCR discovery algorithm as described in: C. O. Back, T. Slaats, T. T. Hildebrandt, M. Marquard, &quot;DisCoveR: accurate and efficient discovery of declarative process models&quot;. Parameters ---------- log : Union[EventLog, pd.DataFrame]     The event log or Pandas dataframe containing the event data. post_process : Optional[str]     Specifies the type of post-processing for the event log, currently supports ROLES, PENDING, TIMED and NESTINGS. activity_key : str, optional     The attribute to be used for the activity, defaults to &quot;concept:name&quot;. timestamp_key : str, optional     The attribute to be used for the timestamp, defaults to &quot;time:timestamp&quot;. case_id_key : str, optional     The attribute to be used as the case identifier, defaults to &quot;case:concept:name&quot;. group_key : str, optional     The attribute to be used as a role identifier, defaults to &quot;org:group&quot;. resource_key : str, optional     The attribute to be used as a resource identifier, defaults to &quot;org:resource&quot;. findAdditionalConditions : bool, optional     A boolean value specifying whether additional conditions should be found, defaults to True. Returns ------- Tuple[Any, dict]     A tuple containing the discovered DCR graph and a dictionary with additional information. Examples -------- .. code-block:: python3     import pm4py     graph, la = pm4py.discover_DCR(log).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pm4py.html#pm4py.conformance.conformance_dcr" title="pm4py.conformance.conformance_dcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.conformance.conformance_dcr</span></code></a>(log, dcr_graph)</p></td>
+<td><p>Applies rule based conformance checking against a DCR model.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pm4py.html#pm4py.conformance.optimal_alignment_dcr" title="pm4py.conformance.optimal_alignment_dcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.conformance.optimal_alignment_dcr</span></code></a>(log, ...)</p></td>
+<td><p>Applies optimal alignment against a DCR model. Reference paper: Axel Kjeld Fjelrad Christfort &amp; Tijs Slaats. &quot;Efficient Optimal Alignment Between Dynamic Condition Response Graphs and Traces&quot; <a class="reference external" href="https://doi.org/10.1007/978-3-031-41620-0_1">https://doi.org/10.1007/978-3-031-41620-0_1</a> Parameters ---------- log : EventLog | pd.DataFrame | Trace     Event log to be used for alignment. also supports Trace dcr_graph : DCRGraph     The DCR graph against which the log is aligned. activity_key : str     The key to identify activity names in the log. timestamp_key : str     The key to identify timestamps in the log. case_id_key : str     The key to identify case identifiers in the log. return_diagnostics_dataframe : bool, default False     If True, returns a diagnostics dataframe instead of the usual list output. Returns ------- Union[pd.DataFrame, List[Tuple[str, Dict[str, Any]]]]     Depending on the value of <cite>return_diagnostics_dataframe</cite>, returns either     a pandas DataFrame with diagnostics or a list of alignment results. Raises ------ Exception     If the log provided is not an instance of EventLog or pandas DataFrame. Examples -------- .. code-block:: python3     import pm4py     graph, la = pm4py.discover_DCR(log)     conf_res = pm4py.optimal_alignment_dcr(log,graph).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="pm4py.html#pm4py.vis.view_dcr" title="pm4py.vis.view_dcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.vis.view_dcr</span></code></a>(dcr[, format, bgcolor, ...])</p></td>
+<td><p>Views a DCR graph</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="pm4py.html#pm4py.vis.save_vis_dcr" title="pm4py.vis.save_vis_dcr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pm4py.vis.save_vis_dcr</span></code></a>(dcr, file_path[, ...])</p></td>
+<td><p>Saves the visualization of a DCR graph</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="generated/pm4py.read.read_dcr_xml.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pm4py.read.read_dcr_xml</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process-discovery-pm4py-discovery">Process Discovery (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.discovery</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conformance-checking-pm4py-conformance">Conformance Checking (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.conformance</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualization-pm4py-vis">Visualization (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.vis</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#read-pm4py-read-and-pm4py-write">Read (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.read</span></code> and <code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.write</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conversion-pm4py-convert">Conversion (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pm4py.convert</span></code>)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overall-list-of-methods">Overall List of Methods</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/api.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

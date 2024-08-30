@@ -1,0 +1,1348 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.discovery &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/discovery';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.discovery</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.discovery</h1><div class="highlight"><pre>
+<span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    This file is part of PM4Py (More Info: https://pm4py.fit.fraunhofer.de).</span>
+
+<span class="sd">    PM4Py is free software: you can redistribute it and/or modify</span>
+<span class="sd">    it under the terms of the GNU General Public License as published by</span>
+<span class="sd">    the Free Software Foundation, either version 3 of the License, or</span>
+<span class="sd">    (at your option) any later version.</span>
+
+<span class="sd">    PM4Py is distributed in the hope that it will be useful,</span>
+<span class="sd">    but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span class="sd">    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span>
+<span class="sd">    GNU General Public License for more details.</span>
+
+<span class="sd">    You should have received a copy of the GNU General Public License</span>
+<span class="sd">    along with PM4Py.  If not, see &lt;https://www.gnu.org/licenses/&gt;.</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="vm">__doc__</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">The ``pm4py.discovery`` module contains the process discovery algorithms implemented in ``pm4py``</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Set</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.powl.inductive.utils.filtering</span> <span class="kn">import</span> <span class="n">FILTERING_THRESHOLD</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.powl.inductive.variants.dynamic_clustering_frequency.dynamic_clustering_frequency_partial_order_cut</span> <span class="kn">import</span> \
+    <span class="n">ORDER_FREQUENCY_RATIO</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.powl.inductive.variants.powl_discovery_varaints</span> <span class="kn">import</span> <span class="n">POWLDiscoveryVariant</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dcr_discover.algorithm</span> <span class="kn">import</span> <span class="n">ExtensionVariants</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.bpmn.obj</span> <span class="kn">import</span> <span class="n">BPMN</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dfg.obj</span> <span class="kn">import</span> <span class="n">DFG</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.powl.obj</span> <span class="kn">import</span> <span class="n">POWL</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.heuristics_net.obj</span> <span class="kn">import</span> <span class="n">HeuristicsNet</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.transition_system.obj</span> <span class="kn">import</span> <span class="n">TransitionSystem</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.trie.obj</span> <span class="kn">import</span> <span class="n">Trie</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventStream</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.petri_net.obj</span> <span class="kn">import</span> <span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.obj</span> <span class="kn">import</span> <span class="n">ProcessTree</span>
+<span class="kn">from</span> <span class="nn">pm4py.util.pandas_utils</span> <span class="kn">import</span> <span class="n">check_is_pandas_dataframe</span><span class="p">,</span> <span class="n">check_pandas_dataframe_columns</span>
+<span class="kn">from</span> <span class="nn">pm4py.utils</span> <span class="kn">import</span> <span class="n">get_properties</span><span class="p">,</span> <span class="n">__event_log_deprecation_warning</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">pandas_utils</span>
+<span class="kn">import</span> <span class="nn">deprecation</span>
+<span class="kn">import</span> <span class="nn">importlib.util</span>
+
+
+<div class="viewcode-block" id="discover_dfg">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_dfg">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_dfg</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a Directly-Follows Graph (DFG) from a log.</span>
+
+<span class="sd">    This method returns a dictionary with the couples of directly-following activities (in the log)</span>
+<span class="sd">    as keys and the frequency of relation as value.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Tuple[dict, dict, dict]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        dfg, start_activities, end_activities = pm4py.discover_dfg(dataframe, case_id_key=&#39;case:concept:name&#39;, activity_key=&#39;concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">constants</span>
+
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg.adapters.pandas.df_statistics</span> <span class="kn">import</span> <span class="n">get_dfg_graph</span>
+        <span class="n">dfg</span> <span class="o">=</span> <span class="n">get_dfg_graph</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span>
+                            <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span>
+                            <span class="n">case_id_glue</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.start_activities.pandas</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">start_activities_module</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.end_activities.pandas</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">end_activities_module</span>
+        <span class="n">start_activities</span> <span class="o">=</span> <span class="n">start_activities_module</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+        <span class="n">end_activities</span> <span class="o">=</span> <span class="n">end_activities_module</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dfg_discovery</span>
+        <span class="n">dfg</span> <span class="o">=</span> <span class="n">dfg_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.start_activities.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">start_activities_module</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.end_activities.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">end_activities_module</span>
+        <span class="n">start_activities</span> <span class="o">=</span> <span class="n">start_activities_module</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+        <span class="n">end_activities</span> <span class="o">=</span> <span class="n">end_activities_module</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dfg</span><span class="p">,</span> <span class="n">start_activities</span><span class="p">,</span> <span class="n">end_activities</span></div>
+
+
+
+<div class="viewcode-block" id="discover_directly_follows_graph">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_directly_follows_graph">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_directly_follows_graph</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="n">discover_dfg</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_dfg_typed">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_dfg_typed">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_dfg_typed</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">DFG</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a Directly-Follows Graph (DFG) from a log.</span>
+
+<span class="sd">    This method returns a typed DFG object, i.e., as specified in ``pm4py.objects.dfg.obj.py`` (``DirectlyFollowsGraph`` Class)</span>
+<span class="sd">    The DFG object describes a graph, start activities and end activities.</span>
+<span class="sd">    The graph is a collection of triples of the form (a,b,f) representing an arc a-&gt;b with frequency f.</span>
+<span class="sd">    The start activities are a collection of tuples of the form (a,f) representing that activity a starts f cases.</span>
+<span class="sd">    The end activities are a collection of tuples of the form (a,f) representing that ativity a ends f cases.</span>
+<span class="sd">    </span>
+<span class="sd">    This method replaces ``pm4py.discover_dfg`` and ``pm4py.discover_directly_follows_graph``. In a future release, these functions will adopt the same behavior as this function.</span>
+
+<span class="sd">    :param log: ``pandas.DataFrame``</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    </span>
+<span class="sd">    :rtype: ``DFG``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        dfg = pm4py.discover_dfg_typed(log, case_id_key=&#39;case:concept:name&#39;, activity_key=&#39;concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg.variants</span> <span class="kn">import</span> <span class="n">clean</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;polars&quot;</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">polars</span> <span class="k">as</span> <span class="nn">pl</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">log</span><span class="p">)</span> <span class="ow">is</span> <span class="n">pl</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg.variants</span> <span class="kn">import</span> <span class="n">clean_polars</span>
+            <span class="k">return</span> <span class="n">clean_polars</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">clean</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;pm4py.discover_dfg_typed is only defined for dataFrames&#39;</span><span class="p">)</span></div>
+
+        
+
+<div class="viewcode-block" id="discover_performance_dfg">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_performance_dfg">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_performance_dfg</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">business_hours</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">business_hour_slots</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_BUSINESS_HOUR_SLOTS</span><span class="p">,</span> <span class="n">workcalendar</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_BUSINESS_HOURS_WORKCALENDAR</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a performance directly-follows graph from an event log.</span>
+
+<span class="sd">    This method returns a dictionary with the couples of directly-following activities (in the log)</span>
+<span class="sd">    as keys and the performance of relation as value.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param business_hours: enables/disables the computation based on the business hours (default: False)</span>
+<span class="sd">    :param business_hour_slots: work schedule of the company, provided as a list of tuples where each tuple represents one time slot of business hours. One slot i.e. one tuple consists of one start and one end time given in seconds since week start, e.g. [(7 * 60 * 60, 17 * 60 * 60), ((24 + 7) * 60 * 60, (24 + 12) * 60 * 60), ((24 + 13) * 60 * 60, (24 + 17) * 60 * 60),] meaning that business hours are Mondays 07:00 - 17:00 and Tuesdays 07:00 - 12:00 and 13:00 - 17:00</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Tuple[dict, dict, dict]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        performance_dfg, start_activities, end_activities = pm4py.discover_performance_dfg(dataframe, case_id_key=&#39;case:concept:name&#39;, activity_key=&#39;concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">constants</span>
+
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg.adapters.pandas.df_statistics</span> <span class="kn">import</span> <span class="n">get_dfg_graph</span>
+        <span class="n">dfg</span> <span class="o">=</span> <span class="n">get_dfg_graph</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_glue</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span> <span class="n">measure</span><span class="o">=</span><span class="s2">&quot;performance&quot;</span><span class="p">,</span> <span class="n">perf_aggregation_key</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+                            <span class="n">business_hours</span><span class="o">=</span><span class="n">business_hours</span><span class="p">,</span> <span class="n">business_hours_slot</span><span class="o">=</span><span class="n">business_hour_slots</span><span class="p">,</span> <span class="n">workcalendar</span><span class="o">=</span><span class="n">workcalendar</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.start_activities.pandas</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">start_activities_module</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.end_activities.pandas</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">end_activities_module</span>
+        <span class="n">start_activities</span> <span class="o">=</span> <span class="n">start_activities_module</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+        <span class="n">end_activities</span> <span class="o">=</span> <span class="n">end_activities_module</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg.variants</span> <span class="kn">import</span> <span class="n">performance</span> <span class="k">as</span> <span class="n">dfg_discovery</span>
+        <span class="n">properties</span><span class="p">[</span><span class="n">dfg_discovery</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">AGGREGATION_MEASURE</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>
+        <span class="n">properties</span><span class="p">[</span><span class="n">dfg_discovery</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">BUSINESS_HOURS</span><span class="p">]</span> <span class="o">=</span> <span class="n">business_hours</span>
+        <span class="n">properties</span><span class="p">[</span><span class="n">dfg_discovery</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">BUSINESS_HOUR_SLOTS</span><span class="p">]</span> <span class="o">=</span> <span class="n">business_hour_slots</span>
+        <span class="n">dfg</span> <span class="o">=</span> <span class="n">dfg_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.start_activities.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">start_activities_module</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.end_activities.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">end_activities_module</span>
+        <span class="n">start_activities</span> <span class="o">=</span> <span class="n">start_activities_module</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+        <span class="n">end_activities</span> <span class="o">=</span> <span class="n">end_activities_module</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dfg</span><span class="p">,</span> <span class="n">start_activities</span><span class="p">,</span> <span class="n">end_activities</span></div>
+
+
+
+<div class="viewcode-block" id="discover_petri_net_alpha">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_petri_net_alpha">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_petri_net_alpha</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a Petri net using the Alpha Miner.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_alpha(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.alpha</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alpha_miner</span>
+    <span class="k">return</span> <span class="n">alpha_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">alpha_miner</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ALPHA_VERSION_CLASSIC</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="discover_petri_net_ilp">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_petri_net_ilp">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_petri_net_ilp</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">alpha</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a Petri net using the ILP Miner.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param alpha: noise threshold for the sequence encoding graph (1.0=no filtering, 0.0=greatest filtering)</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_ilp(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;alpha&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">alpha</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.ilp</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">ilp_miner</span>
+    <span class="k">return</span> <span class="n">ilp_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">ilp_miner</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">CLASSIC</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_petri_net_alpha_plus">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_petri_net_alpha_plus">[docs]</a>
+<span class="nd">@deprecation</span><span class="o">.</span><span class="n">deprecated</span><span class="p">(</span><span class="n">deprecated_in</span><span class="o">=</span><span class="s2">&quot;2.3.0&quot;</span><span class="p">,</span> <span class="n">removed_in</span><span class="o">=</span><span class="s2">&quot;3.0.0&quot;</span><span class="p">,</span> <span class="n">details</span><span class="o">=</span><span class="s2">&quot;this method will be removed in a future release.&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">discover_petri_net_alpha_plus</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a Petri net using the Alpha+ algorithm</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_alpha_plus(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.alpha</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alpha_miner</span>
+    <span class="k">return</span> <span class="n">alpha_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">alpha_miner</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ALPHA_VERSION_PLUS</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="discover_petri_net_inductive">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_petri_net_inductive">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_petri_net_inductive</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DFG</span><span class="p">],</span> <span class="n">multi_processing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENABLE_MULTIPROCESSING_DEFAULT</span><span class="p">,</span> <span class="n">noise_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">disable_fallthroughs</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span>
+        <span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a Petri net using the inductive miner algorithm.</span>
+
+<span class="sd">    The basic idea of Inductive Miner is about detecting a &#39;cut&#39; in the log (e.g. sequential cut, parallel cut, concurrent cut and loop cut) and then recur on sublogs, which were found applying the cut, until a base case is found. The Directly-Follows variant avoids the recursion on the sublogs but uses the Directly Follows graph.</span>
+
+<span class="sd">    Inductive miner models usually make extensive use of hidden transitions, especially for skipping/looping on a portion on the model. Furthermore, each visible transition has a unique label (there are no transitions in the model that share the same label).</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe / typed DFG</span>
+<span class="sd">    :param noise_threshold: noise threshold (default: 0.0)</span>
+<span class="sd">    :param multi_processing: boolean that enables/disables multiprocessing in inductive miner</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param disable_fallthroughs: disable the Inductive Miner fall-throughs</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">pt</span> <span class="o">=</span> <span class="n">discover_process_tree_inductive</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">noise_threshold</span><span class="p">,</span> <span class="n">multi_processing</span><span class="o">=</span><span class="n">multi_processing</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span> <span class="n">disable_fallthroughs</span><span class="o">=</span><span class="n">disable_fallthroughs</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">pm4py.convert</span> <span class="kn">import</span> <span class="n">convert_to_petri_net</span>
+    <span class="k">return</span> <span class="n">convert_to_petri_net</span><span class="p">(</span><span class="n">pt</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_petri_net_heuristics">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_petri_net_heuristics">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_petri_net_heuristics</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">dependency_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                                  <span class="n">and_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.65</span><span class="p">,</span>
+                                  <span class="n">loop_two_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discover a Petri net using the Heuristics Miner</span>
+
+<span class="sd">    Heuristics Miner is an algorithm that acts on the Directly-Follows Graph, providing way to handle with noise and to find common constructs (dependency between two activities, AND). The output of the Heuristics Miner is an Heuristics Net, so an object that contains the activities and the relationships between them. The Heuristics Net can be then converted into a Petri net. The paper can be visited by clicking on the upcoming link: this link).</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param dependency_threshold: dependency threshold (default: 0.5)</span>
+<span class="sd">    :param and_threshold: AND threshold (default: 0.65)</span>
+<span class="sd">    :param loop_two_threshold: loop two threshold (default: 0.5)</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Tuple[PetriNet, Marking, Marking]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        net, im, fm = pm4py.discover_petri_net_heuristics(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.heuristics.variants</span> <span class="kn">import</span> <span class="n">classic</span> <span class="k">as</span> <span class="n">heuristics_miner</span>
+    <span class="n">heu_parameters</span> <span class="o">=</span> <span class="n">heuristics_miner</span><span class="o">.</span><span class="n">Parameters</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">DEPENDENCY_THRESH</span><span class="p">]</span> <span class="o">=</span> <span class="n">dependency_threshold</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">AND_MEASURE_THRESH</span><span class="p">]</span> <span class="o">=</span> <span class="n">and_threshold</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">LOOP_LENGTH_TWO_THRESH</span><span class="p">]</span> <span class="o">=</span> <span class="n">loop_two_threshold</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">heuristics_miner</span><span class="o">.</span><span class="n">apply_pandas</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">heuristics_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_process_tree_inductive">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_process_tree_inductive">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_process_tree_inductive</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DFG</span><span class="p">],</span> <span class="n">noise_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">multi_processing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENABLE_MULTIPROCESSING_DEFAULT</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">disable_fallthroughs</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ProcessTree</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a process tree using the inductive miner algorithm</span>
+
+<span class="sd">    The basic idea of Inductive Miner is about detecting a &#39;cut&#39; in the log (e.g. sequential cut, parallel cut, concurrent cut and loop cut) and then recur on sublogs, which were found applying the cut, until a base case is found. The Directly-Follows variant avoids the recursion on the sublogs but uses the Directly Follows graph.</span>
+
+<span class="sd">    Inductive miner models usually make extensive use of hidden transitions, especially for skipping/looping on a portion on the model. Furthermore, each visible transition has a unique label (there are no transitions in the model that share the same label).</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe / typed DFG</span>
+<span class="sd">    :param noise_threshold: noise threshold (default: 0.0)</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param multi_processing: boolean that enables/disables multiprocessing in inductive miner</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param disable_fallthroughs: disable the Inductive Miner fall-throughs</span>
+<span class="sd">    :rtype: ``ProcessTree``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        process_tree = pm4py.discover_process_tree_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.inductive</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">inductive_miner</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;noise_threshold&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">noise_threshold</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;multiprocessing&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">multi_processing</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="s2">&quot;disable_fallthroughs&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">disable_fallthroughs</span>
+
+    <span class="n">variant</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">IMf</span> <span class="k">if</span> <span class="n">noise_threshold</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">IM</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">DFG</span><span class="p">):</span>
+        <span class="n">variant</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">IMd</span>
+
+    <span class="k">return</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">variant</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_heuristics_net">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_heuristics_net">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_heuristics_net</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">dependency_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+                            <span class="n">and_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.65</span><span class="p">,</span>
+                            <span class="n">loop_two_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">min_act_count</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">min_dfg_occurrences</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">decoration</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;frequency&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">HeuristicsNet</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers an heuristics net</span>
+
+<span class="sd">    Heuristics Miner is an algorithm that acts on the Directly-Follows Graph, providing way to handle with noise and to find common constructs (dependency between two activities, AND). The output of the Heuristics Miner is an Heuristics Net, so an object that contains the activities and the relationships between them. The Heuristics Net can be then converted into a Petri net. The paper can be visited by clicking on the upcoming link: this link).</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param dependency_threshold: dependency threshold (default: 0.5)</span>
+<span class="sd">    :param and_threshold: AND threshold (default: 0.65)</span>
+<span class="sd">    :param loop_two_threshold: loop two threshold (default: 0.5)</span>
+<span class="sd">    :param min_act_count: minimum number of occurrences per activity in order to be included in the discovery</span>
+<span class="sd">    :param min_dfg_occurrences: minimum number of occurrences per arc in the DFG in order to be included in the discovery</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param decoration: the decoration that should be used (frequency, performance)</span>
+<span class="sd">    :rtype: ``HeuristicsNet``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        heu_net = pm4py.discover_heuristics_net(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.heuristics.variants</span> <span class="kn">import</span> <span class="n">classic</span> <span class="k">as</span> <span class="n">heuristics_miner</span>
+    <span class="n">heu_parameters</span> <span class="o">=</span> <span class="n">heuristics_miner</span><span class="o">.</span><span class="n">Parameters</span>
+    <span class="n">parameters</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">DEPENDENCY_THRESH</span><span class="p">]</span> <span class="o">=</span> <span class="n">dependency_threshold</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">AND_MEASURE_THRESH</span><span class="p">]</span> <span class="o">=</span> <span class="n">and_threshold</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">LOOP_LENGTH_TWO_THRESH</span><span class="p">]</span> <span class="o">=</span> <span class="n">loop_two_threshold</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">MIN_ACT_COUNT</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_act_count</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">MIN_DFG_OCCURRENCES</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_dfg_occurrences</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">heu_parameters</span><span class="o">.</span><span class="n">HEU_NET_DECORATION</span><span class="p">]</span> <span class="o">=</span> <span class="n">decoration</span>
+    
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">heuristics_miner</span><span class="o">.</span><span class="n">apply_heu_pandas</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">heuristics_miner</span><span class="o">.</span><span class="n">apply_heu</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="derive_minimum_self_distance">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.derive_minimum_self_distance">[docs]</a>
+<span class="k">def</span> <span class="nf">derive_minimum_self_distance</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">EventStream</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This algorithm computes the minimum self-distance for each activity observed in an event log.</span>
+<span class="sd">    The self distance of a in &lt;a&gt; is infinity, of a in &lt;a,a&gt; is 0, in &lt;a,b,a&gt; is 1, etc.</span>
+<span class="sd">    The activity key &#39;concept:name&#39; is used.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Dict[str, int]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        msd = pm4py.derive_minimum_self_distance(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.minimum_self_distance</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">msd</span>
+    <span class="k">return</span> <span class="n">msd</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">))</span></div>
+
+
+
+<div class="viewcode-block" id="discover_footprints">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_footprints">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_footprints</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">PetriNet</span><span class="p">,</span> <span class="n">Marking</span><span class="p">,</span> <span class="n">Marking</span><span class="p">],</span> <span class="n">ProcessTree</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span>
+        <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers the footprints out of the provided event log / process model</span>
+
+<span class="sd">    :param args: event log / process model</span>
+<span class="sd">    :rtype: ``Union[List[Dict[str, Any]], Dict[str, Any]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        footprints = pm4py.discover_footprints(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">fp_discovery</span>
+    <span class="k">return</span> <span class="n">fp_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_eventually_follows_graph">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_eventually_follows_graph">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_eventually_follows_graph</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Gets the eventually follows graph from a log object.</span>
+
+<span class="sd">    The eventually follows graph is a dictionary associating to every</span>
+<span class="sd">    couple of activities which are eventually following each other the</span>
+<span class="sd">    number of occurrences of this relation.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Dict[Tuple[str, str], int]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        efg = pm4py.discover_eventually_follows_graph(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.eventually_follows.pandas</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="k">return</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.eventually_follows.log</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="k">return</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_bpmn_inductive">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_bpmn_inductive">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_bpmn_inductive</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">DFG</span><span class="p">],</span> <span class="n">noise_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">multi_processing</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">ENABLE_MULTIPROCESSING_DEFAULT</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">disable_fallthroughs</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">BPMN</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a BPMN using the Inductive Miner algorithm</span>
+
+<span class="sd">    The basic idea of Inductive Miner is about detecting a &#39;cut&#39; in the log (e.g. sequential cut, parallel cut, concurrent cut and loop cut) and then recur on sublogs, which were found applying the cut, until a base case is found. The Directly-Follows variant avoids the recursion on the sublogs but uses the Directly Follows graph.</span>
+
+<span class="sd">    Inductive miner models usually make extensive use of hidden transitions, especially for skipping/looping on a portion on the model. Furthermore, each visible transition has a unique label (there are no transitions in the model that share the same label).</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe / typed DFG</span>
+<span class="sd">    :param noise_threshold: noise threshold (default: 0.0)</span>
+<span class="sd">    :param multi_processing: boolean that enables/disables multiprocessing in inductive miner</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param disable_fallthroughs: disable the Inductive Miner fall-throughs</span>
+<span class="sd">    :rtype: ``BPMN``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        bpmn_graph = pm4py.discover_bpmn_inductive(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">pt</span> <span class="o">=</span> <span class="n">discover_process_tree_inductive</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">noise_threshold</span><span class="p">,</span> <span class="n">multi_processing</span><span class="o">=</span><span class="n">multi_processing</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span> <span class="n">disable_fallthroughs</span><span class="o">=</span><span class="n">disable_fallthroughs</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">pm4py.convert</span> <span class="kn">import</span> <span class="n">convert_to_bpmn</span>
+    <span class="k">return</span> <span class="n">convert_to_bpmn</span><span class="p">(</span><span class="n">pt</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_transition_system">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_transition_system">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_transition_system</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">direction</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;forward&quot;</span><span class="p">,</span> <span class="n">window</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">view</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;sequence&quot;</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">TransitionSystem</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a transition system as described in the process mining book</span>
+<span class="sd">    &quot;Process Mining: Data Science in Action&quot;</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param direction: direction in which the transition system is built (forward, backward)</span>
+<span class="sd">    :param window: window (2, 3, ...)</span>
+<span class="sd">    :param view: view to use in the construction of the states (sequence, set, multiset)</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``TransitionSystem``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        transition_system = pm4py.discover_transition_system(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;direction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">direction</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;window&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">window</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;view&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">view</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.transition_system</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">ts_discovery</span>
+    <span class="k">return</span> <span class="n">ts_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_prefix_tree">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_prefix_tree">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_prefix_tree</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Trie</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a prefix tree from the provided log object.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Trie``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        prefix_tree = pm4py.discover_prefix_tree(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.log_to_trie</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">trie_discovery</span>
+    <span class="k">return</span> <span class="n">trie_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_temporal_profile">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_temporal_profile">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_temporal_profile</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">float</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a temporal profile from a log object.</span>
+
+<span class="sd">    Implements the approach described in:</span>
+<span class="sd">    Stertz, Florian, Jürgen Mangler, and Stefanie Rinderle-Ma. &quot;Temporal Conformance Checking at Runtime based on Time-infused Process Models.&quot; arXiv preprint arXiv:2008.07262 (2020).</span>
+
+<span class="sd">    The output is a dictionary containing, for every couple of activities eventually following in at least a case of the log,</span>
+<span class="sd">    the average and the standard deviation of the difference of the timestamps.</span>
+
+<span class="sd">    E.g. if the log has two cases:</span>
+
+<span class="sd">    A (timestamp: 1980-01)   B (timestamp: 1980-03)    C (timestamp: 1980-06)</span>
+<span class="sd">    A (timestamp: 1990-01)   B (timestamp: 1990-02)    D (timestamp: 1990-03)</span>
+
+<span class="sd">    The returned dictionary will contain:</span>
+<span class="sd">    {(&#39;A&#39;, &#39;B&#39;): (1.5 months, 0.5 months), (&#39;A&#39;, &#39;C&#39;): (5 months, 0), (&#39;A&#39;, &#39;D&#39;): (2 months, 0)}</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Dict[Tuple[str, str], Tuple[float, float]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        temporal_profile = pm4py.discover_temporal_profile(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.temporal_profile</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">temporal_profile_discovery</span>
+    <span class="k">return</span> <span class="n">temporal_profile_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_log_skeleton">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_log_skeleton">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_log_skeleton</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">noise_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a log skeleton from an event log.</span>
+
+<span class="sd">    A log skeleton is a declarative model which consists of six different constraints:</span>
+<span class="sd">    - &quot;directly_follows&quot;: specifies for some activities some strict bounds on the activities directly-following. For example,</span>
+<span class="sd">                        &#39;A should be directly followed by B&#39; and &#39;B should be directly followed by C&#39;.</span>
+<span class="sd">    - &quot;always_before&quot;: specifies that some activities may be executed only if some other activities are executed somewhen before</span>
+<span class="sd">                        in the history of the case.</span>
+<span class="sd">                        For example, &#39;C should always be preceded by A&#39;</span>
+<span class="sd">    - &quot;always_after&quot;: specifies that some activities should always trigger the execution of some other activities</span>
+<span class="sd">                        in the future history of the case.</span>
+<span class="sd">                        For example, &#39;A should always be followed by C&#39;</span>
+<span class="sd">    - &quot;equivalence&quot;: specifies that a given couple of activities should happen with the same number of occurrences inside</span>
+<span class="sd">                        a case.</span>
+<span class="sd">                        For example, &#39;B and C should always happen the same number of times&#39;.</span>
+<span class="sd">    - &quot;never_together&quot;: specifies that a given couple of activities should never happen together in the history of the case.</span>
+<span class="sd">                        For example, &#39;there should be no case containing both C and D&#39;.</span>
+<span class="sd">    - &quot;activ_occurrences&quot;: specifies the allowed number of occurrences per activity:</span>
+<span class="sd">                        E.g. A is allowed to be executed 1 or 2 times, B is allowed to be executed 1 or 2 or 3 or 4 times.</span>
+
+<span class="sd">    Reference paper:</span>
+<span class="sd">    Verbeek, H. M. W., and R. Medeiros de Carvalho. &quot;Log skeletons: A classification approach to process discovery.&quot; arXiv preprint arXiv:1806.08247 (2018).</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param noise_threshold: noise threshold, acting as described in the paper.</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Dict[str, Any]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        log_skeleton = pm4py.discover_log_skeleton(dataframe, noise_threshold=0.1, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;noise_threshold&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">noise_threshold</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.log_skeleton</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">log_skeleton_discovery</span>
+    <span class="k">return</span> <span class="n">log_skeleton_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_declare">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_declare">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_declare</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">allowed_templates</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">considered_activities</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">min_support_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">min_confidence_ratio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a DECLARE model from an event log.</span>
+
+<span class="sd">    Reference paper:</span>
+<span class="sd">    F. M. Maggi, A. J. Mooij and W. M. P. van der Aalst, &quot;User-guided discovery of declarative process models,&quot; 2011 IEEE Symposium on Computational Intelligence and Data Mining (CIDM), Paris, France, 2011, pp. 192-199, doi: 10.1109/CIDM.2011.5949297.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param allowed_templates: (optional) collection of templates to consider for the discovery</span>
+<span class="sd">    :param considered_activities: (optional) collection of activities to consider for the discovery</span>
+<span class="sd">    :param min_support_ratio: (optional, decided automatically otherwise) minimum percentage of cases (over the entire set of cases of the log) for which the discovered rules apply</span>
+<span class="sd">    :param min_confidence_ratio: (optional, decided automatically otherwise) minimum percentage of cases (over the rule&#39;s support) for which the discovered rules are valid</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``Dict[str, Any]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        declare_model = pm4py.discover_declare(log)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;allowed_templates&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">allowed_templates</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;considered_activities&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">considered_activities</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;min_support_ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_support_ratio</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;min_confidence_ratio&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_confidence_ratio</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.declare</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">declare_discovery</span>
+    <span class="k">return</span> <span class="n">declare_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_powl">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_powl">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_powl</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">variant</span><span class="o">=</span><span class="n">POWLDiscoveryVariant</span><span class="o">.</span><span class="n">MAXIMAL</span><span class="p">,</span>
+                  <span class="n">filtering_weight_factor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">order_graph_filtering_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+                  <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span>
+                  <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">POWL</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a POWL model from an event log.</span>
+
+<span class="sd">    Reference paper:</span>
+<span class="sd">    Kourani, Humam, and Sebastiaan J. van Zelst. &quot;POWL: partially ordered workflow language.&quot; International Conference on Business Process Management. Cham: Springer Nature Switzerland, 2023.</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param variant: variant of the algorithm</span>
+<span class="sd">    :param filtering_weight_factor: accepts values 0 &lt;= x &lt; 1</span>
+<span class="sd">    :param order_graph_filtering_threshold: accepts values 0.5 &lt; x &lt;= 1</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :rtype: ``POWL``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        log = pm4py.read_xes(&#39;tests/input_data/receipt.xes&#39;)</span>
+<span class="sd">        powl_model = pm4py.discover_powl(log, activity_key=&#39;concept:name&#39;)</span>
+<span class="sd">        print(powl_model)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="kn">import</span> <span class="nn">pm4py</span>
+    <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">convert_to_event_log</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">order_graph_filtering_threshold</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">variant</span> <span class="ow">is</span> <span class="n">POWLDiscoveryVariant</span><span class="o">.</span><span class="n">DYNAMIC_CLUSTERING</span><span class="p">:</span>
+            <span class="n">properties</span><span class="p">[</span><span class="n">ORDER_FREQUENCY_RATIO</span><span class="p">]</span> <span class="o">=</span> <span class="n">order_graph_filtering_threshold</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;the order graph filtering threshold can only be used for the variant DYNAMIC_CLUSTERING&quot;</span><span class="p">)</span>
+
+    <span class="n">properties</span><span class="p">[</span><span class="n">FILTERING_THRESHOLD</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtering_weight_factor</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.powl</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">powl_discovery</span>
+    <span class="k">return</span> <span class="n">powl_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">variant</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_batches">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_batches">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_batches</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">merge_distance</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">15</span> <span class="o">*</span> <span class="mi">60</span><span class="p">,</span> <span class="n">min_batch_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span> <span class="n">resource_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;org:resource&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span>
+        <span class="n">Tuple</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">],</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discover batches from the provided log object</span>
+
+<span class="sd">    We say that an activity is executed in batches by a given resource when the resource executes several times the same activity in a short period of time.</span>
+
+<span class="sd">    Identifying such activities may identify points of the process that can be automated, since the activity of the person may be repetitive.</span>
+
+<span class="sd">    The following categories of batches are detected:</span>
+<span class="sd">    - Simultaneous (all the events in the batch have identical start and end timestamps)</span>
+<span class="sd">    - Batching at start (all the events in the batch have identical start timestamp)</span>
+<span class="sd">    - Batching at end (all the events in the batch have identical end timestamp)</span>
+<span class="sd">    - Sequential batching (for all the consecutive events, the end of the first is equal to the start of the second)</span>
+<span class="sd">    - Concurrent batching (for all the consecutive events that are not sequentially matched)</span>
+
+<span class="sd">    The approach has been described in the following paper:</span>
+<span class="sd">    Martin, N., Swennen, M., Depaire, B., Jans, M., Caris, A., &amp; Vanhoof, K. (2015, December). Batch Processing:</span>
+<span class="sd">    Definition and Event Log Identification. In SIMPDA (pp. 137-140).</span>
+
+<span class="sd">    The output is a (sorted) list containing tuples. Each tuple contain:</span>
+<span class="sd">        - Index 0: the activity-resource for which at least one batch has been detected</span>
+<span class="sd">        - Index 1: the number of batches for the given activity-resource</span>
+<span class="sd">        - Index 2: a list containing all the batches. Each batch is described by:</span>
+<span class="sd">            # The start timestamp of the batch</span>
+<span class="sd">            # The complete timestamp of the batch</span>
+<span class="sd">            # The list of events that are executed in the batch</span>
+
+<span class="sd">    :param log: event log / Pandas dataframe</span>
+<span class="sd">    :param merge_distance: the maximum time distance between non-overlapping intervals in order for them to be considered belonging to the same batch (default: 15*60   15 minutes)</span>
+<span class="sd">    :param min_batch_size: the minimum number of events for a batch to be considered (default: 2)</span>
+<span class="sd">    :param activity_key: attribute to be used for the activity</span>
+<span class="sd">    :param timestamp_key: attribute to be used for the timestamp</span>
+<span class="sd">    :param case_id_key: attribute to be used as case identifier</span>
+<span class="sd">    :param resource_key: attribute to be used as resource</span>
+<span class="sd">    :rtype: ``List[Tuple[Tuple[str, str], int, Dict[str, Any]]]``</span>
+
+<span class="sd">    .. code-block:: python3</span>
+
+<span class="sd">        import pm4py</span>
+
+<span class="sd">        batches = pm4py.discover_log_skeleton(dataframe, activity_key=&#39;concept:name&#39;, case_id_key=&#39;case:concept:name&#39;, timestamp_key=&#39;time:timestamp&#39;, resource_key=&#39;org:resource&#39;)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span>
+            <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">)</span>
+
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span>
+                                <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span> <span class="n">resource_key</span><span class="o">=</span><span class="n">resource_key</span><span class="p">)</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;merge_distance&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_distance</span>
+    <span class="n">properties</span><span class="p">[</span><span class="s2">&quot;min_batch_size&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">min_batch_size</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.batches</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">batches_discovery</span>
+    <span class="k">return</span> <span class="n">batches_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="discover_dcr">
+<a class="viewcode-back" href="../../pm4py.html#pm4py.discovery.discover_dcr">[docs]</a>
+<span class="k">def</span> <span class="nf">discover_dcr</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">post_process</span><span class="p">:</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">,</span>
+                 <span class="n">timestamp_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;time:timestamp&quot;</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;case:concept:name&quot;</span><span class="p">,</span>
+                 <span class="n">resource_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;org:resource&quot;</span><span class="p">,</span> <span class="n">group_key</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;org:group&quot;</span><span class="p">,</span>
+                 <span class="n">finaAdditionalConditions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a DCR graph from an event log based on the DisCoveR algorithm.</span>
+<span class="sd">    This method implements the DCR discovery algorithm as described in:</span>
+<span class="sd">    C. O. Back, T. Slaats, T. T. Hildebrandt, M. Marquard, &quot;DisCoveR: accurate and efficient discovery of declarative process models&quot;.</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    log : Union[EventLog, pd.DataFrame]</span>
+<span class="sd">        The event log or Pandas dataframe containing the event data.</span>
+<span class="sd">    post_process : Optional[str]</span>
+<span class="sd">        Specifies the type of post-processing for the event log, currently supports ROLES, PENDING, TIMED and NESTINGS.</span>
+<span class="sd">    activity_key : str, optional</span>
+<span class="sd">        The attribute to be used for the activity, defaults to &quot;concept:name&quot;.</span>
+<span class="sd">    timestamp_key : str, optional</span>
+<span class="sd">        The attribute to be used for the timestamp, defaults to &quot;time:timestamp&quot;.</span>
+<span class="sd">    case_id_key : str, optional</span>
+<span class="sd">        The attribute to be used as the case identifier, defaults to &quot;case:concept:name&quot;.</span>
+<span class="sd">    group_key : str, optional</span>
+<span class="sd">        The attribute to be used as a role identifier, defaults to &quot;org:group&quot;.</span>
+<span class="sd">    resource_key : str, optional</span>
+<span class="sd">        The attribute to be used as a resource identifier, defaults to &quot;org:resource&quot;.</span>
+<span class="sd">    findAdditionalConditions : bool, optional</span>
+<span class="sd">        A boolean value specifying whether additional conditions should be found, defaults to True.</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    Tuple[Any, dict]</span>
+<span class="sd">        A tuple containing the discovered DCR graph and a dictionary with additional information.</span>
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    .. code-block:: python3</span>
+<span class="sd">        import pm4py</span>
+<span class="sd">        graph, la = pm4py.discover_DCR(log)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">log</span><span class="p">)</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span> <span class="n">EventLog</span><span class="p">,</span> <span class="n">EventStream</span><span class="p">]:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span>
+            <span class="s2">&quot;the method can be applied only to a traditional event log!&quot;</span><span class="p">)</span>
+    <span class="n">__event_log_deprecation_warning</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">check_is_pandas_dataframe</span><span class="p">(</span><span class="n">log</span><span class="p">):</span>
+        <span class="n">check_pandas_dataframe_columns</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span>
+                                       <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">)</span>
+    <span class="n">properties</span> <span class="o">=</span> <span class="n">get_properties</span><span class="p">(</span>
+        <span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="o">=</span><span class="n">activity_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_id_key</span><span class="p">,</span> <span class="n">timestamp_key</span><span class="o">=</span><span class="n">timestamp_key</span><span class="p">,</span>
+        <span class="n">resource_key</span><span class="o">=</span><span class="n">resource_key</span><span class="p">,</span> <span class="n">group_key</span><span class="o">=</span><span class="n">group_key</span><span class="p">)</span>
+    <span class="n">properties</span> <span class="o">=</span> <span class="p">{</span><span class="o">**</span><span class="n">properties</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">}</span>
+
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dcr_discover</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dcr_alg</span>
+    <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dcr_discover.variants</span> <span class="kn">import</span> <span class="n">dcr_discover</span>
+    <span class="k">return</span> <span class="n">dcr_alg</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">dcr_discover</span><span class="p">,</span> <span class="n">post_process</span><span class="o">=</span><span class="n">post_process</span><span class="p">,</span>
+                         <span class="n">findAdditionalConditions</span><span class="o">=</span><span class="n">finaAdditionalConditions</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">properties</span><span class="p">)</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.algo.discovery.dcr_discover.algorithm &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/algo/discovery/dcr_discover/algorithm';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../../../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.algo.d...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.algo.discovery.dcr_discover.algorithm</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">exec_utils</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dcr_discover.variants</span> <span class="kn">import</span> <span class="n">dcr_discover</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dcr_discover.extenstions</span> <span class="kn">import</span> <span class="n">roles</span><span class="p">,</span> <span class="n">pending</span><span class="p">,</span> <span class="n">time_constraints</span><span class="p">,</span> <span class="n">nesting</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">auto</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Set</span>
+
+
+<div class="viewcode-block" id="ExtensionVariants">
+<a class="viewcode-back" href="../../../../../pm4py.algo.discovery.dcr_discover.html#pm4py.algo.discovery.dcr_discover.algorithm.ExtensionVariants">[docs]</a>
+<span class="k">class</span> <span class="nc">ExtensionVariants</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">ROLES</span> <span class="o">=</span> <span class="n">roles</span>
+    <span class="n">PENDING</span> <span class="o">=</span> <span class="n">pending</span>
+    <span class="n">TIMED</span> <span class="o">=</span> <span class="n">time_constraints</span>
+    <span class="n">NESTING</span> <span class="o">=</span> <span class="n">nesting</span></div>
+
+
+
+<div class="viewcode-block" id="Variants">
+<a class="viewcode-back" href="../../../../../pm4py.algo.discovery.dcr_discover.html#pm4py.algo.discovery.dcr_discover.algorithm.Variants">[docs]</a>
+<span class="k">class</span> <span class="nc">Variants</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">DCR_DISCOVER</span> <span class="o">=</span> <span class="n">dcr_discover</span></div>
+
+
+
+<span class="n">DCR_DISCOVER</span> <span class="o">=</span> <span class="n">Variants</span><span class="o">.</span><span class="n">DCR_DISCOVER</span>
+<span class="n">ROLES</span> <span class="o">=</span> <span class="n">ExtensionVariants</span><span class="o">.</span><span class="n">ROLES</span>
+<span class="n">DCR_PENDING</span> <span class="o">=</span> <span class="n">ExtensionVariants</span><span class="o">.</span><span class="n">PENDING</span>
+<span class="n">DCR_TIMED</span> <span class="o">=</span> <span class="n">ExtensionVariants</span><span class="o">.</span><span class="n">TIMED</span>
+<span class="n">DCR_NESTING</span> <span class="o">=</span> <span class="n">ExtensionVariants</span><span class="o">.</span><span class="n">NESTING</span>
+<span class="n">VERSIONS</span> <span class="o">=</span> <span class="p">{</span><span class="n">DCR_DISCOVER</span><span class="p">}</span>
+
+
+<div class="viewcode-block" id="apply">
+<a class="viewcode-back" href="../../../../../pm4py.algo.discovery.dcr_discover.html#pm4py.algo.discovery.dcr_discover.algorithm.apply">[docs]</a>
+<span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">variant</span><span class="o">=</span><span class="n">DCR_DISCOVER</span><span class="p">,</span> <span class="n">findAdditionalConditions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+          <span class="n">post_process</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">parameters</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Any</span><span class="p">,</span> <span class="nb">dict</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    discover a DCR graph from a provided event log, implemented the DisCoveR algorithm presented in [1]_.</span>
+<span class="sd">    Allows for mining for additional attribute currently implemented mining of organisational attributes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ---------------</span>
+<span class="sd">    log: EventLog | pd.DataFrame</span>
+<span class="sd">        event log used for discovery</span>
+<span class="sd">    variant</span>
+<span class="sd">        Variant of the algorithm to use:</span>
+<span class="sd">        - DCR_BASIC</span>
+<span class="sd">    findAdditionalConditions:</span>
+<span class="sd">        Parameter determining if the miner should include an extra step of mining for extra conditions</span>
+<span class="sd">        - [True, False]</span>
+
+<span class="sd">    post_process</span>
+<span class="sd">        kind of post process mining to handle further patterns</span>
+<span class="sd">        - DCR_ROLES</span>
+
+<span class="sd">    parameters</span>
+<span class="sd">        variant specific parameters</span>
+<span class="sd">        findAdditionalConditions: [True or False]</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    ---------------</span>
+<span class="sd">    DcrGraph | DistributedDcrGraph | HierarchicalDcrGraph | TimeDcrGraph:</span>
+<span class="sd">        DCR graph (as an object) containing eventId, set of activities, mapping of event to activities,</span>
+<span class="sd">            condition relations, response relation, include relations and exclude relations.</span>
+<span class="sd">        possible to return variant of different dcr graph depending on which variant, basic, distributed, etc.</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1]</span>
+<span class="sd">        C. O. Back et al. &quot;DisCoveR: accurate and efficient discovery of declarative process models&quot;,</span>
+<span class="sd">        International Journal on Software Tools for Technology Transfer, 2022, 24:563–587. &#39;DOI&#39; &lt;https://doi.org/10.1007/s10009-021-00616-0&gt;_.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">input_log</span> <span class="o">=</span> <span class="n">log</span>  <span class="c1"># deepcopy(log)</span>
+    <span class="n">graph</span><span class="p">,</span> <span class="n">la</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="n">variant</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">input_log</span><span class="p">,</span> <span class="n">findAdditionalConditions</span><span class="o">=</span><span class="n">findAdditionalConditions</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">post_process</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">post_process</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+    <span class="k">if</span> <span class="s1">&#39;roles&#39;</span> <span class="ow">in</span> <span class="n">post_process</span><span class="p">:</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="n">ROLES</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">input_log</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;pending&#39;</span> <span class="ow">in</span> <span class="n">post_process</span><span class="p">:</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="n">DCR_PENDING</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">input_log</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;nesting&#39;</span> <span class="ow">in</span> <span class="n">post_process</span><span class="p">:</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="n">DCR_NESTING</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">if</span> <span class="s1">&#39;timed&#39;</span> <span class="ow">in</span> <span class="n">post_process</span><span class="p">:</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_variant</span><span class="p">(</span><span class="n">DCR_TIMED</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">input_log</span><span class="p">,</span> <span class="n">graph</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">graph</span><span class="p">,</span> <span class="n">la</span></div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

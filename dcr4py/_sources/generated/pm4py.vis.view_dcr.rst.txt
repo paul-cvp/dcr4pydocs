@@ -1,0 +1,6 @@
+﻿pm4py.vis.view\_dcr
+===================
+
+.. currentmodule:: pm4py.vis
+
+.. autofunction:: view_dcr

@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pm4py.algo.discovery.dcr_discover.variants.dcr_discover &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pm4py/algo/discovery/dcr_discover/variants/dcr_discover';</script>
+    <link rel="index" title="Index" href="../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../../../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../../../../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../../../../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../../../../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">pm4py.algo.d...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for pm4py.algo.discovery.dcr_discover.variants.dcr_discover</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">deepcopy</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">pm4py.utils</span>
+<span class="kn">from</span> <span class="nn">pm4py.stats</span> <span class="kn">import</span> <span class="n">get_event_attribute_values</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">dcr_template</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Set</span><span class="p">,</span> <span class="n">Any</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">exec_utils</span><span class="p">,</span> <span class="n">constants</span><span class="p">,</span> <span class="n">xes_constants</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.obj</span> <span class="kn">import</span> <span class="n">EventLog</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dcr.obj</span> <span class="kn">import</span> <span class="n">DcrGraph</span>
+
+
+<span class="c1"># these parameters are used in case of attribute has a custom name, in which case it can be specified on call</span>
+<div class="viewcode-block" id="Parameters">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Parameters">[docs]</a>
+<span class="k">class</span> <span class="nc">Parameters</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    An enumeration class to hold parameter keys used for specifying the activity and case identifier keys</span>
+<span class="sd">    within a log during the DCR discovery process.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ACTIVITY_KEY : str</span>
+<span class="sd">        The key used to identify the activity attribute in the event log.</span>
+<span class="sd">    CASE_ID_KEY : str</span>
+<span class="sd">        The key used to identify the case identifier attribute in the event log.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">ACTIVITY_KEY</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">PARAMETER_CONSTANT_ACTIVITY_KEY</span>
+    <span class="n">CASE_ID_KEY</span> <span class="o">=</span> <span class="n">constants</span><span class="o">.</span><span class="n">PARAMETER_CONSTANT_CASEID_KEY</span></div>
+
+
+
+<div class="viewcode-block" id="apply">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.apply">[docs]</a>
+<span class="k">def</span> <span class="nf">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">findAdditionalConditions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parameters</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DcrGraph</span><span class="p">,</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Discovers a DCR graph model from an event log, using algorithm described in [1]_.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    log</span>
+<span class="sd">        event log (pandas dataframe)</span>
+<span class="sd">    findAdditionalConditions</span>
+<span class="sd">        bool value to identify if additional conditions should be mined</span>
+<span class="sd">    parameters</span>
+<span class="sd">        Possible parameters of the algorithm, including:</span>
+<span class="sd">        - Parameters.ACTIVITY_KEY</span>
+<span class="sd">        - Parameters.Case_ID_KEY</span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    tuple(dict,dict)</span>
+<span class="sd">        returns tuple of dictionaries containing the dcr_graph and the abstracted log used to mine the graph</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    .. [1]</span>
+<span class="sd">        C. O. Back et al., &quot;DisCoveR: accurate and efficient discovery of declarative process models&quot;,</span>
+<span class="sd">        International Journal on Software Tools for Technology Transfer, 2022, 24:563–587. &#39;DOI&#39; &lt;https://doi.org/10.1007/s10009-021-00616-0&gt;_.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">disc</span> <span class="o">=</span> <span class="n">Discover</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">disc</span><span class="o">.</span><span class="n">mine</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">findAdditionalConditions</span><span class="p">,</span> <span class="n">parameters</span> <span class="o">=</span> <span class="n">parameters</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="Discover">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover">[docs]</a>
+<span class="k">class</span> <span class="nc">Discover</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The Discover class is responsible for mining DCR graphs from event logs.</span>
+
+<span class="sd">    Attributes</span>
+<span class="sd">    ----------</span>
+<span class="sd">    graph : dict</span>
+<span class="sd">        A dictionary representing the DCR graph, initialized from a template.</span>
+<span class="sd">    logAbstraction : dict</span>
+<span class="sd">        A dictionary containing abstracted information from the event log to be mined.</span>
+
+<span class="sd">    Methods</span>
+<span class="sd">    ----------</span>
+<span class="sd">    mine(log: Union[EventLog, pd.DataFrame], findAdditionalConditions: bool = True, parameters: Optional[dict] = None) -&gt; Tuple[DCR_Graph, Dict[str, Any]]:</span>
+<span class="sd">        Mines a DCR graph and the log abstraction from an event log.</span>
+
+<span class="sd">    createLogAbstraction(log: Union[EventLog, pd.DataFrame], activity_key: str, case_key: str) -&gt; int:</span>
+<span class="sd">        Creates an abstraction of the event log to facilitate the mining process.</span>
+
+<span class="sd">    parseTrace(trace: List[str]) -&gt; int:</span>
+<span class="sd">        Parses a single trace to extract relations between events.</span>
+
+<span class="sd">    optimizeRelation(relation: Dict[str, Set[str]]) -&gt; Dict[str, Set[str]]:</span>
+<span class="sd">        Optimizes a relation by removing redundant relations based on transitive closure.</span>
+
+<span class="sd">    mineFromAbstraction(findAdditionalConditions: bool = True) -&gt; int:</span>
+<span class="sd">        Mines DCR constraints from the log abstraction.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">dcr_template</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s1">&#39;events&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">(),</span>
+            <span class="s1">&#39;traces&#39;</span><span class="p">:</span> <span class="p">[[]],</span>
+            <span class="s1">&#39;atMostOnce&#39;</span><span class="p">:</span> <span class="nb">set</span><span class="p">(),</span>
+            <span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s1">&#39;precedenceFor&#39;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s1">&#39;predecessor&#39;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s1">&#39;responseTo&#39;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s1">&#39;successor&#39;</span><span class="p">:</span> <span class="p">{}</span>
+        <span class="p">}</span>
+
+<div class="viewcode-block" id="Discover.mine">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover.mine">[docs]</a>
+    <span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">EventLog</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">findAdditionalConditions</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">DcrGraph</span><span class="p">,</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Method used for calling the underlying mining algorithm used for discovery of DCR Graphs</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        log</span>
+<span class="sd">            an event log as EventLog or pandas.DataFrame</span>
+<span class="sd">        findAdditionalConditions</span>
+<span class="sd">            Condition for mining additional condition: True (default) or False</span>
+
+<span class="sd">        parameters</span>
+<span class="sd">                activity_key: optional parameter, used to identify the activities in the log</span>
+<span class="sd">                case_id_key: optional parameter, used to identify the cases executed in the log</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Tuple[DcrGraph,Dict[str, Any]]</span>
+<span class="sd">            returns a tuple containing:</span>
+<span class="sd">            - The DCR Graph</span>
+<span class="sd">            - The log abstraction used for mining</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">activity_key</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_param_value</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">ACTIVITY_KEY</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">xes_constants</span><span class="o">.</span><span class="n">DEFAULT_NAME_KEY</span><span class="p">)</span>
+        <span class="n">case_id_key</span> <span class="o">=</span> <span class="n">exec_utils</span><span class="o">.</span><span class="n">get_param_value</span><span class="p">(</span><span class="n">Parameters</span><span class="o">.</span><span class="n">CASE_ID_KEY</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">constants</span><span class="o">.</span><span class="n">CASE_CONCEPT_NAME</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">createLogAbstraction</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">,</span> <span class="n">case_id_key</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mineFromAbstraction</span><span class="p">(</span><span class="n">findAdditionalConditions</span><span class="o">=</span><span class="n">findAdditionalConditions</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">DcrGraph</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span></div>
+
+
+<div class="viewcode-block" id="Discover.createLogAbstraction">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover.createLogAbstraction">[docs]</a>
+    <span class="k">def</span> <span class="nf">createLogAbstraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">log</span><span class="p">:</span> <span class="p">[</span><span class="n">EventLog</span><span class="p">,</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">],</span> <span class="n">activity_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">case_key</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Performs the mining of abstraction log, will map event log onto a selection of DECLARE templates.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        log : EventLog | pd.DataFrame</span>
+<span class="sd">            The event log to be abstracted.</span>
+<span class="sd">        activity_key : str</span>
+<span class="sd">            The attribute key used to identify the activities recorded in the log.</span>
+<span class="sd">        case_key : str</span>
+<span class="sd">            The attribute key used to identify the cases recorded in the log.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+<span class="sd">            Returns 0 for success, and any other value for failure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># initiate the activities, in DisCoveR, activities and event id is mapped bijectively</span>
+        <span class="n">activities</span> <span class="o">=</span> <span class="n">get_event_attribute_values</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">activity_key</span><span class="p">)</span>
+        <span class="n">events</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">activities</span><span class="p">)</span>
+
+        <span class="c1"># load events in to log abstraction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">project_on_event_attribute</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">case_id_key</span><span class="o">=</span><span class="n">case_key</span><span class="p">)</span>
+
+        <span class="c1"># flatten the event log, all traces are equally significant</span>
+        <span class="n">traces</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">log</span><span class="p">)</span>
+        <span class="n">traces</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">traces</span><span class="p">]</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;traces&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">traces</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;atMostOnce&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">-</span> <span class="nb">set</span><span class="p">([</span><span class="n">event</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;precedenceFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">-</span> <span class="nb">set</span><span class="p">([</span><span class="n">event</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> <span class="o">-</span> <span class="nb">set</span><span class="p">([</span><span class="n">event</span><span class="p">])</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;successor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;traces&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">parseTrace</span><span class="p">(</span><span class="n">trace</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;successor&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="Discover.parseTrace">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover.parseTrace">[docs]</a>
+    <span class="k">def</span> <span class="nf">parseTrace</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">trace</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Parses a trace to mine DEClARE constraints.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        trace : List[str]</span>
+<span class="sd">            A list representing a trace, where each element is an event, and the order of events is maintained.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+<span class="sd">            Returns 0 on success, and any other value on failure.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        This method performs the following key steps:</span>
+<span class="sd">        - Identifies and updates predecessor relationships for each event in the trace.</span>
+<span class="sd">        - Updates &#39;atMostOnce&#39;, &#39;precedenceFor&#39;, and &#39;chainPrecedenceFor&#39; sets in the log abstraction based on the trace events.</span>
+<span class="sd">        - Computes and updates &#39;responseTo&#39; sets in the log abstraction based on the events seen before and after each event in the trace.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">localAtLeastOnce</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+        <span class="n">localSeenOnlyBefore</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="n">lastEvent</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">trace</span><span class="p">:</span>
+            <span class="c1"># All events seen before this one must be predecessors</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">event</span><span class="p">)</span><span class="o">.</span><span class="n">union</span><span class="p">(</span>
+                <span class="n">localAtLeastOnce</span><span class="p">)</span>
+            <span class="c1"># If event seen before in trace, remove from atMostOnce</span>
+            <span class="k">if</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">localAtLeastOnce</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;atMostOnce&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="n">localAtLeastOnce</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="c1"># Precedence for (event): All events that occurred before (event) are kept in the precedenceFor set</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;precedenceFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;precedenceFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span>
+                <span class="n">localAtLeastOnce</span><span class="p">)</span>
+            <span class="c1"># Chain-Precedence for (event): Some event must occur immediately before (event) in all traces</span>
+            <span class="k">if</span> <span class="n">lastEvent</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>  <span class="c1"># TODO: objects vs strings in sets</span>
+                <span class="c1"># If first time this clause is encountered - leaves lastEvent in chain-precedence set.</span>
+                <span class="c1"># The intersect is empty if this clause is encountered again with another lastEvent.</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">][</span>
+                    <span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">lastEvent</span><span class="p">]))</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># First event in a trace, and chainPrecedence is therefore not possible</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="c1"># To later compute responses we note which events were seen before (event) and not after</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="c1"># Save all events seen before (event)</span>
+                <span class="n">localSeenOnlyBefore</span><span class="p">[</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="n">localAtLeastOnce</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+            <span class="c1"># Clear (event) from all localSeenOnlyBefore, since (event) has now occurred after</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">localSeenOnlyBefore</span><span class="p">:</span>
+                <span class="n">localSeenOnlyBefore</span><span class="p">[</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="n">lastEvent</span> <span class="o">=</span> <span class="n">event</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">localSeenOnlyBefore</span><span class="p">:</span>
+            <span class="c1"># Compute set of events in trace that happened after (event)</span>
+            <span class="n">seenOnlyAfter</span> <span class="o">=</span> <span class="n">localAtLeastOnce</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">localSeenOnlyBefore</span><span class="p">[</span><span class="n">event</span><span class="p">])</span>
+            <span class="c1"># Delete self-relation</span>
+            <span class="n">seenOnlyAfter</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="c1"># Set of events that always happens after (event)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span>
+                <span class="n">seenOnlyAfter</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="Discover.optimizeRelation">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover.optimizeRelation">[docs]</a>
+    <span class="k">def</span> <span class="nf">optimizeRelation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">relation</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Set</span><span class="p">[</span><span class="nb">str</span><span class="p">]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Optimizes a given relation by removing redundant connections based on transitive closure.</span>
+
+<span class="sd">        For instance, if there are relations A -&gt; B, B -&gt; C, then an existing relation A -&gt; C can be removed</span>
+<span class="sd">        as it is implied by the transitive nature of the other relations.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        relation : Dict[str, Set[str]]</span>
+<span class="sd">            A dictionary representing a relation, where keys are starting points and values are sets of endpoints.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        Dict[str, Set[str]]</span>
+<span class="sd">            An optimized version of the input relations, with redundant connections removed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Sorted dict to avoid possibly non-deterministic behavior due to unordered nature of dict</span>
+        <span class="n">relation</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">relation</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">conditions</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">conditions</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+        <span class="k">for</span> <span class="n">eventA</span> <span class="ow">in</span> <span class="n">relation</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">eventB</span> <span class="ow">in</span> <span class="n">relation</span><span class="p">[</span><span class="n">eventA</span><span class="p">]:</span>
+                <span class="n">relation</span><span class="p">[</span><span class="n">eventA</span><span class="p">]</span> <span class="o">=</span> <span class="n">relation</span><span class="p">[</span><span class="n">eventA</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">relation</span><span class="p">[</span><span class="n">eventB</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">relation</span></div>
+
+
+<div class="viewcode-block" id="Discover.mineFromAbstraction">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover.mineFromAbstraction">[docs]</a>
+    <span class="k">def</span> <span class="nf">mineFromAbstraction</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">findAdditionalConditions</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Mines DCR constraints based on the DECLARE templates stored in the log abstraction.</span>
+
+<span class="sd">        This method initializes a graph and mines conditions, responses, self-exclusions, and additional conditions</span>
+<span class="sd">        (if specified) from the user. It also optimizes the relations by removing redundant relations based</span>
+<span class="sd">        on transitive closure.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        findAdditionalConditions : bool, optional</span>
+<span class="sd">            Specifies whether to mine additional conditions. Default is True.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        int</span>
+<span class="sd">            Returns 0 if successful, anything else for failure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Initialize graph</span>
+        <span class="c1"># Note that events become an alias, but this is irrelevant since events are never altered</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1">#insert labels and label mapping, used for bijective label mapping</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;labels&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">])</span>
+
+        <span class="c1"># All events are initially included</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;marking&#39;</span><span class="p">][</span><span class="s1">&#39;included&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+        <span class="c1"># Initialize all to_petri_net to avoid indexing errors</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;labelMapping&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="n">event</span> <span class="c1">#{event}</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;includesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+
+        <span class="c1"># Mine conditions from logAbstraction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;precedenceFor&#39;</span><span class="p">])</span>
+        <span class="c1"># remove redundant conditions</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizeRelation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">])</span>
+        <span class="c1"># Mine responses from logAbstraction</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">])</span>
+        <span class="c1"># Remove redundant responses</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizeRelation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">])</span>
+
+        <span class="c1"># Mine self-exclusions</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;responseTo&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;atMostOnce&#39;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+
+        <span class="c1"># For each chainprecedence(i,j) we add: include(i,j) exclude(j,j)</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;chainPrecedenceFor&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">]:</span>
+                <span class="k">if</span> <span class="n">j</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;atMostOnce&#39;</span><span class="p">]:</span> <span class="c1"># new addition to prevent adding unnecessary includes</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;includesTo&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">j</span><span class="p">)</span>
+
+        <span class="c1"># Additional excludes based on predecessors / successors</span>
+        <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]:</span>
+            <span class="c1"># Union of predecessor and successors sets, i.e. all events occuring in the same trace as event</span>
+            <span class="n">coExisters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;successor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">])</span>
+            <span class="n">nonCoExisters</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">coExisters</span><span class="p">)</span>
+            <span class="n">nonCoExisters</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+            <span class="c1"># Note that if events i &amp; j do not co-exist, they should exclude each other.</span>
+            <span class="c1"># Here we only add i --&gt;% j, but on the iteration for j, j --&gt;% i will be added.</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">nonCoExisters</span><span class="p">)</span>
+
+            <span class="c1"># if s precedes (event) but never succeeds (event) add (event) --&gt;% s if s --&gt;% s does not exist</span>
+            <span class="n">precedesButNeverSucceeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;successor&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">precedesButNeverSucceeds</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">s</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+        <span class="c1"># Removing redundant excludes.</span>
+        <span class="c1"># If r always precedes s, and r --&gt;% t, then s --&gt;% t is (mostly) redundant</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;precedenceFor&#39;</span><span class="p">]:</span>
+            <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;precedenceFor&#39;</span><span class="p">][</span><span class="n">s</span><span class="p">]:</span>
+                <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">r</span><span class="p">]:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">s</span><span class="p">]</span><span class="o">.</span><span class="n">discard</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">findAdditionalConditions</span><span class="p">:</span>
+<span class="w">            </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Mining additional conditions:</span>
+<span class="sd">            Every event, x, that occurs before some event, y, is a possible candidate for a condition x --&gt;* y</span>
+<span class="sd">            This is due to the fact, that in the traces where x does not occur before y, x might be excluded</span>
+<span class="sd">            &quot;&quot;&quot;</span>
+            <span class="n">possibleConditions</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;predecessor&#39;</span><span class="p">])</span>
+            <span class="c1"># Replay entire log, filtering out any invalid conditions</span>
+            <span class="k">for</span> <span class="n">trace</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;traces&#39;</span><span class="p">]:</span>
+                <span class="n">localSeenBefore</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+                <span class="n">included</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+                <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">trace</span><span class="p">:</span>
+                    <span class="c1"># Compute conditions that still allow event to be executed</span>
+                    <span class="n">excluded</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logAbstraction</span><span class="p">[</span><span class="s1">&#39;events&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">included</span><span class="p">)</span>
+                    <span class="n">validConditions</span> <span class="o">=</span> <span class="n">localSeenBefore</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">excluded</span><span class="p">)</span>
+                    <span class="c1"># Only keep valid conditions</span>
+                    <span class="n">possibleConditions</span><span class="p">[</span><span class="n">event</span><span class="p">]</span> <span class="o">=</span> <span class="n">possibleConditions</span><span class="p">[</span><span class="n">event</span><span class="p">]</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">validConditions</span><span class="p">)</span>
+                    <span class="c1"># Execute excludes starting from (event)</span>
+                    <span class="n">included</span> <span class="o">=</span> <span class="n">included</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;excludesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">])</span>
+                    <span class="c1"># Execute includes starting from (event)</span>
+                    <span class="n">included</span> <span class="o">=</span> <span class="n">included</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;includesTo&#39;</span><span class="p">][</span><span class="n">event</span><span class="p">])</span>
+                    <span class="n">localSeenBefore</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+
+            <span class="c1"># Now the only possible Condtitions that remain are valid for all traces</span>
+            <span class="c1"># These are therefore added to the graph</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">]:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">][</span><span class="n">key</span><span class="p">]</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">possibleConditions</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+
+            <span class="c1"># Removing redundant conditions</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">optimizeRelation</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clean_empty_sets</span><span class="p">()</span>
+        <span class="k">return</span> <span class="mi">0</span></div>
+
+
+<div class="viewcode-block" id="Discover.clean_empty_sets">
+<a class="viewcode-back" href="../../../../../../pm4py.algo.discovery.dcr_discover.variants.html#pm4py.algo.discovery.dcr_discover.variants.dcr_discover.Discover.clean_empty_sets">[docs]</a>
+    <span class="k">def</span> <span class="nf">clean_empty_sets</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">deepcopy</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="k">if</span> <span class="n">k</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;conditionsFor&#39;</span><span class="p">,</span> <span class="s1">&#39;responseTo&#39;</span><span class="p">,</span> <span class="s1">&#39;excludesTo&#39;</span><span class="p">,</span> <span class="s1">&#39;includesTo&#39;</span><span class="p">]:</span>
+                <span class="n">v_new</span> <span class="o">=</span> <span class="p">{}</span>
+                <span class="k">for</span> <span class="n">k2</span><span class="p">,</span> <span class="n">v2</span> <span class="ow">in</span> <span class="n">v</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                    <span class="k">if</span> <span class="n">v2</span><span class="p">:</span>
+                        <span class="n">v_new</span><span class="p">[</span><span class="n">k2</span><span class="p">]</span> <span class="o">=</span> <span class="nb">set</span><span class="p">([</span><span class="n">v3</span> <span class="k">for</span> <span class="n">v3</span> <span class="ow">in</span> <span class="n">v2</span> <span class="k">if</span> <span class="n">v3</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">set</span><span class="p">()])</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">graph</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v_new</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

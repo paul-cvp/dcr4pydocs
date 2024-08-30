@@ -1,0 +1,1126 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pm4py.objects.dcr package &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=319a7919"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pm4py.objects.dcr';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.algo.html">pm4py.algo package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.algo.conformance.html">pm4py.algo.conformance package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.alignments.html">pm4py.algo.conformance.alignments package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.alignments.dcr.html">pm4py.algo.conformance.alignments.dcr package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.conformance.dcr.html">pm4py.algo.conformance.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.decorators.html">pm4py.algo.conformance.dcr.decorators package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.rules.html">pm4py.algo.conformance.dcr.rules package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.conformance.dcr.variants.html">pm4py.algo.conformance.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.algo.discovery.html">pm4py.algo.discovery package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.html">pm4py.algo.discovery.dcr_discover package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.extenstions.html">pm4py.algo.discovery.dcr_discover.extenstions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.algo.discovery.dcr_discover.variants.html">pm4py.algo.discovery.dcr_discover.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="pm4py.objects.html">pm4py.objects package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.objects.conversion.html">pm4py.objects.conversion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.conversion.dcr.html">pm4py.objects.conversion.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.conversion.dcr.variants.html">pm4py.objects.conversion.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">pm4py.objects.dcr package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.distributed.html">pm4py.objects.dcr.distributed package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.exporter.html">pm4py.objects.dcr.exporter package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html">pm4py.objects.dcr.exporter.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html">pm4py.objects.dcr.extended package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html">pm4py.objects.dcr.hierarchical package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pm4py.objects.dcr.importer.html">pm4py.objects.dcr.importer package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html">pm4py.objects.dcr.importer.variants package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html">pm4py.objects.dcr.timed package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html">pm4py.objects.dcr.utils package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="pm4py.visualization.html">pm4py.visualization package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pm4py.visualization.dcr.html">pm4py.visualization.dcr package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.visualization.dcr.variants.html">pm4py.visualization.dcr.variants package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">pm4py.object...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="pm4py-objects-dcr-package">
+<h1>pm4py.objects.dcr package<a class="headerlink" href="#pm4py-objects-dcr-package" title="Link to this heading">#</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.distributed.html">pm4py.objects.dcr.distributed package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#module-pm4py.objects.dcr.distributed.obj">pm4py.objects.dcr.distributed.obj module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph.obj_to_template"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph.obj_to_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph.principals"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph.principals</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph.roles"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph.roles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph.role_assignments"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph.role_assignments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph.principals_assignments"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph.principals_assignments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#pm4py.objects.dcr.distributed.obj.DistributedDcrGraph.get_constraints"><code class="docutils literal notranslate"><span class="pre">DistributedDcrGraph.get_constraints()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#module-pm4py.objects.dcr.distributed.semantics">pm4py.objects.dcr.distributed.semantics module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.distributed.html#module-pm4py.objects.dcr.distributed">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.exporter.html">pm4py.objects.dcr.exporter package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html">pm4py.objects.dcr.exporter.variants package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html#module-pm4py.objects.dcr.exporter.variants.dcr_js_portal">pm4py.objects.dcr.exporter.variants.dcr_js_portal module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html#module-pm4py.objects.dcr.exporter.variants.xml_dcr_portal">pm4py.objects.dcr.exporter.variants.xml_dcr_portal module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html#module-pm4py.objects.dcr.exporter.variants.xml_simple">pm4py.objects.dcr.exporter.variants.xml_simple module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.variants.html#module-pm4py.objects.dcr.exporter.variants">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#module-pm4py.objects.dcr.exporter.exporter">pm4py.objects.dcr.exporter.exporter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#pm4py.objects.dcr.exporter.exporter.Variants"><code class="docutils literal notranslate"><span class="pre">Variants</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#pm4py.objects.dcr.exporter.exporter.Variants.XML_SIMPLE"><code class="docutils literal notranslate"><span class="pre">Variants.XML_SIMPLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#pm4py.objects.dcr.exporter.exporter.Variants.XML_DCR_PORTAL"><code class="docutils literal notranslate"><span class="pre">Variants.XML_DCR_PORTAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#pm4py.objects.dcr.exporter.exporter.Variants.DCR_JS_PORTAL"><code class="docutils literal notranslate"><span class="pre">Variants.DCR_JS_PORTAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#pm4py.objects.dcr.exporter.exporter.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.exporter.html#module-pm4py.objects.dcr.exporter">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.extended.html">pm4py.objects.dcr.extended package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.extended.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.extended.html#module-pm4py.objects.dcr.extended.obj">pm4py.objects.dcr.extended.obj module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.obj.ExtendedDcrGraph"><code class="docutils literal notranslate"><span class="pre">ExtendedDcrGraph</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.obj.ExtendedDcrGraph.obj_to_template"><code class="docutils literal notranslate"><span class="pre">ExtendedDcrGraph.obj_to_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.obj.ExtendedDcrGraph.milestones"><code class="docutils literal notranslate"><span class="pre">ExtendedDcrGraph.milestones</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.obj.ExtendedDcrGraph.noresponses"><code class="docutils literal notranslate"><span class="pre">ExtendedDcrGraph.noresponses</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.obj.ExtendedDcrGraph.get_constraints"><code class="docutils literal notranslate"><span class="pre">ExtendedDcrGraph.get_constraints()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.extended.html#module-pm4py.objects.dcr.extended.semantics">pm4py.objects.dcr.extended.semantics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.semantics.ExtendedSemantics"><code class="docutils literal notranslate"><span class="pre">ExtendedSemantics</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.semantics.ExtendedSemantics.enabled"><code class="docutils literal notranslate"><span class="pre">ExtendedSemantics.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.extended.html#pm4py.objects.dcr.extended.semantics.ExtendedSemantics.weak_execute"><code class="docutils literal notranslate"><span class="pre">ExtendedSemantics.weak_execute()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.extended.html#module-pm4py.objects.dcr.extended">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html">pm4py.objects.dcr.hierarchical package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#module-pm4py.objects.dcr.hierarchical.obj">pm4py.objects.dcr.hierarchical.obj module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph"><code class="docutils literal notranslate"><span class="pre">HierarchicalDcrGraph</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph.obj_to_template"><code class="docutils literal notranslate"><span class="pre">HierarchicalDcrGraph.obj_to_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph.nestedgroups"><code class="docutils literal notranslate"><span class="pre">HierarchicalDcrGraph.nestedgroups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph.nestedgroups_map"><code class="docutils literal notranslate"><span class="pre">HierarchicalDcrGraph.nestedgroups_map</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#pm4py.objects.dcr.hierarchical.obj.HierarchicalDcrGraph.subprocesses"><code class="docutils literal notranslate"><span class="pre">HierarchicalDcrGraph.subprocesses</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.hierarchical.html#module-pm4py.objects.dcr.hierarchical">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.importer.html">pm4py.objects.dcr.importer package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.importer.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html">pm4py.objects.dcr.importer.variants package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html#module-pm4py.objects.dcr.importer.variants.xml_dcr_portal">pm4py.objects.dcr.importer.variants.xml_dcr_portal module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html#module-pm4py.objects.dcr.importer.variants.xml_simple">pm4py.objects.dcr.importer.variants.xml_simple module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.variants.html#module-pm4py.objects.dcr.importer.variants">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.importer.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.importer.html#module-pm4py.objects.dcr.importer.importer">pm4py.objects.dcr.importer.importer module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.importer.html#pm4py.objects.dcr.importer.importer.Variants"><code class="docutils literal notranslate"><span class="pre">Variants</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.html#pm4py.objects.dcr.importer.importer.Variants.XML_DCR_PORTAL"><code class="docutils literal notranslate"><span class="pre">Variants.XML_DCR_PORTAL</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.html#pm4py.objects.dcr.importer.importer.Variants.XML_SIMPLE"><code class="docutils literal notranslate"><span class="pre">Variants.XML_SIMPLE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.importer.html#pm4py.objects.dcr.importer.importer.Variants.DCR_JS_PORTAL"><code class="docutils literal notranslate"><span class="pre">Variants.DCR_JS_PORTAL</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.importer.html#pm4py.objects.dcr.importer.importer.apply"><code class="docutils literal notranslate"><span class="pre">apply()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.importer.html#pm4py.objects.dcr.importer.importer.deserialize"><code class="docutils literal notranslate"><span class="pre">deserialize()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.importer.html#module-pm4py.objects.dcr.importer">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.timed.html">pm4py.objects.dcr.timed package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.timed.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.timed.html#module-pm4py.objects.dcr.timed.obj">pm4py.objects.dcr.timed.obj module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html#references">References</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedMarking"><code class="docutils literal notranslate"><span class="pre">TimedMarking</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedMarking.executed_time"><code class="docutils literal notranslate"><span class="pre">TimedMarking.executed_time</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedMarking.pending_deadline"><code class="docutils literal notranslate"><span class="pre">TimedMarking.pending_deadline</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedDcrGraph"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timed_dict_to_graph"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.timed_dict_to_graph()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedDcrGraph.obj_to_template"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.obj_to_template()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedconditions"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.timedconditions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.obj.TimedDcrGraph.timedresponses"><code class="docutils literal notranslate"><span class="pre">TimedDcrGraph.timedresponses</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.timed.html#module-pm4py.objects.dcr.timed.semantics">pm4py.objects.dcr.timed.semantics module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics"><code class="docutils literal notranslate"><span class="pre">TimedSemantics</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.execute"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.execute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.enabled"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.enabled()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.weak_execute"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.weak_execute()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.time_step"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.time_step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.next_deadline"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.next_deadline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.next_delay"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.next_delay()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="pm4py.objects.dcr.timed.html#pm4py.objects.dcr.timed.semantics.TimedSemantics.create_can_execute_time_dict"><code class="docutils literal notranslate"><span class="pre">TimedSemantics.create_can_execute_time_dict()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.timed.html#module-pm4py.objects.dcr.timed">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pm4py.objects.dcr.utils.html">pm4py.objects.dcr.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.utils.html#module-pm4py.objects.dcr.utils.utils">pm4py.objects.dcr.utils.utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.time_to_iso_string"><code class="docutils literal notranslate"><span class="pre">time_to_iso_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.clean_input"><code class="docutils literal notranslate"><span class="pre">clean_input()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.clean_input_as_dict"><code class="docutils literal notranslate"><span class="pre">clean_input_as_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.map_labels_to_events"><code class="docutils literal notranslate"><span class="pre">map_labels_to_events()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.cast_to_dcr_object"><code class="docutils literal notranslate"><span class="pre">cast_to_dcr_object()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.time_to_int"><code class="docutils literal notranslate"><span class="pre">time_to_int()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.get_reverse_nesting"><code class="docutils literal notranslate"><span class="pre">get_reverse_nesting()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pm4py.objects.dcr.utils.html#pm4py.objects.dcr.utils.utils.nested_groups_and_sps_to_flat_dcr"><code class="docutils literal notranslate"><span class="pre">nested_groups_and_sps_to_flat_dcr()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pm4py.objects.dcr.utils.html#module-pm4py.objects.dcr.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pm4py.objects.dcr.obj">
+<span id="pm4py-objects-dcr-obj-module"></span><h2>pm4py.objects.dcr.obj module<a class="headerlink" href="#module-pm4py.objects.dcr.obj" title="Link to this heading">#</a></h2>
+<p>This module defines the core components for modelling Declarative Process Models as
+Dynamic Condition Response (DCR) Graphs.</p>
+<p>The module encapsulates the essential elements of DCR Graphs, such as events,
+relations, markings, and constraints, providing a foundational framework for
+working with DCR Graphs within PM4Py.</p>
+<dl class="simple">
+<dt>Classes:</dt><dd><p>Relations: An enumeration of possible relations between events in a DCR Graph.
+Marking: Represents the state of events in terms of executed, included, and pending.
+DCR_Graph: Encapsulates the structure and behavior of a DCR Graph, offering methods to query and manipulate it.</p>
+</dd>
+</dl>
+<p>The <cite>dcr_template</cite> dictionary provides a blueprint for initializing new DCR Graphs with default settings.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.obj.</span></span><span class="sig-name descname"><span class="pre">Relations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#Relations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations.I">
+<span class="sig-name descname"><span class="pre">I</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'includes'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations.I" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations.E">
+<span class="sig-name descname"><span class="pre">E</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'excludes'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations.E" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations.R">
+<span class="sig-name descname"><span class="pre">R</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'responses'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations.R" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations.N">
+<span class="sig-name descname"><span class="pre">N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'noresponses'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations.N" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations.C">
+<span class="sig-name descname"><span class="pre">C</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'conditions'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations.C" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Relations.M">
+<span class="sig-name descname"><span class="pre">M</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'milestones'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.Relations.M" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.obj.</span></span><span class="sig-name descname"><span class="pre">TemplateRelations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#TemplateRelations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations.I">
+<span class="sig-name descname"><span class="pre">I</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'includesTo'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations.I" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations.E">
+<span class="sig-name descname"><span class="pre">E</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'excludesTo'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations.E" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations.R">
+<span class="sig-name descname"><span class="pre">R</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'responseTo'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations.R" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations.N">
+<span class="sig-name descname"><span class="pre">N</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'noResponseTo'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations.N" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations.C">
+<span class="sig-name descname"><span class="pre">C</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'conditionsFor'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations.C" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.TemplateRelations.M">
+<span class="sig-name descname"><span class="pre">M</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'milestonesFor'</span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.TemplateRelations.M" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Marking">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.obj.</span></span><span class="sig-name descname"><span class="pre">Marking</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">executed</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">included</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pending</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#Marking"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.Marking" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the set of all markings M(G), in which it contains three sets:
+M(G) = executed x included x pending</p>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>self.__executed: Set[str]</dt><dd><p>The set of executed events</p>
+</dd>
+<dt>self.__included: Set[str]</dt><dd><p>The set of included events</p>
+</dd>
+<dt>self.__pending: Set[str]</dt><dd><p>the set of pending events</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>reset(self, initial_marking) -&gt; None:</dt><dd><p>Given the initial marking of the DCR Graph, reset the marking, to restart execution of traces</p>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Marking.executed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">executed</span></span><a class="headerlink" href="#pm4py.objects.dcr.obj.Marking.executed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Marking.included">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">included</span></span><a class="headerlink" href="#pm4py.objects.dcr.obj.Marking.included" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Marking.pending">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pending</span></span><a class="headerlink" href="#pm4py.objects.dcr.obj.Marking.pending" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.Marking.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial_marking</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#Marking.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.Marking.reset" title="Link to this definition">#</a></dt>
+<dd><p>Resets the marking of a DCR graph, uses the graphs event to reset included marking</p>
+<section id="parameters">
+<h4>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>initial_marking</dt><dd><p>the events in the DCR Graphs</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.obj.</span></span><span class="sig-name descname"><span class="pre">DcrGraph</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#DcrGraph"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The DCR Structure was implemented according to definition 3 in <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+Follows the idea of DCR graph as a set of tuples
+G = (E,Act,M,-&gt;*,*-&gt;,-&gt;{+,-},l)
+G graphs consist of a tuple of the events the activities,
+the marking of executed, included and pending events, all the relations, and the mapping of events to activities.</p>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h3>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Thomas T. Hildebrandt and Raghava Rao Mukkamala, “Declarative Event-BasedWorkflow as Distributed Dynamic Condition Response Graphs”,
+Electronic Proceedings in Theoretical Computer Science — 2011, Volume 69, 59–73. <a class="reference external" href="10.4204/EPTCS.69.5">DOI</a>.</p>
+</aside>
+</aside>
+</section>
+<section id="id3">
+<h3>Attributes<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>self.__events: Set[str]</dt><dd><p>The set of all events in graph</p>
+</dd>
+<dt>self.__marking: Marking</dt><dd><p>the marking of the DCR graph loaded in</p>
+</dd>
+<dt>self.__labels: Set[str]</dt><dd><p>The set of activities in Graphs</p>
+</dd>
+<dt>self.__labelMapping: Dict[str, Set[str]]:</dt><dd><p>The set of event and their corresponding activity</p>
+</dd>
+<dt>self.__condiditionsFor: Dict[str, Set[str]]:</dt><dd><p>attribute containing all the conditions relation between events</p>
+</dd>
+<dt>self.__responseTo: Dict[str, Set[str]]:</dt><dd><p>attribute containing all the response relation between events</p>
+</dd>
+<dt>self.__includesTo: Dict[str, Set[str]]:</dt><dd><p>attribute containing all the include relations between events</p>
+</dd>
+<dt>self.__excludesTo: Dict[str, Set[str]]:</dt><dd><p>attribute containing all the exclude relations between events</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h3>Methods<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>getEvent(activity) -&gt; str:</dt><dd><p>returns the event of the associated activity</p>
+</dd>
+<dt>getActivity(event) -&gt; str:</dt><dd><p>returns the activity of the given event</p>
+</dd>
+<dt>getConstraints() -&gt; int:</dt><dd><p>returns the size of the model based on number of constraints</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>template<span class="classifier">dict, optional</span></dt><dd><p>A template dictionary to initialize the distributed and assignments from, if provided.</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h3>
+<p>call this module and call the following
+graph = DCR_graph(dcr_template)</p>
+</section>
+<section id="notes">
+<h3>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>DCR graph can not be initialized with a partially created template, use DCR_template for easy instantiation</p></li>
+</ul>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.obj_to_template">
+<span class="sig-name descname"><span class="pre">obj_to_template</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#DcrGraph.obj_to_template"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.obj_to_template" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.events">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">events</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.events" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.marking">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">marking</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="#pm4py.objects.dcr.obj.Marking" title="pm4py.objects.dcr.obj.Marking"><span class="pre">Marking</span></a></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.marking" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.labels">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">labels</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.labels" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.conditions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">conditions</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.conditions" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.responses">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">responses</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.responses" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.includes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">includes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.includes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.excludes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">excludes</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.excludes" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.label_map">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">label_map</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.label_map" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.get_event">
+<span class="sig-name descname"><span class="pre">get_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">activity</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#DcrGraph.get_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.get_event" title="Link to this definition">#</a></dt>
+<dd><p>Get the event ID of an activity from graph.</p>
+<section id="id6">
+<h4>Parameters<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>activity</dt><dd><p>the activity of an event</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h4>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>event</dt><dd><p>the event ID of activity</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.get_activity">
+<span class="sig-name descname"><span class="pre">get_activity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#DcrGraph.get_activity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.get_activity" title="Link to this definition">#</a></dt>
+<dd><p>get the activity of an Event</p>
+<section id="id7">
+<h4>Parameters<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>event</dt><dd><p>event ID</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h4>Returns<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>activity</dt><dd><p>the activity of the event</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.obj.DcrGraph.get_constraints">
+<span class="sig-name descname"><span class="pre">get_constraints</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/obj.html#DcrGraph.get_constraints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.obj.DcrGraph.get_constraints" title="Link to this definition">#</a></dt>
+<dd><dl class="simple">
+<dt>compute constraints in DCR Graph</dt><dd><ul class="simple">
+<li><p>conditions</p></li>
+<li><p>responses</p></li>
+<li><p>includes</p></li>
+<li><p>excludes</p></li>
+</ul>
+</dd>
+</dl>
+<section id="id9">
+<h4>Returns<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<dl class="simple">
+<dt>no</dt><dd><p>number of constraints</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+<section id="module-pm4py.objects.dcr.semantics">
+<span id="pm4py-objects-dcr-semantics-module"></span><h2>pm4py.objects.dcr.semantics module<a class="headerlink" href="#module-pm4py.objects.dcr.semantics" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.semantics.DcrSemantics">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pm4py.objects.dcr.semantics.</span></span><span class="sig-name descname"><span class="pre">DcrSemantics</span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/semantics.html#DcrSemantics"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.semantics.DcrSemantics" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>the semantics functions implemented is based on the paper by:</p>
+<p>Author: Thomas T. Hildebrandt and Raghava Rao Mukkamala,
+Title: Declarative Event-BasedWorkflow as Distributed Dynamic Condition Response Graphs
+publisher: Electronic Proceedings in Theoretical Computer Science. EPTCS, Open Publishing Association, 2010, pp. 59–73. doi: 10.4204/EPTCS.69.5.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.semantics.DcrSemantics.is_enabled">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">event</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/semantics.html#DcrSemantics.is_enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.semantics.DcrSemantics.is_enabled" title="Link to this definition">#</a></dt>
+<dd><p>Verify that the given event is enabled for execution in the DCR graph</p>
+<section id="id10">
+<h3>Parameters<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">rtype<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-even">type graph<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">DcrGraph</span></code></a></p>
+</dd>
+<dt class="field-odd">param event<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the instance of event being check for if enabled</p>
+</dd>
+<dt class="field-even">param graph<span class="colon">:</span></dt>
+<dd class="field-even"><p>DCR graph that it check for being enabled</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h3>Returns<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>true if enabled, false otherwise</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.semantics.DcrSemantics.enabled">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">enabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/semantics.html#DcrSemantics.enabled"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.semantics.DcrSemantics.enabled" title="Link to this definition">#</a></dt>
+<dd><p>Creates a list of enabled events, based on included events and conditions constraints met</p>
+<section id="id12">
+<h3>Parameters<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">type graph<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">DcrGraph</span></code></a></p>
+</dd>
+<dt class="field-even">param graph<span class="colon">:</span></dt>
+<dd class="field-even"><p>takes the current state of the DCR</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h3>Returns<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">param res<span class="colon">:</span></dt>
+<dd class="field-odd"><p>set of enabled activities</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.semantics.DcrSemantics.execute">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">event</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pm4py/objects/dcr/semantics.html#DcrSemantics.execute"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.semantics.DcrSemantics.execute" title="Link to this definition">#</a></dt>
+<dd><p>Function based on semantics of execution a DCR graph
+will update the graph according to relations of the executed activity</p>
+<p>can extend to allow of execution of milestone activity</p>
+<section id="id14">
+<h3>Parameters<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">type graph<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">DcrGraph</span></code></a></p>
+</dd>
+<dt class="field-even">param graph<span class="colon">:</span></dt>
+<dd class="field-even"><p>DCR graph</p>
+</dd>
+<dt class="field-odd">param event<span class="colon">:</span></dt>
+<dd class="field-odd"><p>the event being executed</p>
+</dd>
+</dl>
+</section>
+<section id="id15">
+<h3>Returns<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DCR graph with updated marking</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pm4py.objects.dcr.semantics.DcrSemantics.is_accepting">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_accepting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graph</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><span class="pre">DcrGraph</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/pm4py/objects/dcr/semantics.html#DcrSemantics.is_accepting"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pm4py.objects.dcr.semantics.DcrSemantics.is_accepting" title="Link to this definition">#</a></dt>
+<dd><p>Checks if the graph is accepting, no included events are pending</p>
+<section id="id16">
+<h3>Parameters<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">rtype<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-even">type graph<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#pm4py.objects.dcr.obj.DcrGraph" title="pm4py.objects.dcr.obj.DcrGraph"><code class="xref py py-class docutils literal notranslate"><span class="pre">DcrGraph</span></code></a></p>
+</dd>
+<dt class="field-odd">param graph<span class="colon">:</span></dt>
+<dd class="field-odd"><p>DCR Graph</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h3>Returns<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">return<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if graph is accepting, false otherwise</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pm4py.objects.dcr">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pm4py.objects.dcr" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.objects.dcr.obj">pm4py.objects.dcr.obj module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations"><code class="docutils literal notranslate"><span class="pre">Relations</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations.I"><code class="docutils literal notranslate"><span class="pre">Relations.I</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations.E"><code class="docutils literal notranslate"><span class="pre">Relations.E</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations.R"><code class="docutils literal notranslate"><span class="pre">Relations.R</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations.N"><code class="docutils literal notranslate"><span class="pre">Relations.N</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations.C"><code class="docutils literal notranslate"><span class="pre">Relations.C</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Relations.M"><code class="docutils literal notranslate"><span class="pre">Relations.M</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations"><code class="docutils literal notranslate"><span class="pre">TemplateRelations</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations.I"><code class="docutils literal notranslate"><span class="pre">TemplateRelations.I</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations.E"><code class="docutils literal notranslate"><span class="pre">TemplateRelations.E</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations.R"><code class="docutils literal notranslate"><span class="pre">TemplateRelations.R</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations.N"><code class="docutils literal notranslate"><span class="pre">TemplateRelations.N</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations.C"><code class="docutils literal notranslate"><span class="pre">TemplateRelations.C</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.TemplateRelations.M"><code class="docutils literal notranslate"><span class="pre">TemplateRelations.M</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Marking"><code class="docutils literal notranslate"><span class="pre">Marking</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Marking.executed"><code class="docutils literal notranslate"><span class="pre">Marking.executed</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Marking.included"><code class="docutils literal notranslate"><span class="pre">Marking.included</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Marking.pending"><code class="docutils literal notranslate"><span class="pre">Marking.pending</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.Marking.reset"><code class="docutils literal notranslate"><span class="pre">Marking.reset()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph"><code class="docutils literal notranslate"><span class="pre">DcrGraph</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.obj_to_template"><code class="docutils literal notranslate"><span class="pre">DcrGraph.obj_to_template()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.events"><code class="docutils literal notranslate"><span class="pre">DcrGraph.events</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.marking"><code class="docutils literal notranslate"><span class="pre">DcrGraph.marking</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.labels"><code class="docutils literal notranslate"><span class="pre">DcrGraph.labels</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.conditions"><code class="docutils literal notranslate"><span class="pre">DcrGraph.conditions</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.responses"><code class="docutils literal notranslate"><span class="pre">DcrGraph.responses</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.includes"><code class="docutils literal notranslate"><span class="pre">DcrGraph.includes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.excludes"><code class="docutils literal notranslate"><span class="pre">DcrGraph.excludes</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.label_map"><code class="docutils literal notranslate"><span class="pre">DcrGraph.label_map</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.get_event"><code class="docutils literal notranslate"><span class="pre">DcrGraph.get_event()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.get_activity"><code class="docutils literal notranslate"><span class="pre">DcrGraph.get_activity()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.obj.DcrGraph.get_constraints"><code class="docutils literal notranslate"><span class="pre">DcrGraph.get_constraints()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.objects.dcr.semantics">pm4py.objects.dcr.semantics module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.semantics.DcrSemantics"><code class="docutils literal notranslate"><span class="pre">DcrSemantics</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.semantics.DcrSemantics.is_enabled"><code class="docutils literal notranslate"><span class="pre">DcrSemantics.is_enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.semantics.DcrSemantics.enabled"><code class="docutils literal notranslate"><span class="pre">DcrSemantics.enabled()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.semantics.DcrSemantics.execute"><code class="docutils literal notranslate"><span class="pre">DcrSemantics.execute()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pm4py.objects.dcr.semantics.DcrSemantics.is_accepting"><code class="docutils literal notranslate"><span class="pre">DcrSemantics.is_accepting()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pm4py.objects.dcr">Module contents</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="_sources/pm4py.objects.dcr.rst.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

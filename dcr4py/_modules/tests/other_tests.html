@@ -1,0 +1,897 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tests.other_tests &#8212; pm4py 2.7.10 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=c1b0afdb" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=319a7919"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/tests/other_tests';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/pm4py-logo.png" class="logo__image only-light" alt="pm4py 2.7.10 documentation - Home"/>
+    <script>document.write(`<img src="../../_static/pm4py-logo.png" class="logo__image only-dark" alt="pm4py 2.7.10 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+      
+    </div>
+    
+  </div>
+  
+  
+
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar hide-on-wide">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../api.html">
+    API Reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script></div>
+        
+      </div>
+    
+  </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Module code</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page">tests.other_tests</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for tests.other_tests</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">unittest</span>
+<span class="kn">import</span> <span class="nn">importlib.util</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.log_skeleton</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">lsk_alg</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.conformance.log_skeleton</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">lsk_conf_alg</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.importer</span> <span class="kn">import</span> <span class="n">importer</span> <span class="k">as</span> <span class="n">ptree_importer</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.process_tree.exporter</span> <span class="kn">import</span> <span class="n">exporter</span> <span class="k">as</span> <span class="n">ptree_exporter</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.performance_spectrum.variants</span> <span class="kn">import</span> <span class="n">log</span> <span class="k">as</span> <span class="n">log_pspectrum</span><span class="p">,</span> <span class="n">dataframe</span> <span class="k">as</span> <span class="n">df_pspectrum</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dfg.importer</span> <span class="kn">import</span> <span class="n">importer</span> <span class="k">as</span> <span class="n">dfg_importer</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.dfg.exporter</span> <span class="kn">import</span> <span class="n">exporter</span> <span class="k">as</span> <span class="n">dfg_exporter</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.dfg</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dfg_discovery</span>
+<span class="kn">from</span> <span class="nn">pm4py.statistics.start_activities.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">start_activities</span>
+<span class="kn">from</span> <span class="nn">pm4py.statistics.end_activities.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">end_activities</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.importer.xes</span> <span class="kn">import</span> <span class="n">importer</span> <span class="k">as</span> <span class="n">xes_importer</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.discovery.inductive</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">inductive_miner</span>
+<span class="kn">from</span> <span class="nn">pm4py.statistics.variants.log</span> <span class="kn">import</span> <span class="n">get</span> <span class="k">as</span> <span class="n">variants_get</span>
+<span class="kn">from</span> <span class="nn">pm4py.algo.simulation.playout.petri_net</span> <span class="kn">import</span> <span class="n">algorithm</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.conversion.log</span> <span class="kn">import</span> <span class="n">converter</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.log.util</span> <span class="kn">import</span> <span class="n">dataframe_utils</span>
+<span class="kn">from</span> <span class="nn">pm4py.util</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">pandas_utils</span>
+<span class="kn">from</span> <span class="nn">pm4py.objects.conversion.process_tree</span> <span class="kn">import</span> <span class="n">converter</span> <span class="k">as</span> <span class="n">process_tree_converter</span>
+
+
+<div class="viewcode-block" id="OtherPartsTests">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests">[docs]</a>
+<span class="k">class</span> <span class="nc">OtherPartsTests</span><span class="p">(</span><span class="n">unittest</span><span class="o">.</span><span class="n">TestCase</span><span class="p">):</span>
+<div class="viewcode-block" id="OtherPartsTests.test_emd_1">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_emd_1">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_emd_1</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;pyemd&quot;</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.earth_mover_distance</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">earth_mover_distance</span>
+            <span class="n">M</span> <span class="o">=</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.49</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.49</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.01</span><span class="p">,</span>
+                 <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.01</span><span class="p">}</span>
+            <span class="n">L1</span> <span class="o">=</span> <span class="p">{(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.49</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.49</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.01</span><span class="p">,</span>
+                  <span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">):</span> <span class="mf">0.01</span><span class="p">}</span>
+            <span class="n">earth_mover_distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">M</span><span class="p">,</span> <span class="n">L1</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_emd_2">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_emd_2">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_emd_2</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">importlib</span><span class="o">.</span><span class="n">util</span><span class="o">.</span><span class="n">find_spec</span><span class="p">(</span><span class="s2">&quot;pyemd&quot;</span><span class="p">):</span>
+            <span class="kn">from</span> <span class="nn">pm4py.algo.evaluation.earth_mover_distance</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">earth_mover_distance</span>
+            <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+            <span class="n">lang_log</span> <span class="o">=</span> <span class="n">variants_get</span><span class="o">.</span><span class="n">get_language</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+            <span class="n">process_tree</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+            <span class="n">net1</span><span class="p">,</span> <span class="n">im1</span><span class="p">,</span> <span class="n">fm1</span> <span class="o">=</span> <span class="n">process_tree_converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">process_tree</span><span class="p">)</span>
+            <span class="n">lang_model1</span> <span class="o">=</span> <span class="n">variants_get</span><span class="o">.</span><span class="n">get_language</span><span class="p">(</span>
+                <span class="n">algorithm</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">net1</span><span class="p">,</span> <span class="n">im1</span><span class="p">,</span> <span class="n">fm1</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">algorithm</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">STOCHASTIC_PLAYOUT</span><span class="p">,</span>
+                                <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">algorithm</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">STOCHASTIC_PLAYOUT</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">LOG</span><span class="p">:</span> <span class="n">log</span><span class="p">}))</span>
+            <span class="n">emd</span> <span class="o">=</span> <span class="n">earth_mover_distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">lang_model1</span><span class="p">,</span> <span class="n">lang_log</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_importing_dfg">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_importing_dfg">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_importing_dfg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span> <span class="o">=</span> <span class="n">dfg_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_exporting_dfg">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_exporting_dfg">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_exporting_dfg</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="n">dfg</span> <span class="o">=</span> <span class="n">dfg_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">dfg_exporter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">dfg</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">))</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span> <span class="o">=</span> <span class="n">dfg_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_exporting_dfg_with_sa_ea">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_exporting_dfg_with_sa_ea">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_exporting_dfg_with_sa_ea</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="n">dfg</span> <span class="o">=</span> <span class="n">dfg_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">sa</span> <span class="o">=</span> <span class="n">start_activities</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">ea</span> <span class="o">=</span> <span class="n">end_activities</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">dfg_exporter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">dfg</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">),</span>
+                           <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">dfg_exporter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">CLASSIC</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_ACTIVITIES</span><span class="p">:</span> <span class="n">sa</span><span class="p">,</span>
+                                       <span class="n">dfg_exporter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">CLASSIC</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">END_ACTIVITIES</span><span class="p">:</span> <span class="n">ea</span><span class="p">})</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span> <span class="o">=</span> <span class="n">dfg_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.dfg&quot;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_log_skeleton">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_log_skeleton">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_log_skeleton</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.xes&quot;</span><span class="p">))</span>
+        <span class="n">skeleton</span> <span class="o">=</span> <span class="n">lsk_alg</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">conf_res</span> <span class="o">=</span> <span class="n">lsk_conf_alg</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">skeleton</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_performance_spectrum_log">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_performance_spectrum_log">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_performance_spectrum_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.xes&quot;</span><span class="p">))</span>
+        <span class="n">pspectr</span> <span class="o">=</span> <span class="n">log_pspectrum</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;T02 Check confirmation of receipt&quot;</span><span class="p">,</span> <span class="s2">&quot;T03 Adjust confirmation of receipt&quot;</span><span class="p">],</span>
+                                      <span class="mi">1000</span><span class="p">,</span> <span class="p">{})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_performance_spectrum_df">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_performance_spectrum_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_performance_spectrum_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.csv&quot;</span><span class="p">))</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">)</span>
+        <span class="n">pspectr</span> <span class="o">=</span> <span class="n">df_pspectrum</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;T02 Check confirmation of receipt&quot;</span><span class="p">,</span> <span class="s2">&quot;T03 Adjust confirmation of receipt&quot;</span><span class="p">],</span>
+                                     <span class="mi">1000</span><span class="p">,</span> <span class="p">{})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_alignment">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_alignment">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_alignment</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.alpha</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alpha_miner</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">alpha_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.petri_net</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alignments</span>
+        <span class="n">aligned_traces</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">alignments</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">VERSION_STATE_EQUATION_A_STAR</span><span class="p">)</span>
+        <span class="n">aligned_traces</span> <span class="o">=</span> <span class="n">alignments</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">alignments</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">VERSION_DIJKSTRA_NO_HEURISTICS</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_import_export_ptml">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_import_export_ptml">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_import_export_ptml</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">ptree_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.ptml&quot;</span><span class="p">))</span>
+        <span class="n">ptree_exporter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example2.ptml&quot;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;test_output_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example2.ptml&quot;</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_footprints_net">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_footprints_net">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_footprints_net</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.alpha</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alpha_miner</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">alpha_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_discovery</span>
+        <span class="n">fp_entire_log</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">footprints_discovery</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ENTIRE_EVENT_LOG</span><span class="p">)</span>
+        <span class="n">fp_trace_trace</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">fp_net</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_conformance</span>
+        <span class="n">conf1</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_entire_log</span><span class="p">,</span> <span class="n">fp_net</span><span class="p">)</span>
+        <span class="n">conf2</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_trace_trace</span><span class="p">,</span> <span class="n">fp_net</span><span class="p">)</span>
+        <span class="n">conf3</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_entire_log</span><span class="p">,</span> <span class="n">fp_net</span><span class="p">,</span>
+                                             <span class="n">variant</span><span class="o">=</span><span class="n">footprints_conformance</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">LOG_EXTENSIVE</span><span class="p">)</span>
+        <span class="n">conf4</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_trace_trace</span><span class="p">,</span> <span class="n">fp_net</span><span class="p">,</span>
+                                             <span class="n">variant</span><span class="o">=</span><span class="n">footprints_conformance</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TRACE_EXTENSIVE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_footprints_tree">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_footprints_tree">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_footprints_tree</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.inductive</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">inductive_miner</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_discovery</span>
+        <span class="n">fp_entire_log</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">footprints_discovery</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ENTIRE_EVENT_LOG</span><span class="p">)</span>
+        <span class="n">fp_trace_trace</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">fp_tree</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_conformance</span>
+        <span class="n">conf1</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_entire_log</span><span class="p">,</span> <span class="n">fp_tree</span><span class="p">)</span>
+        <span class="n">conf2</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_trace_trace</span><span class="p">,</span> <span class="n">fp_tree</span><span class="p">)</span>
+        <span class="n">conf3</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_entire_log</span><span class="p">,</span> <span class="n">fp_tree</span><span class="p">,</span>
+                                             <span class="n">variant</span><span class="o">=</span><span class="n">footprints_conformance</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">LOG_EXTENSIVE</span><span class="p">)</span>
+        <span class="n">conf4</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_trace_trace</span><span class="p">,</span> <span class="n">fp_tree</span><span class="p">,</span>
+                                             <span class="n">variant</span><span class="o">=</span><span class="n">footprints_conformance</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TRACE_EXTENSIVE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_footprints_tree_df">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_footprints_tree_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_footprints_tree_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.csv&quot;</span><span class="p">))</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.inductive</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">inductive_miner</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_EVENT_LOG</span><span class="p">)</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_discovery</span>
+        <span class="n">fp_df</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="n">fp_tree</span> <span class="o">=</span> <span class="n">footprints_discovery</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.footprints</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">footprints_conformance</span>
+        <span class="n">conf</span> <span class="o">=</span> <span class="n">footprints_conformance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fp_df</span><span class="p">,</span> <span class="n">fp_tree</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_conversion_pn_to_pt">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_conversion_pn_to_pt">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_conversion_pn_to_pt</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.alpha</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">alpha_miner</span>
+        <span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span> <span class="o">=</span> <span class="n">alpha_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.conversion.wf_net</span> <span class="kn">import</span> <span class="n">converter</span> <span class="k">as</span> <span class="n">wf_net_converter</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">wf_net_converter</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">net</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">fm</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">wf_net_converter</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">TO_PROCESS_TREE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_playout_tree_basic">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_playout_tree_basic">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_playout_tree_basic</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.inductive</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">inductive_miner</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.simulation.playout.process_tree</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">tree_playout</span>
+        <span class="n">new_log</span> <span class="o">=</span> <span class="n">tree_playout</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_playout_tree_extensive">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_playout_tree_extensive">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_playout_tree_extensive</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.inductive</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">inductive_miner</span>
+        <span class="n">tree</span> <span class="o">=</span> <span class="n">inductive_miner</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.simulation.playout.process_tree</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">tree_playout</span>
+        <span class="n">new_log</span> <span class="o">=</span> <span class="n">tree_playout</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">tree_playout</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">EXTENSIVE</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_service_time_xes">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_service_time_xes">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_service_time_xes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;interval_event_log.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.service_time.log</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="n">soj_time</span> <span class="o">=</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">get</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_TIMESTAMP_KEY</span><span class="p">:</span> <span class="s2">&quot;start_timestamp&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_service_time_pandas">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_service_time_pandas">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_service_time_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;interval_event_log.csv&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.log.util</span> <span class="kn">import</span> <span class="n">dataframe_utils</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.service_time.pandas</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="n">soj_time</span> <span class="o">=</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">get</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_TIMESTAMP_KEY</span><span class="p">:</span> <span class="s2">&quot;start_timestamp&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_concurrent_activities_xes">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_concurrent_activities_xes">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_concurrent_activities_xes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;interval_event_log.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.concurrent_activities.log</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="n">conc_act</span> <span class="o">=</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">get</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_TIMESTAMP_KEY</span><span class="p">:</span> <span class="s2">&quot;start_timestamp&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_concurrent_activities_pandas">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_concurrent_activities_pandas">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_concurrent_activities_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;interval_event_log.csv&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.log.util</span> <span class="kn">import</span> <span class="n">dataframe_utils</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.concurrent_activities.pandas</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="n">conc_act</span> <span class="o">=</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">get</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_TIMESTAMP_KEY</span><span class="p">:</span> <span class="s2">&quot;start_timestamp&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_efg_xes">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_efg_xes">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_efg_xes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">xes_importer</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;interval_event_log.xes&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.eventually_follows.log</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="n">efg</span> <span class="o">=</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">get</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_TIMESTAMP_KEY</span><span class="p">:</span> <span class="s2">&quot;start_timestamp&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_efg_pandas">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_efg_pandas">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_efg_pandas</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;interval_event_log.csv&quot;</span><span class="p">))</span>
+        <span class="kn">from</span> <span class="nn">pm4py.objects.log.util</span> <span class="kn">import</span> <span class="n">dataframe_utils</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.statistics.eventually_follows.pandas</span> <span class="kn">import</span> <span class="n">get</span>
+        <span class="n">efg</span> <span class="o">=</span> <span class="n">get</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="n">get</span><span class="o">.</span><span class="n">Parameters</span><span class="o">.</span><span class="n">START_TIMESTAMP_KEY</span><span class="p">:</span> <span class="s2">&quot;start_timestamp&quot;</span><span class="p">})</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_dfg_playout">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_dfg_playout">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_dfg_playout</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.simulation.playout.dfg</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dfg_playout</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">dfg_playout</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_dfg_align">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_dfg_align">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_dfg_align</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.filtering.dfg</span> <span class="kn">import</span> <span class="n">dfg_filtering</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.conformance.alignments.dfg</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">dfg_alignment</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">log</span><span class="p">)</span>
+        <span class="n">act_count</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">get_event_attribute_values</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">)</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span><span class="p">,</span> <span class="n">act_count</span> <span class="o">=</span> <span class="n">dfg_filtering</span><span class="o">.</span><span class="n">filter_dfg_on_activities_percentage</span><span class="p">(</span><span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span><span class="p">,</span> <span class="n">act_count</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span><span class="p">,</span> <span class="n">act_count</span> <span class="o">=</span> <span class="n">dfg_filtering</span><span class="o">.</span><span class="n">filter_dfg_on_paths_percentage</span><span class="p">(</span><span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span><span class="p">,</span> <span class="n">act_count</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">aligned_traces</span> <span class="o">=</span> <span class="n">dfg_alignment</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">dfg</span><span class="p">,</span> <span class="n">sa</span><span class="p">,</span> <span class="n">ea</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_insert_idx_in_trace">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_insert_idx_in_trace">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_insert_idx_in_trace</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.csv&quot;</span><span class="p">))</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">insert_ev_in_tr_index</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_automatic_feature_extraction">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_automatic_feature_extraction">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_automatic_feature_extraction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.csv&quot;</span><span class="p">))</span>
+        <span class="n">fea_df</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">automatic_feature_extraction_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_log_to_trie">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_log_to_trie">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_log_to_trie</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.log_to_trie</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">log_to_trie</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="n">trie</span> <span class="o">=</span> <span class="n">log_to_trie</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_minimum_self_distance">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_minimum_self_distance">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_minimum_self_distance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.discovery.minimum_self_distance</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">minimum_self_distance</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;running-example.xes&quot;</span><span class="p">))</span>
+        <span class="n">msd</span> <span class="o">=</span> <span class="n">minimum_self_distance</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_projection_univariate_log">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_projection_univariate_log">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_projection_univariate_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util.compression</span> <span class="kn">import</span> <span class="n">util</span> <span class="k">as</span> <span class="n">compression_util</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.xes&quot;</span><span class="p">))</span>
+        <span class="n">cl</span> <span class="o">=</span> <span class="n">compression_util</span><span class="o">.</span><span class="n">project_univariate</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">)</span>
+        <span class="c1"># just verify that the set is non-empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_alphabet</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_variants</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_projection_univariate_df">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_projection_univariate_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_projection_univariate_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util.compression</span> <span class="kn">import</span> <span class="n">util</span> <span class="k">as</span> <span class="n">compression_util</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.csv&quot;</span><span class="p">))</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">,</span> <span class="n">timest_columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time:timestamp&quot;</span><span class="p">])</span>
+        <span class="n">cl</span> <span class="o">=</span> <span class="n">compression_util</span><span class="o">.</span><span class="n">project_univariate</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">)</span>
+        <span class="c1"># just verify that the set is non-empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_alphabet</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_variants</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_compression_univariate_log">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_compression_univariate_log">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_compression_univariate_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util.compression</span> <span class="kn">import</span> <span class="n">util</span> <span class="k">as</span> <span class="n">compression_util</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.xes&quot;</span><span class="p">))</span>
+        <span class="n">cl</span><span class="p">,</span> <span class="n">lookup</span> <span class="o">=</span> <span class="n">compression_util</span><span class="o">.</span><span class="n">compress_univariate</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">)</span>
+        <span class="c1"># just verify that the set is non-empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_alphabet</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_variants</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_compression_univariate_df">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_compression_univariate_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_compression_univariate_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util.compression</span> <span class="kn">import</span> <span class="n">util</span> <span class="k">as</span> <span class="n">compression_util</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.csv&quot;</span><span class="p">))</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">,</span> <span class="n">timest_columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time:timestamp&quot;</span><span class="p">])</span>
+        <span class="n">cl</span><span class="p">,</span> <span class="n">lookup</span> <span class="o">=</span> <span class="n">compression_util</span><span class="o">.</span><span class="n">compress_univariate</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="s2">&quot;concept:name&quot;</span><span class="p">)</span>
+        <span class="c1"># just verify that the set is non-empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_alphabet</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_variants</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_compression_multivariate_log">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_compression_multivariate_log">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_compression_multivariate_log</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util.compression</span> <span class="kn">import</span> <span class="n">util</span> <span class="k">as</span> <span class="n">compression_util</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.xes&quot;</span><span class="p">))</span>
+        <span class="n">cl</span><span class="p">,</span> <span class="n">lookup</span> <span class="o">=</span> <span class="n">compression_util</span><span class="o">.</span><span class="n">compress_multivariate</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="s2">&quot;org:resource&quot;</span><span class="p">])</span>
+        <span class="c1"># just verify that the set is non-empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_alphabet</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_variants</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_compression_multivariate_df">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_compression_multivariate_df">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_compression_multivariate_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">pm4py.util.compression</span> <span class="kn">import</span> <span class="n">util</span> <span class="k">as</span> <span class="n">compression_util</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas_utils</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;input_data&quot;</span><span class="p">,</span> <span class="s2">&quot;receipt.csv&quot;</span><span class="p">))</span>
+        <span class="n">dataframe</span> <span class="o">=</span> <span class="n">dataframe_utils</span><span class="o">.</span><span class="n">convert_timestamp_columns_in_df</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="n">timest_format</span><span class="o">=</span><span class="n">constants</span><span class="o">.</span><span class="n">DEFAULT_TIMESTAMP_PARSE_FORMAT</span><span class="p">,</span> <span class="n">timest_columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;time:timestamp&quot;</span><span class="p">])</span>
+        <span class="n">cl</span><span class="p">,</span> <span class="n">lookup</span> <span class="o">=</span> <span class="n">compression_util</span><span class="o">.</span><span class="n">compress_multivariate</span><span class="p">(</span><span class="n">dataframe</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;concept:name&quot;</span><span class="p">,</span> <span class="s2">&quot;org:resource&quot;</span><span class="p">])</span>
+        <span class="c1"># just verify that the set is non-empty</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_start_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_end_activities</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_alphabet</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">discover_dfg</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="n">compression_util</span><span class="o">.</span><span class="n">get_variants</span><span class="p">(</span><span class="n">cl</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_log_to_target_rem_time">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_log_to_target_rem_time">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_log_to_target_rem_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.log_to_target</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">log_to_target</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="s2">&quot;input_data/running-example.xes&quot;</span><span class="p">)</span>
+        <span class="n">rem_time_target</span><span class="p">,</span> <span class="n">classes</span> <span class="o">=</span> <span class="n">log_to_target</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">log_to_target</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">REMAINING_TIME</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_log_to_target_next_time">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_log_to_target_next_time">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_log_to_target_next_time</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.log_to_target</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">log_to_target</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="s2">&quot;input_data/running-example.xes&quot;</span><span class="p">)</span>
+        <span class="n">next_time_target</span><span class="p">,</span> <span class="n">classes</span> <span class="o">=</span> <span class="n">log_to_target</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">log_to_target</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">NEXT_TIME</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_log_to_target_next_activity">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_log_to_target_next_activity">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_log_to_target_next_activity</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.log_to_target</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">log_to_target</span>
+        <span class="n">log</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_xes</span><span class="p">(</span><span class="s2">&quot;input_data/running-example.xes&quot;</span><span class="p">)</span>
+        <span class="n">next_activity_target</span><span class="p">,</span> <span class="n">next_activities</span> <span class="o">=</span> <span class="n">log_to_target</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">log</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">log_to_target</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">NEXT_ACTIVITY</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_split_cc_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_split_cc_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_split_cc_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.split_ocel</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">split_ocel</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">split_ocel</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">,</span> <span class="n">variant</span><span class="o">=</span><span class="n">split_ocel</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">CONNECTED_COMPONENTS</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_split_ancestors_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_split_ancestors_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_split_ancestors_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.split_ocel</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">split_ocel</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">split_ocel</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;object_type&quot;</span><span class="p">:</span> <span class="s2">&quot;order&quot;</span><span class="p">},</span> <span class="n">variant</span><span class="o">=</span><span class="n">split_ocel</span><span class="o">.</span><span class="n">Variants</span><span class="o">.</span><span class="n">ANCESTORS_DESCENDANTS</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_object_features_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_object_features_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_object_features_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.features.objects</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">ocel_fea</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">ocel_fea</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_event_features_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_event_features_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_event_features_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.features.events</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">ocel_fea</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">ocel_fea</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_event_object_features_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_event_object_features_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_event_object_features_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.features.events_objects</span> <span class="kn">import</span> <span class="n">algorithm</span> <span class="k">as</span> <span class="n">ocel_fea</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">ocel_fea</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_interaction_graph_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_interaction_graph_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_interaction_graph_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.graphs</span> <span class="kn">import</span> <span class="n">object_interaction_graph</span>
+        <span class="n">object_interaction_graph</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_descendants_graph_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_descendants_graph_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_descendants_graph_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.graphs</span> <span class="kn">import</span> <span class="n">object_descendants_graph</span>
+        <span class="n">object_descendants_graph</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_inheritance_graph_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_inheritance_graph_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_inheritance_graph_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.graphs</span> <span class="kn">import</span> <span class="n">object_inheritance_graph</span>
+        <span class="n">object_inheritance_graph</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_cobirth_graph_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_cobirth_graph_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_cobirth_graph_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.graphs</span> <span class="kn">import</span> <span class="n">object_cobirth_graph</span>
+        <span class="n">object_cobirth_graph</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_codeath_graph_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_codeath_graph_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_codeath_graph_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.graphs</span> <span class="kn">import</span> <span class="n">object_codeath_graph</span>
+        <span class="n">object_codeath_graph</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="OtherPartsTests.test_ocel_description_non_simpl_interface">
+<a class="viewcode-back" href="../../tests.html#tests.other_tests.OtherPartsTests.test_ocel_description_non_simpl_interface">[docs]</a>
+    <span class="k">def</span> <span class="nf">test_ocel_description_non_simpl_interface</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">pm4py</span>
+        <span class="n">ocel</span> <span class="o">=</span> <span class="n">pm4py</span><span class="o">.</span><span class="n">read_ocel</span><span class="p">(</span><span class="s2">&quot;input_data/ocel/example_log.jsonocel&quot;</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">pm4py.algo.transformation.ocel.description.variants</span> <span class="kn">import</span> <span class="n">variant1</span>
+        <span class="n">variant1</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">ocel</span><span class="p">)</span></div>
+</div>
+
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright Process Intelligence Solutions.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
